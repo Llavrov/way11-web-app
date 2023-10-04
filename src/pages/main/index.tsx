@@ -29,7 +29,7 @@ export default function Main() {
     return (
         <div className="w-full flex h-[calc(100vh-140px)] flex-col items-center justify-end p-[50px] box-border">
 
-            <div className='absolute w-full h-full z-5'>
+            <div className='absolute overflow-hidden w-full h-full z-5'>
                 <motion.svg initial='hidden' variants={svgVariantsBig} animate='visible' width="1438" height="1324" viewBox="0 0 1438 1324" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <Background01 />
                 </motion.svg>
