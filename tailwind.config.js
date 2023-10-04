@@ -60,6 +60,8 @@ module.exports = {
         'text-l': ['18px', { lineHeight: '22px' }],
         'text-l-bold': ['18px', { fontWeight: '600' }],
         'accent-l': ['18px', { fontWeight: '500' }],
+
+        '20': ['20px', { lineHeight: '22px', fontWeight: '500' }],
       },
       filter: {
         'white-icon': 'brightness(0) invert(1)',

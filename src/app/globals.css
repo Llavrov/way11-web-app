@@ -10,7 +10,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-html, p, span, div, h1, h2, h3, h4, a {
+html, p, span, div, h1, h2, h3, h4, a, button {
   font-family: 'WorkSans', sans-serif;
 }
 
