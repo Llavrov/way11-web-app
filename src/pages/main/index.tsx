@@ -1,5 +1,7 @@
 'use client';
 
+import PreviewBlock from "@/pages/main/preview-block/PreviewBlock";
+import AboutUs from "@/pages/main/about-us/AboutUs";
 import smallImg from './../../../public/svg/mainScreenSmall.svg';
 import Background01 from './background';
 import { motion } from 'framer-motion';
@@ -29,6 +31,9 @@ export default function Main() {
                 <motion.svg className='w-full' initial='hidden' variants={svgVariants} animate='visible' width="218" height="609" viewBox="0 0 218 609" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <Background02 />
                 </motion.svg>
+        
+        <PreviewBlock />
+            <AboutUs />
         </div>
     )
 }
