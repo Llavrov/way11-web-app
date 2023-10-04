@@ -58,9 +58,9 @@ module.exports = {
         'text-m': ['16px', { lineHeight: '20px', fontWeight: '400' }],
         'text-m-bold': ['16px', { fontWeight: '700' }],
         'text-l': ['18px', { lineHeight: '22px' }],
-        'text-l-bold': ['18px', { fontWeight: '600' }],
         'accent-l': ['18px', { fontWeight: '500' }],
 
+        '18': ['18px', { lineHeight: '20px', fontWeight: '500' }],
         '20': ['20px', { lineHeight: '22px', fontWeight: '500' }],
       },
       filter: {
