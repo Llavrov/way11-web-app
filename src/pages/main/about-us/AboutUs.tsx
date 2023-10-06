@@ -1,4 +1,4 @@
-'use strict'
+'use client'
 
 import NewsCard from "@/pages/main/about-us/NewsCard";
 import EmptyButton from "@/components/emptyButton";

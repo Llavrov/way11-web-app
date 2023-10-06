@@ -2,8 +2,8 @@
 
 import Tag from "@/components/tag";
 import {motion} from "framer-motion";
-import Background01 from "@/pages/main/background";
-import Background02 from "@/pages/main/background02";
+import Background01 from "@/pages/main/preview-block/background";
+import Background02 from "@/pages/main/preview-block/background02";
 
 const LIST_OF_TAGS = ['inst', 'youtube', 'tenchat', 'tg'];
 
