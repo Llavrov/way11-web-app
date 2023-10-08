@@ -23,14 +23,14 @@ export default function Header() {
                     <Image width={84} height={86} src={'/logotype.svg'} alt={'logotype way11'} />
                 </Link>
                 <nav className="flex items-center h-[110px]">
-                    <a href="mailto:mail@studioway11.com" className="text-20">mail@studioway11.com</a>
+                    <a href="mailto:mail@studioway11.com" className="text-20 text-white">mail@studioway11.com</a>
                 </nav>
             </div>
 
             <div className="flex items-center gap-6 relative h-[110px] pr-[50px]">
                 {TABS.map(({link, title}) => (
                     <nav key={title}>
-                        <Link href={link} className="text-20">
+                        <Link href={link} className="text-20 text-white">
                             {title}
                         </Link>
                     </nav>
