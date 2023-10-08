@@ -3,14 +3,21 @@
 import PreviewBlock from "@/pages/main/preview-block/PreviewBlock";
 import AboutUs from "@/pages/main/about-us/AboutUs";
 import OurClients from "@/pages/main/our-clients/OurClients";
+import OurPhilosophy from "@/pages/main/our-philosophy/OurPhilosophy";
+import OurNews from "@/pages/main/our-news/OurNews";
+import ContactUs from "@/pages/main/contact-us/ContactUs";
 
 export default function Main() {
     return (
-        <div className="flex flex-col items-center w-full overflow-hidden justify-between">
+        <div className="flex flex-col items-center w-full overflow-hidden justify-between pb-[100px]">
             <PreviewBlock />
             <AboutUs />
 
             <OurClients />
+            <OurPhilosophy />
+            <OurNews />
+
+            <ContactUs />
         </div>
     )
 }

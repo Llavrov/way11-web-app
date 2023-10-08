@@ -23,6 +23,6 @@ html, p, span, div, h1, h2, h3, h4, a, button {
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: #1E1E1E;
+  color: white;
+  background: #171717;
 }

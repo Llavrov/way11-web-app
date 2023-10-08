@@ -26,7 +26,7 @@ module.exports = {
         5: '5deg',
       },
       backgroundColor: {
-
+        gray: '#8E8E93',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
