@@ -1,39 +1,40 @@
-'use strict'
+'use client'
 
 import NewsCard from "@/pages/main/about-us/NewsCard";
+import EmptyButton from "@/components/emptyButton";
+import Tag from "@/components/tag";
 
-const LIST_OF_NEWS: {
-    title: string;
-    image: string;
-    link: string;
-} = [
+const LIST_OF_NEWS = [
     {
         image: '/about-us-01.png',
         link: '/',
-        title: `8 стартапов </br> с нуля`,
+        title: '8 стартапов </br> с нуля',
     },
     {
         image: '/about-us-02.png',
         link: '/',
-        title: `Российский и </br> зарубежный рынок`,
+        title: 'Российский и </br> зарубежный рынок',
     },
     {
         image: '/about-us-03.png',
         link: '/',
-        title: `№2 Ad‑Unions за </br> 2022 год`,
+        title: '№2 Ad‑Unions за </br> 2022 год',
     }
 ];
 
 export default function AboutUs() {
     return (
-        <div className="w-full h-[480px] flex flex-col items-center justify-end p-[50px] box-border">
+        <div className="w-full h-[530px] flex flex-col items-center px-[50px] pt-[50px] box-border">
             <div className="w-full flex justify-between h-[210px]">
-                <div className="max-w-[560px]">
+                <div className="max-w-[560px] flex flex-col gap-2">
+                    <div className="flex">
+                        <Tag title="наши успехи" />
+                    </div>
                     <h1 className="text-white text-heading-l">
-                        Путь в тысячу миль начинается с одного шага
+                        Немного о нас
                     </h1>
                 </div>
-                <div className="flex justify-between flex-col">
+                <div className="flex justify-between flex-col gap-[30px]">
                     <div className="flex relative gap-[10px]">
                         {
                             LIST_OF_NEWS.map((cardNewsObj) => (
@@ -42,9 +43,7 @@ export default function AboutUs() {
                         }
                     </div>
 
-                    <p className="text-20 max-w-[400px]">
-                        Команда Way11 поможет вам реализовать IT‑решения для любого бизнеса. В основе наших проектов лежат идеи, основанные на аналитике, креативе и технологиях.
-                    </p>
+                    <EmptyButton title={'больше о нас'} onClick={() => undefined}  />
                 </div>
             </div>
         </div>

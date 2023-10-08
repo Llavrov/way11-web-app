@@ -17,7 +17,7 @@ const TABS = [
 
 export default function Header() {
     return (
-        <header className="w-full h-[140px] flex flex-row justify-between relative z-10 bg-transparent">
+        <header className="w-full h-[140px] flex flex-row justify-between fixed">
             <div className="relative flex gap-10">
                 <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px]">
                     <Image width={84} height={86} src={'/logotype.svg'} alt={'logotype way11'} />
