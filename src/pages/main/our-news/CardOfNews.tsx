@@ -9,7 +9,7 @@ type TNewsCard = {
     link: string;
 }
 
-function NewsCard({title, image, link}: TNewsCard) {
+export default function CardOfNews({title, image, link}: TNewsCard) {
     return (
         <Link href={link}>
             <div className="flex flex-col justify-between h-[463px] w-[390px] max-w-[390px] rounded-5 box-border bg-white">
@@ -24,5 +24,3 @@ function NewsCard({title, image, link}: TNewsCard) {
         </Link>
     )
 }
-
-export default NewsCard;

@@ -1,6 +1,6 @@
 'use client'
 
-import NewsCard from "@/pages/main/about-us/NewsCard";
+import CardAboutUs from "./CardAboutUs";
 import EmptyButton from "@/components/emptyButton";
 import Tag from "@/components/tag";
 
@@ -38,7 +38,7 @@ export default function AboutUs() {
                     <div className="flex relative gap-[10px]">
                         {
                             LIST_OF_NEWS.map((cardNewsObj) => (
-                                <NewsCard key={cardNewsObj.title} {...cardNewsObj} />
+                                <CardAboutUs key={cardNewsObj.title} {...cardNewsObj} />
                             ))
                         }
                     </div>

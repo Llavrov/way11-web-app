@@ -1,7 +1,7 @@
 'use client'
 
 import Tag from "@/components/tag";
-import NewsCard from "@/pages/main/our-news/NewsCard";
+import CardOfNews from "./CardOfNews";
 import Image from "next/image";
 
 export default function OurNews() {
@@ -24,12 +24,9 @@ export default function OurNews() {
             </div>
 
             <div className="w-[50vw] flex overflow-x-scroll gap-[10px]">
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <NewsCard title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
+                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
+                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
+                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
             </div>
         </div>
     );
