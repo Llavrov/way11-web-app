@@ -21,19 +21,25 @@ const CARDS_OF_CASES = [
 
 export default function Cases() {
     return (
-        <div className="flex justify-between p-24 w-full flex-wrap sm:p-3 w-full">
+        <div className="flex justify-between p-24 sm:p-3 w-full">
             <div>
                 <span className="text-lg rounded-full border-white border border-solid  p-3 px-5 text-white font-medium">что уже сделали</span>
                 <h2 className="text-6xl font-bold text-white my-7">ПРОЕКТЫ</h2>
             </div>
 
-            <div className="w-full">
+            <div>
                 {
                     CARDS_OF_CASES.map((cardObj) => (
                         <CardCase key={cardObj.background} {...cardObj} />
                     ))
                 }
-                <Link href="/cases" className="text-center border border-solid border-white rounded-[15px] mt-10 text-[20px] font-medium text-white py-2 px-[]">смотреть все</Link>
+                <Link href="/cases">
+                    <div className="flex justify-center items-center max-w-[790px] h-[74px] w-screen border border-white border-solid rounded-[15px]">
+                        <p className="text-20">
+                            смотреть все
+                        </p>
+                    </div>
+                </Link>
             </div>
 
             
