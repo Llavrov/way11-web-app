@@ -1,8 +1,8 @@
 'use client'
 
-import CardAboutUs from "./CardAboutUs";
 import EmptyButton from "@/components/emptyButton";
 import Tag from "@/components/tag";
+import CardAboutUs from "@/components/cards/CardAboutUs";
 
 const LIST_OF_NEWS = [
     {

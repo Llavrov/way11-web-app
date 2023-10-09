@@ -1,5 +1,5 @@
 import Link from "next/link";
-import CardCase from "./CardCase";
+import CardCase from "@/components/cards/CardCase";
 
 const CARDS_OF_CASES = [
     {

@@ -1,8 +1,8 @@
 'use client'
 
 import Tag from "@/components/tag";
-import CardOfNews from "./CardOfNews";
 import Image from "next/image";
+import CardOfNews from "@/components/cards/CardOfNews";
 
 export default function OurNews() {
     return (
