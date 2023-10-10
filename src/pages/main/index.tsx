@@ -22,8 +22,9 @@ export default function Main() {
                 <OurPhilosophy />
                 <OurNews />
 
-                <ContactUs />
-            </section>
+            <ContactUs />
+
+            <Footer />
         </div>
     )
 }
