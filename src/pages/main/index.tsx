@@ -7,6 +7,7 @@ import OurPhilosophy from "@/pages/main/our-philosophy/OurPhilosophy";
 import OurNews from "@/pages/main/our-news/OurNews";
 import ContactUs from "@/pages/main/contact-us/ContactUs";
 import Cases from "@/pages/main/cases/Cases";
+import Footer from "@/components/footer/Footer";
 
 export default function Main() {
     return (
