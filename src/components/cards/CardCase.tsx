@@ -12,7 +12,7 @@ type TCardCase = {
 
 export default function CardCase({tags, photo, background}: TCardCase) {
     return (
-        <div className="p-5 rounded-6 mb-5 max-w-[790px]" style={{ backgroundColor: background }}>
+        <div className="p-5 sm:p-2 sm:pt-4 rounded-6 mb-5 max-w-[790px]" style={{ backgroundColor: background }}>
             <div >
                 {
                     tags.map((title) => (
@@ -20,7 +20,7 @@ export default function CardCase({tags, photo, background}: TCardCase) {
                     ))
                 }
             </div>
-            <div className="p-10 pt-20 sm:p-2 sm:pt-6">
+            <div className="p-10 pt-20 sm:p-5 sm:pt-6">
                 <Image className="aspect-video box-border" src={photo} width={658} height={375} alt={title} />
             </div>
         </div>
