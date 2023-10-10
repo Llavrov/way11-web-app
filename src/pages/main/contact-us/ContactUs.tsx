@@ -7,7 +7,7 @@ import QUTextField from "@/components/textFields/QUTextField";
 
 export default function ContactUs() {
     return (
-        <div className="w-full flex relative flex-row box-border justify-between rounded-[50px] pt-[100px] px-[50px]">
+        <div className="w-full flex relative flex-row box-border justify-between rounded-[50px] px-[50px]">
             <div className="flex gap-2 flex-col items-left max-w-[470px]">
                 <div className="flex">
                     <Tag title="обратная связь" />

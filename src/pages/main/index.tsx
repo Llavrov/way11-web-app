@@ -10,16 +10,19 @@ import Cases from "@/pages/main/cases/Cases";
 
 export default function Main() {
     return (
-        <div className="flex flex-col items-center w-full overflow-hidden justify-between pb-[100px]">
+        <div className="flex flex-col items-center w-full overflow-hidden justify-between">
             <PreviewBlock />
-            <AboutUs />
-            <Cases />
 
-            <OurClients />
-            <OurPhilosophy />
-            <OurNews />
+            <section className="flex flex-col items-center w-full gap-[240px] py-[120px]">
+                <AboutUs />
+                <Cases />
 
-            <ContactUs />
+                <OurClients />
+                <OurPhilosophy />
+                <OurNews />
+
+                <ContactUs />
+            </section>
         </div>
     )
 }
