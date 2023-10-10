@@ -21,7 +21,7 @@ export default function Main() {
                 <OurClients />
                 <OurPhilosophy />
                 <OurNews />
-
+            </section>
             <ContactUs />
 
             <Footer />
