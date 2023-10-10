@@ -35,11 +35,6 @@ export default function Cases() {
                     ))
                 }
                 <Link href="/cases">
-                    {/* <div className="flex justify-center items-center max-w-[790px] h-[74px] w-screen border border-white border-solid rounded-[15px]">
-                        <p className="text-20">
-                            смотреть все
-                        </p>
-                    </div> */}
                     <EmptyButton title="смотреть все" onClick={() => {}}/>
                 </Link>
             </div>
