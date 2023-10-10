@@ -1,5 +1,6 @@
 import Link from "next/link";
 import CardCase from "@/components/cards/CardCase";
+import EmptyButton from "@/components/emptyButton";
 
 const CARDS_OF_CASES = [
     {
@@ -21,24 +22,25 @@ const CARDS_OF_CASES = [
 
 export default function Cases() {
     return (
-        <div className="flex justify-between p-24 sm:p-3 w-full">
+        <div className="w-full flex justify-between flex-wrap p-24 sm:p-3 ">
             <div>
                 <span className="text-lg rounded-full border-white border border-solid  p-3 px-5 text-white font-medium">что уже сделали</span>
                 <h2 className="text-6xl font-bold text-white my-7">ПРОЕКТЫ</h2>
             </div>
 
-            <div>
+            <div className="flex flex-col w-50 sm:w-full">
                 {
                     CARDS_OF_CASES.map((cardObj) => (
                         <CardCase key={cardObj.background} {...cardObj} />
                     ))
                 }
                 <Link href="/cases">
-                    <div className="flex justify-center items-center max-w-[790px] h-[74px] w-screen border border-white border-solid rounded-[15px]">
+                    {/* <div className="flex justify-center items-center max-w-[790px] h-[74px] w-screen border border-white border-solid rounded-[15px]">
                         <p className="text-20">
                             смотреть все
                         </p>
-                    </div>
+                    </div> */}
+                    <EmptyButton title="смотреть все" onClick={() => {}}/>
                 </Link>
             </div>
 
