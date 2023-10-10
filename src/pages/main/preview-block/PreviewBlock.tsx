@@ -53,7 +53,7 @@ export default function PreviewBlock() {
                     variants={backgroundVariants}
                     transition={{
                         repeat: Infinity,
-                        duration: 45,
+                        duration: 60,
                         ease: 'easeInOut',
                         opacity: { duration: 5 },
                     }}
@@ -71,7 +71,7 @@ export default function PreviewBlock() {
                     variants={backgroundVariants}
                     transition={{
                         repeat: Infinity,
-                        duration: 45,
+                        duration: 60,
                         ease: 'easeInOut',
                         opacity: { duration: 5 },
                     }}
