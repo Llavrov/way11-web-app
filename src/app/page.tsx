@@ -1,5 +1,4 @@
 import Main from "@/pages/main";
-import Cases from "@/pages/main/cases/Cases";
 
 export default function Home() {
   return (
