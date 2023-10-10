@@ -34,6 +34,7 @@ export default function Cases() {
                         <CardCase key={cardObj.background} {...cardObj} />
                     ))
                 }
+
                 <Link href="/cases">
                     <EmptyButton title="смотреть все" onClick={() => {}}/>
                 </Link>

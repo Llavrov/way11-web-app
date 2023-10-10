@@ -4,6 +4,7 @@ import Tag from "@/components/tag";
 import Image from "next/image";
 import QUMultiLineTextField from "@/components/textFields/QUMultiLineTextField";
 import QUTextField from "@/components/textFields/QUTextField";
+import EmptyButton from "@/components/emptyButton";
 
 export default function ContactUs() {
     return (
@@ -31,6 +32,8 @@ export default function ContactUs() {
                 <QUTextField type="text" placeholder="Бюджет проекта" />
 
                 <QUMultiLineTextField placeholder="Описание проекта" />
+
+                <EmptyButton title="отправить" onClick={() => {}} />
             </div>
         </div>
     );
