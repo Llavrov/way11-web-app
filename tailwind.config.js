@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["WorkSans"],
+        sans: ['var(--font-work-sans)'],
       },
       colors: {
 
@@ -46,6 +46,7 @@ module.exports = {
         'rem-heading-xm': ['1.5rem', { fontWeight: '600' }],
         'rem-heading-s': ['1.2rem', { fontWeight: '600' }],
         'heading-l': ['64px', { fontWeight: '500', lineHeight: '70px' }],
+        'heading-l-bold': ['64px', { fontWeight: 'Bold', lineHeight: '70px' }],
         'heading-xl': ['38px', { fontWeight: '600' }],
         'heading-xxl': ['52px', { fontWeight: '600' }],
         'text-s': ['12px', { lineHeight: '15px' }],

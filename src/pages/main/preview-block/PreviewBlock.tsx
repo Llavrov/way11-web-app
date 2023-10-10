@@ -26,10 +26,10 @@ const backgroundVariants = {
 
 export default function PreviewBlock() {
     return (
-        <div className="w-full h-screen flex bg-black relative flex-col items-center justify-end p-[50px] box-border">
-            <div className="w-full flex justify-between h-[210px]">
+        <div className="w-full h-screen overflow-hidden flex bg-black relative flex-col items-center justify-end p-[50px] box-border">
+            <div className="w-full flex justify-between h-[210px] absolute z-10 px-[50px] box-border">
                 <div className="max-w-[560px]">
-                    <h1 className="text-white text-heading-l">
+                    <h1 className="text-white text-heading-l-bold font-sans">
                         Путь в тысячу миль начинается с одного шага
                     </h1>
                 </div>

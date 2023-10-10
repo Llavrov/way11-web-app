@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -11,7 +9,7 @@
 }
 
 html, p, span, div, h1, h2, h3, h4, a, button {
-  font-family: 'WorkSans', sans-serif;
+  font-family: WorkSans, 'sans-serif';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -25,4 +23,45 @@ html, p, span, div, h1, h2, h3, h4, a, button {
 body {
   color: white;
   background: #171717;
+}
+
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 900;
+  src: url('/fonts/Web/WorkSans-Black.woff') format("woff"),
+  url('/fonts/TTF/WorkSans-Black.woff') format("ttf"),
+  url('/fonts/OTF/WorkSans-Black.otf') format("otf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 700;
+  src: url('/fonts/Web/WorkSans-Bold.woff') format("woff"),
+  url('/fonts/TTF/WorkSans-Bold.woff') format("ttf"),
+  url('/fonts/OTF/WorkSans-Bold.otf') format("otf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 600;
+  src: url('/fonts/Web/WorkSans-SemiBold.woff') format("woff"),
+  url('/fonts/TTF/WorkSans-SemiBold.woff') format("ttf"),
+  url('/fonts/OTF/WorkSans-SemiBold.otf') format("otf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 500;
+  src: url('/fonts/Web/WorkSans-Medium.woff') format("woff"),
+  url('/fonts/TTF/WorkSans-Medium.woff') format("ttf"),
+  url('/fonts/OTF/WorkSans-Medium.otf') format("otf");
+}
+
+@font-face {
+  font-family: WorkSans;
+  font-weight: 400;
+  src: url('/fonts/Web/WorkSans-Regular.woff') format("woff"),
+  url('/fonts/TTF/WorkSans-Regular.woff') format("ttf"),
+  url('/fonts/OTF/WorkSans-Regular.otf') format("otf");
 }
