@@ -1,26 +1,28 @@
 'use strict'
 
 import Tag from "@/components/tag";
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Background01 from "@/pages/main/preview-block/background";
 import Background02 from "@/pages/main/preview-block/background02";
 
 const LIST_OF_TAGS = ['inst', 'youtube', 'tenchat', 'tg'];
 
-const svgVariants = {
-    hidden: { y: '50vh', x: '0vw', opacity: 0, },
-    visible: {
-        y: '-80vh', x: '-40vw', opacity: 1,
-        transition: { duration: 3 }
+const backgroundVariants = {
+    hidden: {
+        opacity: 0
     },
+    animationOne: {
+        opacity: 1,
+        x: [-400, -200, 400, 200, -400],
+        y: [-400, 0, -200, -500, -400],
+    },
+    animationTwo: {
+        opacity: 1,
+        x: [700, 700, 200, 0, 400, 700],
+        y: [-1000, -1500, -1600, -1000, -800, -1000],
+    }
 }
-const svgVariantsBig = {
-    visible: {
-        y: ['-45vh', '-35vh'], x: '20vw', scale: [1, 1], rotate: 0,
-        transition: { duration: 3 },
-    },
-    hidden: { y: '20vh', x: '-150vw', scale: 1, rotate: -180 },
-};
+
 
 export default function PreviewBlock() {
     return (
@@ -47,9 +49,16 @@ export default function PreviewBlock() {
 
             <motion.div style={{ position: 'absolute', top: 0, right: 0, zIndex: -1 }}>
                 <motion.svg
+
+                    variants={backgroundVariants}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 60,
+                        ease: 'easeInOut',
+                        opacity: { duration: 5 },
+                    }}
                     initial='hidden'
-                    variants={svgVariantsBig}
-                    animate='visible'
+                    animate='animationOne'
                     width="1438"
                     height="1324"
                     viewBox="0 0 1438 1324"
@@ -59,11 +68,16 @@ export default function PreviewBlock() {
                     <Background01 />
                 </motion.svg>
                 <motion.svg
-                    className='w-full'
+                    variants={backgroundVariants}
+                    transition={{
+                        repeat: Infinity,
+                        duration: 60,
+                        ease: 'easeInOut',
+                        opacity: { duration: 5 },
+                    }}
                     initial='hidden'
-                    variants={svgVariants}
-                    animate='visible'
-                    width="218"
+                    animate='animationTwo'
+                    width="100%"
                     height="609"
                     viewBox="0 0 218 609"
                     fill="none"
