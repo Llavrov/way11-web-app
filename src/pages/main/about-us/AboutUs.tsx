@@ -35,7 +35,7 @@ export default function AboutUs() {
                     </h1>
                 </div>
                 <div className="flex justify-between flex-col gap-[30px]">
-                    <div className="flex relative gap-[10px]">
+                    <div className="flex relative gap-1">
                         {
                             LIST_OF_NEWS.map((cardNewsObj) => (
                                 <CardAboutUs key={cardNewsObj.title} {...cardNewsObj} />
