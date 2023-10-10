@@ -24,7 +24,7 @@ const LIST_OF_NEWS = [
 
 export default function AboutUs() {
     return (
-        <div className="w-full h-[530px] flex flex-col items-center px-[50px] pt-[50px] box-border">
+        <div className="w-full h-[530px] flex flex-col items-center px-[50px] box-border">
             <div className="w-full flex justify-between h-[210px]">
                 <div className="max-w-[560px] flex flex-col gap-2">
                     <div className="flex">
@@ -35,7 +35,7 @@ export default function AboutUs() {
                     </h1>
                 </div>
                 <div className="flex justify-between flex-col gap-[30px]">
-                    <div className="flex relative gap-[10px]">
+                    <div className="flex relative gap-1">
                         {
                             LIST_OF_NEWS.map((cardNewsObj) => (
                                 <CardAboutUs key={cardNewsObj.title} {...cardNewsObj} />

@@ -34,7 +34,7 @@ const CLIENTS = [
 
 export default function OurClients() {
     return (
-        <div className="w-full flex h-screen relative flex-col box-border justify-center items-center gap-[50px]">
+        <div className="w-full flex relative flex-col box-border justify-center items-center gap-[50px]">
             <div className="flex gap-6 flex-col items-center">
                 <div className="flex">
                     <Tag title="с кем мы работали"/>

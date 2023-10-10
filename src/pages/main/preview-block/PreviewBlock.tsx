@@ -26,7 +26,7 @@ const backgroundVariants = {
 
 export default function PreviewBlock() {
     return (
-        <div className="w-full flex h-screen relative flex-col items-center justify-end p-[50px] box-border">
+        <div className="w-full h-screen flex bg-black relative flex-col items-center justify-end p-[50px] box-border">
             <div className="w-full flex justify-between h-[210px]">
                 <div className="max-w-[560px]">
                     <h1 className="text-white text-heading-l">
@@ -47,7 +47,7 @@ export default function PreviewBlock() {
                 </div>
             </div>
 
-            <motion.div style={{ position: 'absolute', top: 0, right: 0, zIndex: -1 }}>
+            <motion.div style={{ position: 'absolute', top: 0, right: 0, zIndex: 1 }}>
                 <motion.svg
 
                     variants={backgroundVariants}

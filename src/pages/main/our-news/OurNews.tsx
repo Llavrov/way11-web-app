@@ -6,7 +6,7 @@ import CardOfNews from "@/components/cards/CardOfNews";
 
 export default function OurNews() {
     return (
-        <div className="w-full flex relative flex-row box-border justify-between rounded-[50px] py-[240px]">
+        <div className="w-full flex relative flex-row box-border justify-between rounded-[50px]">
             <div className="flex flex-col items-left justify-between gap-[30px] h-[463px] pl-[50px]">
                 <div className="flex gap-2 flex-col items-left max-w-[470px]">
                     <div className="flex">
