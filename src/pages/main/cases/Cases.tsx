@@ -25,7 +25,7 @@ export default function Cases() {
         <div className="w-full flex justify-between flex-wrap px-[50px] sm:p-3 ">
             <div>
                 <span className="text-lg rounded-full border-white border border-solid  p-3 px-5 text-white font-medium">что уже сделали</span>
-                <h2 className="text-6xl font-bold text-white my-7">ПРОЕКТЫ</h2>
+                <h2 className="text-6xl font-bold text-white my-7">проекты</h2>
             </div>
 
             <div className="flex flex-col w-50 sm:w-full">
@@ -34,6 +34,7 @@ export default function Cases() {
                         <CardCase key={cardObj.background} {...cardObj} />
                     ))
                 }
+
                 <Link href="/cases">
                     <EmptyButton title="смотреть все" onClick={() => {}}/>
                 </Link>

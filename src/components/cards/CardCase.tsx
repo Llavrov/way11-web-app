@@ -13,7 +13,7 @@ type TCardCase = {
 export default function CardCase({tags, photo, background}: TCardCase) {
     return (
         <div className="p-5 sm:p-2 sm:pt-4 rounded-6 mb-5 max-w-[790px]" style={{ backgroundColor: background }}>
-            <div >
+            <div className="flex gap-2">
                 {
                     tags.map((title) => (
                         <TagWhite key={title} title={title} />
