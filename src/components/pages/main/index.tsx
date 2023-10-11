@@ -8,6 +8,7 @@ import OurNews from "@/components/pages/main/our-news/OurNews";
 import ContactUs from "@/components/pages/main/contact-us/ContactUs";
 import Cases from "@/components/pages/main/cases/Cases";
 import OurServices from "@/components/pages/main/our-services/OurServices";
+import Footer from "@/components/common/footer/Footer";
 
 export default function MainPage() {
     return (
@@ -25,6 +26,9 @@ export default function MainPage() {
                 <OurNews />
                 <ContactUs />
             </section>
+
+            <Footer />
+
         </div>
     )
 }
