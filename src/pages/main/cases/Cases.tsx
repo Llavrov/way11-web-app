@@ -22,8 +22,8 @@ const CARDS_OF_CASES = [
 
 export default function Cases() {
     return (
-        <div className="w-full flex justify-between flex-wrap px-[50px] sm:p-3 ">
-            <div>
+        <div className="w-full flex justify-between items-start flex-wrap px-[50px] sm:p-3 ">
+            <div className="sticky top-0">
                 <span className="text-lg rounded-full border-white border border-solid  p-3 px-5 text-white font-medium">что уже сделали</span>
                 <h2 className="text-6xl font-bold text-white my-7">ПРОЕКТЫ</h2>
             </div>

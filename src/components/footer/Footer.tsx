@@ -49,16 +49,16 @@ const STATS: TSocial[] = [
 
 export default function Footer() {
     return (
-        <footer className="px-10 max-w-[1340px] h-[350px] md:h-auto gap-5 flex md:flex-col justify-center mt-10">
-            <div className="max-w-[640px] px-[80px] lg:px-[10px] lg:w-full flex justify-center items-center bg-[#252525] rounded-[30px]">
+        <footer className="px-10 max-w-[1340px] pb-3 h-[350px] md:h-auto gap-5 flex md:flex-col justify-center md:px-3 md:gap-3 mt-10">
+            <div className="max-w-[640px] px-[80px] lg:px-[10px] md:w-full flex justify-center items-center bg-[#252525] rounded-[30px]">
                 <Image width={290} className="lg:w-[180px] lg:h-[180px]" height={290} src={'/svg/logoFooter.svg'} alt={'logotype way11'} />
             </div>
 
-            <nav className="w-[750px] lg:max-w-[750px] bg-[#252525] flex p-10 rounded-[30px] lg:p-5 md:flex-col lg:w-full">
-                <div className="w-[50%] flex flex-col justify-between">
+            <nav className="w-[750px] lg:max-w-[750px] bg-[#252525] flex p-10 rounded-[30px] lg:p-5 md:flex-col md:gap-10 lg:w-full">
+                <div className="w-[50%] md:w-full flex flex-col justify-between">
                     <span >
                         <h2 className="text-[#878787]">мы в соцсетях</h2>
-                        <ul className="flex gap-2 flex-wrap flex-row w-100 p-3">
+                        <ul className="flex gap-2 flex-wrap flex-row w-100 p-3 md:px-0">
                             {
                                 SOCIAL.map(({ link, title }) => (
                                     <li >
@@ -73,7 +73,7 @@ export default function Footer() {
 
                     <span>
                         <h2 className="text-[#878787]">наши статьи</h2>
-                        <ul className="flex gap-2 flex-wrap flex-row w-100 p-3">
+                        <ul className="flex gap-2 flex-wrap flex-row w-100 p-3 md:px-0">
                             {
                                 STATS.map(({ link, title }) => (
                                     <li >
@@ -87,7 +87,7 @@ export default function Footer() {
                     </span>
                 </div>
                 
-                <div className="w-[50%] lg:w-[45%] pl-5 lg:pl-0 flex flex-col justify-between">
+                <div className="w-[50%] md:w-full pl-5 lg:pl-0 flex flex-col justify-between">
                     <span className="text-20 flex gap-4 flex-col">
                         <Link href={'/'}>mail@studioway11.com</Link>
                         <Link href="tel:+79371234333">+7 (937) 123-43-33</Link>
