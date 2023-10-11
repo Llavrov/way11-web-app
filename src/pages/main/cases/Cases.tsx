@@ -6,24 +6,24 @@ const CARDS_OF_CASES = [
     {
         tags: ['Buy Now', 'E-commercial'],
         photo: '/cases/image4.png',
-        background: '#DD622D'
+        background: 'orange'
     },
     {
         tags: ['ERP', 'промышленность'],
         photo: '/cases/image5.png',
-        background: '#7C7AFE'
+        background: 'purple'
     },
     {
         tags: ['Lancelot', 'образование'],
         photo: '/cases/imag6.png',
-        background: '#007FE0'
+        background: 'blue'
     }
 ];
 
 export default function Cases() {
     return (
         <div className="w-full flex justify-between items-start flex-wrap px-[50px] sm:p-3 ">
-            <div className="sticky top-0">
+            <div className="sticky top-0 h-[400px]">
                 <span className="text-lg rounded-full border-white border border-solid  p-3 px-5 text-white font-medium">что уже сделали</span>
                 <h2 className="text-6xl font-bold text-white my-7">ПРОЕКТЫ</h2>
             </div>

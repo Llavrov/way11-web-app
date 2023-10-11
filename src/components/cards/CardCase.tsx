@@ -7,12 +7,18 @@ import { title } from "process";
 type TCardCase = {
     tags: string[],
     photo: string,
-    background: string
-};
+    background: any
+}; 
 
 export default function CardCase({tags, photo, background}: TCardCase) {
+    const colorVariants:any = {
+        orange: 'bg-[#DD622D]',
+        purple: 'bg-[#7C7AFE]',
+        blue: 'bg-[#007FE0]',
+    }
     return (
-        <div className="p-5 sm:p-2 sm:pt-4 rounded-6 mb-5 max-w-[790px]" style={{ backgroundColor: background }}>
+        <div className={`p-5 sm:p-2 sm:pt-4 rounded-6 mb-5 max-w-[790px] hover:z-[1] ease-in-out duration-300 ${colorVariants[background]} hover:opacity-60`} 
+        >
             <div >
                 {
                     tags.map((title) => (
