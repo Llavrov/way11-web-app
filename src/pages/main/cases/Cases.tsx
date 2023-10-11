@@ -4,17 +4,17 @@ import EmptyButton from "@/components/emptyButton";
 
 const CARDS_OF_CASES = [
     {
-        tags: [ 'Buy Now', 'E-commercial'],
+        tags: ['Buy Now', 'E-commercial'],
         photo: '/cases/image4.png',
         background: '#DD622D'
     },
     {
-        tags: [ 'ERP', 'промышленность'],
+        tags: ['ERP', 'промышленность'],
         photo: '/cases/image5.png',
         background: '#7C7AFE'
     },
     {
-        tags: [ 'Lancelot', 'образование'],
+        tags: ['Lancelot', 'образование'],
         photo: '/cases/imag6.png',
         background: '#007FE0'
     }
@@ -35,11 +35,11 @@ export default function Cases() {
                     ))
                 }
                 <Link href="/cases">
-                    <EmptyButton title="смотреть все" onClick={() => {}}/>
+                    <EmptyButton title="смотреть все" onClick={() => { }} />
                 </Link>
             </div>
 
-            
+
         </div>
     )
 }
