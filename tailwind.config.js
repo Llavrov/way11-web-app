@@ -11,7 +11,7 @@ module.exports = {
         sans: ['var(--font-work-sans)'],
       },
       colors: {
-
+        'tag-gray': '#8C8C8C',
       },
       backgroundPosition: {
         top_bg: 'top -60px',
@@ -28,15 +28,18 @@ module.exports = {
       backgroundColor: {
         gray: '#8E8E93',
         'base-gray': '#2D2D2D',
+        blue: '#007FE0',
+        'border-gray': 'rgba(140, 140, 140, 0.4)',
+        'tag-gray': '#8C8C8C',
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'card-hover': 'linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8))'
       },
       borderColor: {
         orange: 'rgba(255, 100, 51, 1)',
         border: 'rgba(31, 31, 31, 0.1)',
         disabled: 'rgba(31, 31, 31, 0.2)',
+        'tag-gray': '#8C8C8C',
       },
       fontSize: {
         'heading-ss': ['18px', { fontWeight: '500' }],
@@ -71,7 +74,7 @@ module.exports = {
       spacing: {
         px: '1px',
         0: '0px',
-        1: '2px',
+        1: '4px',
         2: '8px',
         3: '12px',
         4: '16px',
