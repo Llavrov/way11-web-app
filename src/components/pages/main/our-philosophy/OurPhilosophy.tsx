@@ -1,7 +1,9 @@
 'use client'
 
+import { Canvas } from '@react-three/fiber';
 import Image from "next/image";
 import TagBlack from "@/components/common/tags/tagBlack";
+import ModelWithRingls from "@/components/common/3d/modelWithRingls";
 
 export default function OurPhilosophy() {
     return (
@@ -24,8 +26,8 @@ export default function OurPhilosophy() {
             </div>
 
             <div className="flex items-center justify-center w-full h-[341px] relative">
-                <Image className="absolute top-0 z-10" style={{ mixBlendMode: 'overlay' }} src={'/overlay.png'} alt={'3d model'} width={850} height={360} />
-                <Image className="absolute top-0" src={'/subtract3d.png'} alt={'3d model'} width={850} height={360} />
+                {/*<Image className="absolute top-0 z-10" style={{ mixBlendMode: 'overlay' }} src={'/overlay.png'} alt={'3d model'} width={850} height={360} />*/}
+                {/*<Image className="absolute top-0" src={'/subtract3d.png'} alt={'3d model'} width={850} height={360} />*/}
             </div>
         </div>
     );
