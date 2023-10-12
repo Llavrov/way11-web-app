@@ -26,9 +26,6 @@ export default function MainPage() {
                 <OurNews />
                 <ContactUs />
             </section>
-
-            <Footer />
-
         </div>
     )
 }
