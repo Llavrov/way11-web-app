@@ -1,7 +1,7 @@
 'use client'
 
 import Image from "next/image";
-import TagWhite from "@/components/tagWhite";
+import TagWhite from "@/components/common/tags/tagWhite";
 import { title } from "process";
 
 type TCardCase = {

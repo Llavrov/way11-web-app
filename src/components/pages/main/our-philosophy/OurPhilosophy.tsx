@@ -1,7 +1,7 @@
 'use client'
 
-import Image from "next/image";
 import TagBlack from "@/components/common/tags/tagBlack";
+import Image from "next/image";
 
 export default function OurPhilosophy() {
     return (

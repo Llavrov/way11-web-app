@@ -33,6 +33,7 @@ export default function PreviewBlock() {
                         Путь в тысячу миль начинается с одного шага
                     </h1>
                 </div>
+
                 <div className="flex justify-between flex-col">
                     <div className="flex relative gap-[10px]">
                         {

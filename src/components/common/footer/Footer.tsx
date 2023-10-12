@@ -60,7 +60,7 @@ export default function Footer() {
                         <ul className="flex gap-2 flex-wrap flex-row w-100 p-3 md:px-0">
                             {
                                 SOCIAL.map(({ link, title }) => (
-                                    <li >
+                                    <li key={title}>
                                         <Link className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
                                             {title}
                                         </Link>
@@ -75,7 +75,7 @@ export default function Footer() {
                         <ul className="flex gap-2 flex-wrap flex-row w-100 p-3 md:px-0">
                             {
                                 STATS.map(({ link, title }) => (
-                                    <li >
+                                    <li key={title}>
                                         <Link className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
                                             {title}
                                         </Link>

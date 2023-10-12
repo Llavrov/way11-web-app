@@ -20,6 +20,18 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   }
 }
 
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+}
+
 body {
   color: white;
   background: #171717;
