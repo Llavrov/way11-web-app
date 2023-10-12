@@ -22,7 +22,7 @@ type TCasePage = {
 
 export default function CasePage({ title, tag, description, image, imageBackground = 'white', taskAndSolution, solution }: TCasePage) {
     return (
-        <div className="flex flex-col items-center w-full relative overflow-hidden justify-between pt-[200px] gap-[120px] box-border">
+        <div className="flex flex-col items-center w-full relative overflow-hidden justify-between pt-[200px] pb-[120px] gap-[120px] box-border">
             <div className="w-full flex justify-between h-[210px] px-[50px]">
                 <div className="flex items-start gap-8">
                     <Image className="pt-4" src={'/svg/arrow-left.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />

@@ -51,7 +51,7 @@ export default function CasesPage() {
     const [activeTag, setActiveTag] = useState('все проекты');
 
     return (
-        <div className="flex flex-col items-center w-full overflow-hidden justify-between px-[50px] pt-[200px] gap-[120px] box-border">
+        <div className="flex flex-col items-center w-full overflow-hidden justify-between px-[50px] pt-[200px] pb-[120px] gap-[120px] box-border">
             <div className="w-full flex justify-between">
                 <div>
                     <h1 className="text-heading-l text-white">все наши кейсы</h1>
