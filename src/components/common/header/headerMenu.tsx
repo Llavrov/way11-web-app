@@ -74,7 +74,7 @@ export default function HeaderMenu() {
                 </span>
             </div>
 
-            <div className="h-[200px]">
+            <div className="h-[200px] flex justify-center items-center">
                 <EmptyButton title="оставить заявку" onClick={() => { }} />
             </div>
         </motion.div>
