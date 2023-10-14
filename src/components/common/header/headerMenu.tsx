@@ -10,10 +10,10 @@ import { motion } from "framer-motion";
 
 const headerVariants = {
     hidden: {
-        y: '-100vh',
+        x: '-100vw',
     },
     visible: {
-        y: '0vh',
+        x: '0vw',
         transition: {
             duration: 1,
         }
@@ -22,13 +22,12 @@ const headerVariants = {
     //     x: '-100vw',
     //     opacity: 0
     // }
-
 }
 
 export default function HeaderMenu() {
     return (
         <motion.div
-            className="w-full h-[100vh] px-[20px] mt-[90px] flex flex-col justify-between fixed z-[998] bg-[#000]"
+            className="w-full h-[100vh] px-[20px] pt-[90px] flex flex-col justify-between fixed z-[998] bg-[#000]"
             variants={headerVariants}
             initial='hidden'
             animate='visible'

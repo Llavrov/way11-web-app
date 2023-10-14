@@ -42,7 +42,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'bg-[#000] z-[998]' : ''} z-[10] lg:h-[90px]`}>
+            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'z-[999]' : ''} z-[10] lg:h-[90px]`}>
                 <div className="relative z-[999] flex gap-10"
                 >
                     <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">
