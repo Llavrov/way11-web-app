@@ -115,13 +115,13 @@ export default function Header() {
                 </button>
             </header>
 
-
-
-            <>{
-                openMenu
-                    ? <HeaderMenu />
-                    : null
-            }</>
+            <>
+                {
+                    openMenu
+                        ? <HeaderMenu />
+                        : null
+                }
+            </>
         </>
     )
 }

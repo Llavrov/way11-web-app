@@ -28,9 +28,9 @@ export default function HeaderMenu() {
     return (
         <motion.div
             className="w-full h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
-            variants={headerVariants}
-            initial='hidden'
-            animate='visible'
+            // variants={headerVariants}
+            // initial='hidden'
+            // animate='visible'
             // exit='exit'
             exit={{ x: -300, opacity: 0 }}
         >
