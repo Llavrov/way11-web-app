@@ -92,21 +92,21 @@ export default function Header() {
                         <motion.path
                             {...path01Variants.closed}
                             animate={path01Controls}
-                            transition={{ duration: 0.4 }}
+                            transition={{ duration: 0.7 }}
                             stroke='#FFFFFF'
                             strokeWidth='2'
                         />
                         <motion.path
                             {...path02Variants.closed}
                             animate={path02Controls}
-                            transition={{ duration: 0.4 }}
+                            transition={{ duration: 0.7 }}
                             stroke='#FFFFFF'
                             strokeWidth='2'
                         />
                         <motion.path
                             {...path03Variants.closed}
                             animate={path03Controls}
-                            transition={{ duration: 0.4 }}
+                            transition={{ duration: 0.7 }}
                             stroke='#FFFFFF'
                             strokeWidth='2'
                         />

@@ -18,20 +18,15 @@ const headerVariants = {
             duration: 1,
         }
     },
-    // exit: {
-    //     x: '-100vw',
-    //     opacity: 0
-    // }
 }
 
 export default function HeaderMenu() {
     return (
         <motion.div
             className="w-full h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
-            // variants={headerVariants}
-            // initial='hidden'
-            // animate='visible'
-            // exit='exit'
+            variants={headerVariants}
+            initial='hidden'
+            animate='visible'
             exit={{ x: -300, opacity: 0 }}
         >
             <div className="flex flex-col gap-[30px] pt-[50px] justify-between">
