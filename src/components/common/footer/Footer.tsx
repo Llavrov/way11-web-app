@@ -8,7 +8,7 @@ type TSocial = {
     title: string
 }
 
-const SOCIAL: TSocial[] = [
+export const SOCIAL: TSocial[] = [
     {
         link: '/',
         title: 'youtube',
@@ -35,7 +35,7 @@ const SOCIAL: TSocial[] = [
     },
 ]
 
-const STATS: TSocial[] = [
+export const STATS: TSocial[] = [
     {
         title: 'dzen',
         link: '/'
