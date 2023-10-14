@@ -47,7 +47,7 @@ export default function PreviewBlock() {
     const [wWidth, setWidth] = useState<number>(1000)
     useEffect(() => {
         setWidth(window.innerWidth);
-    }, [window.innerWidth]);
+    }, []);
 
     return (
         <div className="w-full h-screen overflow-hidden flex bg-black relative flex-col items-center justify-end p-[50px] box-border lg:p-[10px] lg:pb-[60px]">
