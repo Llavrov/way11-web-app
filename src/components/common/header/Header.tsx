@@ -21,18 +21,11 @@ const TABS = [
 const fadeIdVariants = {
     hidden: {
         opacity: 0,
-        transition: {
-            duration: 2,
-            type: "spring",
-            stiffness: 50
-        }
     },
-    animationOne: {
+    animationThree: {
         opacity: 1,
         transition: {
-            duration: 2,
-            type: "spring",
-            stiffness: 50
+            duration: 1.2,
         }
     },
     exit: {
@@ -49,8 +42,9 @@ export default function Header() {
 
     return (
         <>
-            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'bg-[#000] z-[999]' : ''} z-[10] lg:h-[90px]`}>
-                <div className="relative flex gap-10">
+            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'bg-[#000] z-[998]' : ''} z-[10] lg:h-[90px]`}>
+                <div className="relative z-[999] flex gap-10"
+                >
                     <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">
                         <Image
                             width={84}
@@ -99,7 +93,7 @@ export default function Header() {
             <>{
                 openMenu
                     ? <HeaderMenu />
-                    : <></>
+                    : null
             }</>
         </>
     )
