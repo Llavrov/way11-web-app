@@ -30,6 +30,18 @@ const path03Variants = {
     open: { d: 'M0 0L0 0', opacity: 0},
     closed: { d: 'M0 19.5L24 19.5', opacity: 1},
 }
+// const path01Variants = {
+//     open: { d: 'M3.06061 2.99999L21.0606 21'},
+//     closed: { d: 'M0 9.5L24 9.5'},
+// }
+// const path02Variants = {
+//     open: { d: 'M3.00006 21.0607L21 3.06064'},
+//     closed: { d: 'M0 14.5L24 14.5'},
+// }
+// const path03Variants = {
+//     open: { d: 'M0 0L0 0', opacity: 0},
+//     closed: { d: 'M0 19.5L24 19.5', opacity: 1},
+// }
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -88,7 +100,7 @@ export default function Header() {
                     onClick={() => changeMenuState(!openMenu)}
                     className="hidden h-[90px] flex justify-center items-center pr-[30px] lg:flex">
 
-                    <svg width='24' height='24' viewBox='0 0 24 24'>
+                    <svg width='34' height='34' viewBox='0 0 24 24'>
                         <motion.path
                             {...path01Variants.closed}
                             animate={path01Controls}
