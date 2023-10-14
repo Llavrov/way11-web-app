@@ -6,10 +6,34 @@ import Button from "@/components/common/buttons/button";
 import { SOCIAL } from "../footer/Footer";
 import { STATS } from "../footer/Footer";
 import EmptyButton from "../buttons/emptyButton";
+import { motion } from "framer-motion";
+
+const headerVariants = {
+    hidden: {
+        x: '-100vw',
+    },
+    visible: {
+        x: '0vw',
+        transition: {
+            duration: 1,
+        }
+    },
+    // exit: {
+    //     x: '-100vw',
+    //     opacity: 0
+    // }
+}
 
 export default function HeaderMenu() {
     return (
-        <div className="w-full h-[100vh] px-[20px] mt-[90px] flex flex-col justify-between fixed z-[999] bg-[#000]">
+        <motion.div
+            className="w-full h-[100vh] px-[20px] pt-[90px] flex flex-col justify-between fixed z-[998] bg-[#000]"
+            variants={headerVariants}
+            initial='hidden'
+            animate='visible'
+            // exit='exit'
+            exit={{ x: -300, opacity: 0 }}
+        >
             <div className="flex flex-col gap-[30px] pt-[50px] justify-between">
                 <nav className="flex justify-start items-start leading-[60px] flex-col text-[64px] font-medium">
                     <Link href={'/'}>кейсы</Link>
@@ -22,7 +46,7 @@ export default function HeaderMenu() {
 
                 <span >
                     <h2 className="text-[#878787]">мы в соцсетях</h2>
-                    <ul className="flex gap-2 flex-wrap w-100 py-3 md:px-0">
+                    <ul className="flex gap-2 flex-wrap w-full py-3 md:px-0">
                         {
                             SOCIAL.map(({ link, title }) => (
                                 <li key={title}>
@@ -50,9 +74,9 @@ export default function HeaderMenu() {
                 </span>
             </div>
 
-            <div className="h-[200px]">
+            <div className="h-[200px] flex justify-center items-center">
                 <EmptyButton title="оставить заявку" onClick={() => { }} />
             </div>
-        </div>
+        </motion.div>
     )
 }
