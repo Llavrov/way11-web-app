@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Background01 from "@/components/pages/main/preview-block/background";
 import Background02 from "@/components/pages/main/preview-block/background02";
 import Tag from "@/components/common/tags/tag";
+import Background03 from "./backgroundForPhone";
 
 const LIST_OF_TAGS = ['inst', 'youtube', 'tenchat', 'tg'];
 
@@ -13,8 +14,6 @@ const backgroundVariants = {
     },
     animationOne: {
         opacity: 1,
-        // x: [-400, -200, 400, 200, -400],
-        // y: [-400, 0, -200, -500, -400],
         x: [400, 200, -400, -200, 400],
         y: [-200, -500, -400, 0, -200],
     },
@@ -22,8 +21,6 @@ const backgroundVariants = {
         opacity: 1,
         x: [0, 400, 700, 700, 200, 0],
         y: [-1000, -800, -1000, -1500, -1600, -1000],
-        // x: [700, 700, 200, 0, 400, 700],
-        // y: [-1000, -1500, -1600, -1000, -800, -1000],
     }
 }
 
@@ -42,7 +39,7 @@ export default function PreviewBlock() {
                     <div className="flex relative gap-[10px]">
                         {
                             LIST_OF_TAGS.map((title) => (
-                                <Tag title={title} key={title}/>
+                                <Tag title={title} key={title} />
                             ))
                         }
                     </div>
@@ -52,45 +49,53 @@ export default function PreviewBlock() {
                 </div>
             </div>
 
-            <motion.div style={{ position: 'absolute', top: 0, right: 0, zIndex: 1 }}>
-                <motion.svg
-                    
-                    variants={backgroundVariants}
-                    transition={{
-                        repeat: Infinity,
-                        duration: 60,
-                        ease: 'easeInOut',
-                        opacity: { duration: 5 },
-                    }}
-                    initial='hidden'
-                    animate='animationOne'
-                    width="1438"
-                    height="1324"
-                    viewBox="0 0 1438 1324"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <Background01 />
-                </motion.svg>
-                <motion.svg
-                    variants={backgroundVariants}
-                    transition={{
-                        repeat: Infinity,
-                        duration: 60,
-                        ease: 'easeInOut',
-                        opacity: { duration: 5 },
-                    }}
-                    initial='hidden'
-                    animate='animationTwo'
-                    width="100%"
-                    height="609"
-                    viewBox="0 0 218 609"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                >
-                    <Background02 />
-                </motion.svg>
-            </motion.div>
+
+
+            {
+                window.innerWidth <= 1024
+                    ? <motion.div style={{ position: 'absolute', top: -100, right: -200, zIndex: 1 }}>
+                        <Background03 />
+                    </motion.div>
+                    : <motion.div style={{ position: 'absolute', top: 0, right: 0, zIndex: 1 }}>
+                        <motion.svg
+                            variants={backgroundVariants}
+                            transition={{
+                                repeat: Infinity,
+                                duration: 60,
+                                ease: 'easeInOut',
+                                opacity: { duration: 5 },
+                            }}
+                            initial='hidden'
+                            animate='animationOne'
+                            width="1438"
+                            height="1324"
+                            viewBox="0 0 1438 1324"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <Background01 />
+                        </motion.svg>
+                        <motion.svg
+                            variants={backgroundVariants}
+                            transition={{
+                                repeat: Infinity,
+                                duration: 60,
+                                ease: 'easeInOut',
+                                opacity: { duration: 5 },
+                            }}
+                            initial='hidden'
+                            animate='animationTwo'
+                            width="100%"
+                            height="609"
+                            viewBox="0 0 218 609"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <Background02 />
+                        </motion.svg>
+                    </motion.div>
+            }
+
         </div>
     )
 }

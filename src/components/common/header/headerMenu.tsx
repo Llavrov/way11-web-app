@@ -27,7 +27,7 @@ const headerVariants = {
 export default function HeaderMenu() {
     return (
         <motion.div
-            className="w-full h-[100vh] px-[20px] pt-[90px] flex flex-col justify-between fixed z-[998] bg-[#000]"
+            className="w-full h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
             variants={headerVariants}
             initial='hidden'
             animate='visible'
