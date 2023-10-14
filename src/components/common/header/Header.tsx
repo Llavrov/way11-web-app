@@ -19,29 +19,17 @@ const TABS = [
 ]
 
 const path01Variants = {
-    open: { d: 'M3.06061 2.99999L21.0606 21'},
-    closed: { d: 'M0 9.5L24 9.5'},
+    open: { d: 'M3.06061 2.99999L21.0606 21' },
+    closed: { d: 'M0 9.5L24 9.5' },
 }
 const path02Variants = {
-    open: { d: 'M3.00006 21.0607L21 3.06064'},
-    closed: { d: 'M0 14.5L24 14.5'},
+    open: { d: 'M3.00006 21.0607L21 3.06064' },
+    closed: { d: 'M0 14.5L24 14.5' },
 }
 const path03Variants = {
-    open: { d: 'M0 0L0 0', opacity: 0},
-    closed: { d: 'M0 19.5L24 19.5', opacity: 1},
+    open: { d: 'M0 0L0 0', opacity: 0 },
+    closed: { d: 'M0 19.5L24 19.5', opacity: 1 },
 }
-// const path01Variants = {
-//     open: { d: 'M3.06061 2.99999L21.0606 21'},
-//     closed: { d: 'M0 9.5L24 9.5'},
-// }
-// const path02Variants = {
-//     open: { d: 'M3.00006 21.0607L21 3.06064'},
-//     closed: { d: 'M0 14.5L24 14.5'},
-// }
-// const path03Variants = {
-//     open: { d: 'M0 0L0 0', opacity: 0},
-//     closed: { d: 'M0 19.5L24 19.5', opacity: 1},
-// }
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
@@ -67,7 +55,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'z-[999]' : ''} z-[10] lg:h-[90px]`}>
+            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'z-[999]' : ''} z-10 lg:h-[90px]`}>
                 <div className="relative z-[999] flex gap-10"
                 >
                     <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">
@@ -127,11 +115,13 @@ export default function Header() {
                 </button>
             </header>
 
-            <>{
-                openMenu
-                    ? <HeaderMenu />
-                    : null
-            }</>
+            <>
+                {
+                    openMenu
+                        ? <HeaderMenu />
+                        : null
+                }
+            </>
         </>
     )
 }
