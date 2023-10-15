@@ -2,7 +2,7 @@
 
 import TagGray from "@/components/common/tags/tagGray";
 import Image from "next/image";
-import CardOfNews from "@/components/common/cards/CardOfNews";
+import CardsSwiper from "@/components/common/cardsSwiper";
 
 export default function OurNews() {
     return (
@@ -18,15 +18,21 @@ export default function OurNews() {
                 </div>
 
                 <div className="flex gap-2">
-                    <Image src={'/svg/arrow-left.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
-                    <Image src={'/svg/arrow-right.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
+                    <Image id="swiper-button-prev" src={'/svg/arrow-left.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
+                    <Image id="swiper-button-next" src={'/svg/arrow-right.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
                 </div>
             </div>
 
-            <div className="w-[50vw] flex overflow-x-scroll gap-[10px]">
-                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
-                <CardOfNews title="№2 Ad‑Unions за 2022 год" image={'/about-us-01.png'} link={'/'} />
+            <div className="w-[50vw] flex gap-[10px]">
+                <CardsSwiper cards={[
+                    {title: 'ss', image: '/about-us-01.png'},
+                    {title: 'ss3', image: '/about-us-01.png'},
+                    {title: 's2s', image: '/about-us-01.png'},
+                    {title: 's22s', image: '/about-us-01.png'},
+                    {title: 's23s', image: '/about-us-01.png'},
+                    {title: 's22s', image: '/about-us-01.png'},
+                    {title: 's23s', image: '/about-us-01.png'}
+                ]} />
             </div>
         </div>
     );
