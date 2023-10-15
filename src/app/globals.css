@@ -32,10 +32,70 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   }
 }
 
+.swiper-slide {
+  transition: 0.5s;
+}
+
+.swiper-wrapper.disabled {
+  transform: translate3d(0px, 0, 0) !important;
+}
+.swiper-pagination.disabled {
+  display: none;
+}
+
+/*.swiper-slide {*/
+/*  opacity: 0;*/
+/*  transition: 0.5s opacity;*/
+/*  animation: toOpacity 0.5s;*/
+/*}*/
+
+/*.swiper-slide-active {*/
+/*  opacity: 1;*/
+/*  transition: 0.5s opacity;*/
+/*  animation: toOpacity 0.5s;*/
+/*}*/
+
+.swiper-slide-prev {
+  opacity: 0;
+  transition: 0.5s opacity;
+  animation: fromOpacity 0.5s;
+}
+
+.swiper-component {
+  overflow: hidden;
+}
+
+.swiper,
+.swiper-wrapper,
+.swiper-container {
+  overflow: visible !important;
+}
+
 body {
   color: white;
   background: #171717;
 }
+
+@keyframes fromOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes toOpacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 
 
 @font-face {

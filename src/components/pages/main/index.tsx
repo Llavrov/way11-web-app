@@ -9,6 +9,7 @@ import ContactUs from "@/components/pages/main/contact-us/ContactUs";
 import Cases from "@/components/pages/main/cases/Cases";
 import OurServices from "@/components/pages/main/our-services/OurServices";
 import Footer from "@/components/common/footer/Footer";
+import CardsSwiper from "@/components/common/cardsSwiper";
 
 export default function MainPage() {
     return (
