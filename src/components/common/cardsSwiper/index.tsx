@@ -1,13 +1,22 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import {useRef} from "react";
+import { Navigation } from 'swiper/modules';
+import { useRef } from "react";
 import CardOfNews from "@/components/common/cards/CardOfNews";
 
 type TCardSwiper = {
     title: string;
     image: string;
-}
+};
 
-export default function CardsSwiper({ cards }: { cards: TCardSwiper[] }) {
+export default function CardsSwiper({
+    cards,
+    prevBtn,
+    nextBtn,
+}: {
+    cards: TCardSwiper[];
+    prevBtn: React.RefObject<HTMLDivElement>;
+    nextBtn: React.RefObject<HTMLDivElement>;
+}) {
     const swiperRef = useRef();
 
     const sliderSettings = {
@@ -17,33 +26,40 @@ export default function CardsSwiper({ cards }: { cards: TCardSwiper[] }) {
     };
 
     return (
-        <div className="swiper-component ml-[-400px] max-w-[1186px]">
+        <div className="swiper-component max-w-[1186px]">
             <Swiper
                 style={{
                     width: '1186px',
-                    height: '462px'
+                    height: '462px',
+                }}
+                modules={[Navigation]}
+                navigation={{
+                    prevEl: prevBtn.current ?? '',
+                    nextEl: nextBtn.current ?? '',
                 }}
                 loop={true}
-                spaceBetween={10}
-                navigation={{
-                    prevEl: '#swiper-button-prev',
-                    nextEl: '#swiper-button-next'
-                }}
+                slidesPerGroup={1}
                 initialSlide={0}
                 slidesPerView={3}
                 breakpoints={sliderSettings}
                 onBeforeInit={(swiper) => {
+                    // @ts-ignore
                     swiperRef.current = swiper;
                 }}
+                effect="fade"
                 className="pr-[400px]"
             >
-                {
-                    cards && cards.map(({title, image}, index) => (
-                        <SwiperSlide key={title} className={`swiper-slide max-w-[390px] ${index === cards.length - 1 ? 'pr-[400px]' : ''}`}>
+                {cards &&
+                    cards.map(({ title, image }, index) => (
+                        <SwiperSlide
+                            key={title}
+                            className={`swiper-slide max-w-[390px] ${
+                                index === cards.length - 1 ? 'pr-[400px]' : 'mr-2'
+                            }`}
+                        >
                             <CardOfNews title={title} image={image} link={'/'} />
                         </SwiperSlide>
-                    ))
-                }
+                    ))}
             </Swiper>
         </div>
     );

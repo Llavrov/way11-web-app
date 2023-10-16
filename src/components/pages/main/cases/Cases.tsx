@@ -28,7 +28,7 @@ const CARDS_OF_CASES = [
 
 export default function Cases() {
     const scrollRef = useRef(null)
-    const [margins, setMargins] = useState<any>([10, 1500]);
+    const [margins, setMargins] = useState<any>([10, 1700])
 
     useEffect(() => {
         // @ts-ignore
@@ -37,7 +37,7 @@ export default function Cases() {
 
     return (
         <div className="w-full flex justify-between flex-wrap px-[50px] sm:p-3" ref={scrollRef}>
-            <TagSticky heightArea={margins[1]} innerH='1150' />
+            {scrollRef ? <TagSticky tagText={'что уже сделали'} heightArea={margins[1]} container={scrollRef} title={'проекты'}/> : (<></>)}
 
             <div className="flex flex-col sm:w-full gap-6">
                 {

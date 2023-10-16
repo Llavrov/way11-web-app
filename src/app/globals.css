@@ -55,11 +55,11 @@ html, p, span, div, h1, h2, h3, h4, a, button {
 /*  animation: toOpacity 0.5s;*/
 /*}*/
 
-.swiper-slide-prev {
-  opacity: 0;
-  transition: 0.5s opacity;
-  animation: fromOpacity 0.5s;
-}
+/*.swiper-slide-prev {*/
+/*  opacity: 0;*/
+/*  transition: 0.5s opacity;*/
+/*  animation: fromOpacity 0.5s;*/
+/*}*/
 
 .swiper-component {
   overflow: hidden;

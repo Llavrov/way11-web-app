@@ -25,7 +25,7 @@ const fadeIdVariants = {
     }
 }
 
-function TagSticky({ heightArea, innerH }: any) {
+function TagSticky({ heightArea, container, title, tagText }: {heightArea: number, container: React.RefObject<HTMLDivElement>, title: string, tagText: string}) {
     const utpRef = useRef(null);
     const { scrollY } = useScroll();
     const [position, setPosition] = useState<any>('relative');
@@ -34,16 +34,18 @@ function TagSticky({ heightArea, innerH }: any) {
     useEffect(() => {
         const updateOpacity = () => {
             // @ts-ignore
+            const innerHeightOfContainer = String(container.current?.getBoundingClientRect()?.height - 800);
+            // @ts-ignore
             const distanceFromTop = utpRef?.current?.getBoundingClientRect()?.top + window.scrollY;
-            const scrollRange = [distanceFromTop, distanceFromTop + heightArea];
+            const scrollRange = [distanceFromTop, distanceFromTop + +innerHeightOfContainer + 500];
             const scrollProgress = (scrollY.get() - scrollRange[0]) / (scrollRange[1] - scrollRange[0]);
 
-            if (scrollProgress > -0.08 && scrollProgress < 1 && window.innerWidth >= +innerH) {
+            if (scrollProgress > -0.08 && scrollProgress < 1 && window.innerWidth >= +innerHeightOfContainer) {
                 setPosition('fixed');
                 setTop('120px')
             } else if (scrollProgress >= 1) {
                 setPosition('relative');
-                setTop(heightArea + 120)
+                setTop(+innerHeightOfContainer + 620)
             } else {
                 setPosition('relative');
                 setTop('0px')
@@ -51,7 +53,7 @@ function TagSticky({ heightArea, innerH }: any) {
         };
 
         scrollY.on('change', updateOpacity);
-    }, [scrollY, utpRef]);
+    }, [scrollY, utpRef, container]);
 
     return (
         <motion.div
@@ -65,9 +67,11 @@ function TagSticky({ heightArea, innerH }: any) {
                 style={{ position, top }}>
                 <motion.div className="flex flex-col gap-1">
                     <div className="flex">
-                        <TagGray title="что уже сделали" />
+                        <TagGray title={tagText} />
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0">проекты</h2>
+                    <h2 className="text-6xl font-bold text-white my-0">
+                        {title}
+                    </h2>
                 </motion.div>
             </motion.div>
         </motion.div>
