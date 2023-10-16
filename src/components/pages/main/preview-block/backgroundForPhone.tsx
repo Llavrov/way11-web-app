@@ -12,26 +12,26 @@ export default function Background03() {
                     <ellipse cx="348.356" cy="293.805" rx="132.298" ry="57.7786" transform="rotate(-27.2825 348.356 293.805)" fill="#D9D9D9" />
                 </g>
                 <g filter="url(#filter3_f_145_1139)">
-                    <path d="M272.538 248.191C293.078 225.442 294.845 98.6658 89 94.2485" stroke="#3467BD" stroke-width="7.06765" />
+                    <path d="M272.538 248.191C293.078 225.442 294.845 98.6658 89 94.2485" stroke="#3467BD" strokeWidth="7.06765" />
                 </g>
                 <defs>
-                    <filter id="filter0_f_145_1139" x="60.3453" y="134.527" width="597.131" height="390.114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <filter id="filter0_f_145_1139" x="60.3453" y="134.527" width="597.131" height="390.114" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="44.1728" result="effect1_foregroundBlur_145_1139" />
                     </filter>
-                    <filter id="filter1_f_145_1139" x="138.474" y="0.955193" width="544.571" height="428.507" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <filter id="filter1_f_145_1139" x="138.474" y="0.955193" width="544.571" height="428.507" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="44.1728" result="effect1_foregroundBlur_145_1139" />
                     </filter>
-                    <filter id="filter2_f_145_1139" x="139.458" y="125.995" width="417.796" height="335.621" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <filter id="filter2_f_145_1139" x="139.458" y="125.995" width="417.796" height="335.621" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="44.1728" result="effect1_foregroundBlur_145_1139" />
                     </filter>
-                    <filter id="filter3_f_145_1139" x="0.578484" y="2.36974" width="372.778" height="336.535" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <filter id="filter3_f_145_1139" x="0.578484" y="2.36974" width="372.778" height="336.535" filterUnits="userSpaceOnUse" colorInterpolationFilters="sRGB">
+                        <feFlood floodOpacity="0" result="BackgroundImageFix" />
                         <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
                         <feGaussianBlur stdDeviation="44.1728" result="effect1_foregroundBlur_145_1139" />
                     </filter>

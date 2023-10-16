@@ -3,6 +3,8 @@ import CardCase from "@/components/common/cards/CardCase";
 import EmptyButton from "@/components/common/buttons/emptyButton";
 import CardOfService from "@/components/common/cards/CardOfService";
 import TagGray from "@/components/common/tags/tagGray";
+import {useEffect, useRef, useState} from "react";
+import TagSticky from "@/components/common/tags/tagSticky";
 
 const CARDS_OF_CASES = [
     {
@@ -28,14 +30,17 @@ const CARDS_OF_CASES = [
 ];
 
 export default function OurServices() {
+    const scrollRef = useRef(null)
+    const [margins, setMargins] = useState<any>([10, 1700])
+
+    useEffect(() => {
+        // @ts-ignore
+        setMargins([10, scrollRef?.current?.clientHeight])
+    }, []);
+
     return (
-        <div className="w-full flex justify-between flex-wrap px-[50px] sm:p-3 ">
-            <div className="flex flex-col gap-2">
-                <div className="flex">
-                    <TagGray title="наши услуги" />
-                </div>
-                <h2 className="text-6xl font-bold text-white my-0">в чём мы сильны</h2>
-            </div>
+        <div ref={scrollRef} className="w-full flex justify-between flex-wrap px-[50px] sm:p-3 ">
+            {scrollRef ? <TagSticky heightArea={margins[1]} container={scrollRef} title={'в чем мы сильны'} tagText={'наши услуги'} /> : (<></>)}
 
             <div className="w-full max-w-[742px] flex flex-col gap-[70px]">
                 {
