@@ -27,7 +27,7 @@ export default function CardsSwiper({
 
 
     return (
-        <div className="swiper-component max-w-[1186px]">
+        <div className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px]">
             <Swiper
                 style={{
                     width: '1186px',
