@@ -59,7 +59,7 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
         <motion.div
             ref={utpRef}
         >
-            <motion.div className='h-[200px] mt-10 opacity-1'
+            <motion.div className='h-[200px] pt-10 opacity-1'
                 variants={fadeIdVariants}
                 initial="hidden"
                 whileInView="animationOne"

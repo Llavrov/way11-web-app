@@ -43,23 +43,26 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   display: none;
 }
 
-/*.swiper-slide {*/
-/*  opacity: 0;*/
-/*  transition: 0.5s opacity;*/
-/*  animation: toOpacity 0.5s;*/
-/*}*/
+.swiper-slide {
+  opacity: 0;
+  transition: 0.5s opacity;
+}
 
-/*.swiper-slide-active {*/
-/*  opacity: 1;*/
-/*  transition: 0.5s opacity;*/
-/*  animation: toOpacity 0.5s;*/
-/*}*/
+.swiper-slide-active .swiper-slide,
+.swiper-slide-prev .swiper-slide,
+.swiper-slide-next .swiper-slide {
+  opacity: 0;
+  transition: 0.5s opacity;
+  animation: fromOpacity 0.5s;
+}
 
-/*.swiper-slide-prev {*/
-/*  opacity: 0;*/
-/*  transition: 0.5s opacity;*/
-/*  animation: fromOpacity 0.5s;*/
-/*}*/
+.swiper-slide-active,
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 1;
+  transition: 0.5s opacity;
+  animation: toOpacity 0.5s;
+}
 
 .swiper-component {
   overflow: hidden;
