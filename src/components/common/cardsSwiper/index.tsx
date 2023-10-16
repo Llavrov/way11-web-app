@@ -20,10 +20,11 @@ export default function CardsSwiper({
     const swiperRef = useRef();
 
     const sliderSettings = {
-        440: { slidesPerView: 1, spaceBetween: 30 },
-        680: { slidesPerView: 2, spaceBetween: 30 },
-        1024: { slidesPerView: 3, spaceBetween: 30 },
+        440: { slidesPerView: 1, spaceBetween: 10 },
+        680: { slidesPerView: 2, spaceBetween: 10 },
+        1024: { slidesPerView: 3, spaceBetween: 10 },
     };
+
 
     return (
         <div className="swiper-component max-w-[1186px]">
@@ -53,9 +54,7 @@ export default function CardsSwiper({
                     cards.map(({ title, image }, index) => (
                         <SwiperSlide
                             key={title}
-                            className={`swiper-slide max-w-[390px] ${
-                                index === cards.length - 1 ? 'pr-[400px]' : 'mr-2'
-                            }`}
+                            className={`swiper-slide max-w-[390px]`}
                         >
                             <CardOfNews title={title} image={image} link={'/'} />
                         </SwiperSlide>

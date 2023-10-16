@@ -13,8 +13,6 @@ export default function FilePickerComponent() {
         setFiles([...files, file]);
     };
 
-    useEffect(() => console.log(files), [files])
-
     return (
         <div className="flex flex-col w-full gap-6 pt-[14px] pb-6">
             {
