@@ -36,10 +36,10 @@ export default function Cases() {
     }, []);
 
     return (
-        <div className="w-full flex justify-between flex-wrap px-[50px] sm:p-3" ref={scrollRef}>
+        <div className="w-full flex justify-between flex-wrap lg:flex-col lg:gap-6 px-[50px] lg:p-3" ref={scrollRef}>
             {scrollRef ? <TagSticky tagText={'что уже сделали'} heightArea={margins[1]} container={scrollRef} title={'проекты'}/> : (<></>)}
 
-            <div className="flex flex-col sm:w-full gap-6">
+            <div className="flex flex-col sm:w-full gap-6 lg:gap-[50px]">
                 {
                     CARDS_OF_CASES.map((cardObj) => (
                         <CardCase key={cardObj.background} {...cardObj} />

@@ -35,11 +35,11 @@ const CLIENTS = [
 export default function OurClients() {
     return (
         <div className="w-full flex relative flex-col box-border justify-center items-center gap-[50px]">
-            <div className="flex gap-6 flex-col items-center">
+            <div className="flex gap-6 lg:gap-0 flex-col items-center">
                 <div className="flex">
                     <TagGray title="с кем мы работали"/>
                 </div>
-                <p className="text-heading-l">
+                <p className="text-heading-l lg:text-3xl lg:leading-9">
                     наши клиенты
                 </p>
             </div>
@@ -48,7 +48,7 @@ export default function OurClients() {
                 {
                     CLIENTS.map(({src, width, height}) => (
                         <div key={src} className="mx-[45px]">
-                            <Image src={src} alt={src} width={width} height={height} />
+                            <Image className="lg:w-[110px] object-contain" src={src} alt={src} width={width} height={height} />
                         </div>
                     ))
                 }

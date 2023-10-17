@@ -74,6 +74,43 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   overflow: visible !important;
 }
 
+@media (max-width: 1024px) {
+  .swiper-wrapper.disabled {
+    transform: translate3d(0px, 0, 0) !important;
+  }
+  .swiper-pagination.disabled {
+    display: none;
+  }
+
+  .swiper-slide {
+    opacity: 1;
+  }
+
+  .swiper-slide-active .swiper-slide,
+  .swiper-slide-prev .swiper-slide,
+  .swiper-slide-next .swiper-slide {
+    opacity: 1;
+    animation: none;
+  }
+
+  .swiper-slide-active,
+  .swiper-slide-prev,
+  .swiper-slide-next {
+    opacity: 1;
+    animation: none;
+  }
+
+  .swiper-component {
+    overflow: hidden;
+  }
+
+  .swiper,
+  .swiper-wrapper,
+  .swiper-container {
+    overflow: auto;
+  }
+}
+
 body {
   color: white;
   background: #171717;

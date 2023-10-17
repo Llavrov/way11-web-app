@@ -25,7 +25,7 @@ const LIST_OF_NEWS = [
 export default function AboutUs() {
     return (
         <div className="w-full h-[530px] flex flex-col items-center px-[50px] md:px-0 box-border">
-            <div className="w-full flex lg:flex-col justify-between h-[210px]">
+            <div className="w-full flex lg:flex-col justify-between h-[210px] lg:gap-6">
                 <div className="max-w-[560px] flex flex-col gap-2 lg:px-4">
                     <div className="flex">
                         <TagGray title="наши успехи" />
@@ -43,7 +43,9 @@ export default function AboutUs() {
                         }
                     </div>
 
-                    <EmptyButton title={'больше о нас'} onClick={() => undefined} />
+                    <div className="w-full lg:px-4">
+                        <EmptyButton title={'больше о нас'} onClick={() => undefined} />
+                    </div>
                 </div>
             </div>
         </div>
