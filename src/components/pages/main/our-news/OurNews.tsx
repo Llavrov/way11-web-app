@@ -44,13 +44,13 @@ export default function OurNews() {
                     refs.nextBtnRef.current &&
                     refs.nextBtnRef.current &&
                     <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={[
-                        {title: 'ss', image: '/about-us-01.png'},
-                        {title: 'ss3', image: '/about-us-01.png'},
-                        {title: 's2s', image: '/about-us-01.png'},
-                        {title: 's22s', image: '/about-us-01.png'},
-                        {title: 's23s', image: '/about-us-01.png'},
-                        {title: 's22s', image: '/about-us-01.png'},
-                        {title: 's23s', image: '/about-us-01.png'}]}
+                        {title: 'тусовка в офисе 2023', image: '/news-01.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-02.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-03.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-01.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-02.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-03.png'},
+                        {title: 'тусовка в офисе 2023', image: '/news-01.png'}]}
                     />
                 }
             </div>
