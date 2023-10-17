@@ -81,7 +81,9 @@ export default function Header() {
                             </Link>
                         </nav>
                     ))}
-                    <Button title="оставить заявку" onClick={(): void => undefined} />
+                    <Link href={'/#contact-us'}>
+                        <Button title="оставить заявку" onClick={(): void => {}} />
+                    </Link>
                 </div>
 
                 <button

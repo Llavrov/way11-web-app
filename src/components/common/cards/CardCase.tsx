@@ -20,7 +20,7 @@ export default function CardCase({tags, photo, background, description}: TCardCa
             <div
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="relative w-[790px] h-[600px] lg:h-[392px] max-w-[790px] lg:max-w-full p-6 lg:pr-0 overflow-hidden sm:py-4 rounded-10 lg:rounded-5"
+                className="relative cursor-pointer w-[790px] h-[600px] lg:h-[392px] max-w-[790px] lg:max-w-full p-6 lg:pr-0 overflow-hidden sm:py-4 rounded-10 lg:rounded-5"
                 style={{ backgroundColor: background }}
             >
                 <div className="absolute flex gap-2 z-10">

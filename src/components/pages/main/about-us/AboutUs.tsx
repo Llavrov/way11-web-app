@@ -8,17 +8,17 @@ const LIST_OF_NEWS = [
     {
         image: '/about-us-01.png',
         link: '/',
-        title: '8 стартапов </br> с нуля',
+        title: '8 стартапов с нуля',
     },
     {
         image: '/about-us-02.png',
         link: '/',
-        title: 'Российский и </br> зарубежный рынок',
+        title: 'Российский и зарубежный рынок',
     },
     {
         image: '/about-us-03.png',
         link: '/',
-        title: '№2 Ad‑Unions за </br> 2022 год',
+        title: '№2 Ad‑Unions за 2022 год',
     }
 ];
 
@@ -31,7 +31,7 @@ export default function AboutUs() {
                         <TagGray title="наши успехи" />
                     </div>
                     <h1 className="text-white text-heading-l lg:w-full lg:text-3xl lg:leading-9">
-                        Немного о нас
+                        немного о нас
                     </h1>
                 </div>
                 <div className="flex justify-between flex-col min-h-[460px] gap-[30px]">

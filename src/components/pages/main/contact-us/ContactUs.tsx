@@ -8,7 +8,7 @@ import FilePickerComponent from "../../../common/filePickerComponent";
 
 export default function ContactUs() {
     return (
-        <div className="w-full flex relative flex-row lg:flex-col box-border justify-between rounded-[50px] px-[50px] lg:px-4">
+        <div id="contact-us" className="w-full flex relative flex-row lg:flex-col box-border justify-between rounded-[50px] px-[50px] lg:px-4">
             <div className="flex gap-2 flex-col items-left max-w-[470px] lg:max-w-[230px]">
                 <div className="flex">
                     <TagGray title="обратная связь" />

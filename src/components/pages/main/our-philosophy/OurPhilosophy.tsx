@@ -23,9 +23,9 @@ export default function OurPhilosophy() {
                 </p>
             </div>
 
-            <div className="flex items-center justify-center w-full h-[341px] relative">
-                <Image className="absolute top-0 z-10 lg:min-w-[460px] lg:h-full" style={{ mixBlendMode: 'overlay' }} src={'/overlay.png'} alt={'3d model'} width={850} height={360} />
-                <Image className="absolute top-0 lg:top-auto lg:min-w-[460px]" src={'/subtract3d-pic.png'} alt={'3d model'} width={850} height={360} />
+            <div className="flex items-center justify-center w-full h-[671px] relative">
+                <Image className="absolute top-0 z-10 lg:min-w-[460px] h-full" style={{ mixBlendMode: 'overlay' }} src={'/overlay.png'} alt={'3d model'} width={850} height={360} />
+                <Image className="absolute -top-10 lg:top-auto min-w-[1000px] lg:min-w-[460px]" src={'/subtract3d-pic.png'} alt={'3d model'} width={1020} height={920} />
             </div>
         </div>
     );
