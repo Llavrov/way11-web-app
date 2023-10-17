@@ -2,6 +2,7 @@ import { motion, useScroll, Variants } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import TagGray from "./tagGray";
 
+export const TABLET = 1370;
 
 const fadeIdVariants = {
     hidden: {
@@ -33,22 +34,24 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
 
     useEffect(() => {
         const updateOpacity = () => {
-            // @ts-ignore
-            const innerHeightOfContainer = String(container.current?.getBoundingClientRect()?.height - 800);
-            // @ts-ignore
-            const distanceFromTop = utpRef?.current?.getBoundingClientRect()?.top + window.scrollY;
-            const scrollRange = [distanceFromTop, distanceFromTop + +innerHeightOfContainer + 500];
-            const scrollProgress = (scrollY.get() - scrollRange[0]) / (scrollRange[1] - scrollRange[0]);
+            if ((window && window?.innerWidth) >= TABLET) {
+                // @ts-ignore
+                const innerHeightOfContainer = String(container.current?.getBoundingClientRect()?.height - 800);
+                // @ts-ignore
+                const distanceFromTop = utpRef?.current?.getBoundingClientRect()?.top + window.scrollY;
+                const scrollRange = [distanceFromTop, distanceFromTop + +innerHeightOfContainer + 500];
+                const scrollProgress = (scrollY.get() - scrollRange[0]) / (scrollRange[1] - scrollRange[0]);
 
-            if (scrollProgress > -0.08 && scrollProgress < 1 && window.innerWidth >= +innerHeightOfContainer) {
-                setPosition('fixed');
-                setTop('120px')
-            } else if (scrollProgress >= 1) {
-                setPosition('relative');
-                setTop(+innerHeightOfContainer + 620)
-            } else {
-                setPosition('relative');
-                setTop('0px')
+                if (scrollProgress > -0.08 && scrollProgress < 1 && window.innerWidth >= +innerHeightOfContainer) {
+                    setPosition('fixed');
+                    setTop('120px')
+                } else if (scrollProgress >= 1) {
+                    setPosition('relative');
+                    setTop(+innerHeightOfContainer + 620)
+                } else {
+                    setPosition('relative');
+                    setTop('0px')
+                }
             }
         };
 
@@ -59,7 +62,7 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
         <motion.div
             ref={utpRef}
         >
-            <motion.div className='h-[200px] pt-10 opacity-1'
+            <motion.div className='h-[200px] lg:h-auto pt-10 opacity-1'
                 variants={fadeIdVariants}
                 initial="hidden"
                 whileInView="animationOne"
@@ -69,7 +72,7 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
                     <div className="flex">
                         <TagGray title={tagText} />
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0">
+                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">
                         {title}
                     </h2>
                 </motion.div>

@@ -23,6 +23,9 @@ const headerVariants = {
 export default function HeaderMenu() {
     return (
         <motion.div
+            style={{
+                overscrollBehavior: 'contain',
+            }}
             className="w-full h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
             variants={headerVariants}
             initial='hidden'

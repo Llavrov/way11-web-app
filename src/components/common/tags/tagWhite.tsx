@@ -6,7 +6,7 @@ type TTag = {
 
 function TagWhite({title}: TTag) {
     return (
-        <span className="rounded-[100px] py-[10px] px-[20px] box-border text-18 text-black bg-white">
+        <span className="rounded-[100px] py-[10px] px-[20px] box-border text-18 lg:text-text-s text-black bg-white">
             {title}
         </span>
     )

@@ -16,7 +16,7 @@ export default function MainPage() {
         <div className="flex flex-col items-center w-full overflow-hidden justify-between">
             <PreviewBlock />
 
-            <section className="flex flex-col items-center w-full gap-[240px] py-[120px]">
+            <section className="flex flex-col items-center w-full gap-[240px] lg:gap-[120px] py-[120px] lg:py-15">
                 <AboutUs />
                 <Cases />
 

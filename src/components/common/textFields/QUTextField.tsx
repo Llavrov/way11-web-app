@@ -1,6 +1,6 @@
 import InputAdornment from '@mui/material/InputAdornment';
 import TextField from '@mui/material/TextField';
-import { type ReactElement } from 'react';
+import {type ReactElement, useEffect, useState} from 'react';
 import { type QUTextFieldProps } from './QUTextFieldProps';
 
 export default function QUTextField({
@@ -17,6 +17,13 @@ export default function QUTextField({
     className,
     ...params
 }: QUTextFieldProps): ReactElement {
+
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMobile((window && window?.innerWidth <= 768));
+    }, [])
+
     return (
         <TextField
             {...params}
@@ -36,8 +43,8 @@ export default function QUTextField({
                             border: '0px solid black',
                             borderColor: '#8E8E93',
                         },
-                        color: 'rgba(142, 142, 147, 1)',
-                        fontSize: '28px',
+                        color: '#fff',
+                        fontSize: isMobile ? '28px' : '18px',
                     },
                     '.MuiOutlinedInput-notchedOutline': {
                         border: '0px solid #8E8E93',
@@ -47,8 +54,8 @@ export default function QUTextField({
                     background: 'rgba(142, 142, 147, 0.08)',
                     color: 'rgba(142, 142, 147, 0.24)',
                     transition: '0.5s',
-                    height: '80px',
-                    fontSize: '24px',
+                    height: isMobile ? '80px' : '58px',
+                    fontSize: isMobile ? '24px' : '16px',
                 },
             }}
             style={style}

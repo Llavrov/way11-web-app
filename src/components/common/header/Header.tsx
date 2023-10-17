@@ -55,7 +55,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`w-full h-[140px] flex flex-row justify-between fixed ${openMenu ? 'z-[999]' : ''} z-10 lg:h-[90px]`}>
+            <header className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[90px]`}>
                 <div className="relative z-[999] flex gap-10"
                 >
                     <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">
@@ -66,7 +66,7 @@ export default function Header() {
                             alt={'logotype way11'}
                         />
                     </Link>
-                    <nav className="flex items-center h-[110px] block lg:hidden">
+                    <nav className="flex items-center h-[110px] lg:hidden">
                         <a href="mailto:mail@studioway11.com" className="text-20 text-white">
                             mail@studioway11.com
                         </a>

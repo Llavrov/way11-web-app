@@ -27,12 +27,8 @@ export default function CardsSwiper({
 
 
     return (
-        <div className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px]">
+        <div className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px] lg:pl-4 lg:ml-0">
             <Swiper
-                style={{
-                    width: '1186px',
-                    height: '462px',
-                }}
                 modules={[Navigation]}
                 navigation={{
                     prevEl: prevBtn.current ?? '',
@@ -40,7 +36,7 @@ export default function CardsSwiper({
                 }}
                 loop={true}
                 slidesPerGroup={1}
-                initialSlide={0}
+                initialSlide={(window && window?.innerWidth >= 768) ? 1 : 0}
                 slidesPerView={3}
                 breakpoints={sliderSettings}
                 onBeforeInit={(swiper) => {
@@ -48,13 +44,13 @@ export default function CardsSwiper({
                     swiperRef.current = swiper;
                 }}
                 effect="fade"
-                className="pr-[400px]"
+                className="w-[1186px] lg:w-full lg:h-[367px] h-[462px] pr-[400px] lg:pr-0"
             >
                 {cards &&
                     cards.map(({ title, image }, index) => (
                         <SwiperSlide
                             key={title}
-                            className={`swiper-slide max-w-[390px]`}
+                            className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px]`}
                         >
                             <CardOfNews title={title} image={image} link={'/'} />
                         </SwiperSlide>

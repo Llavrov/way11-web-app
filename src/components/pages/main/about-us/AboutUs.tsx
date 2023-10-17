@@ -24,18 +24,18 @@ const LIST_OF_NEWS = [
 
 export default function AboutUs() {
     return (
-        <div className="w-full h-[530px] flex flex-col items-center px-[50px] box-border">
-            <div className="w-full flex justify-between h-[210px]">
-                <div className="max-w-[560px] flex flex-col gap-2">
+        <div className="w-full h-[530px] flex flex-col items-center px-[50px] md:px-0 box-border">
+            <div className="w-full flex lg:flex-col justify-between h-[210px] lg:gap-6">
+                <div className="max-w-[560px] flex flex-col gap-2 lg:px-4">
                     <div className="flex">
                         <TagGray title="наши успехи" />
                     </div>
-                    <h1 className="text-white text-heading-l">
+                    <h1 className="text-white text-heading-l lg:w-full lg:text-3xl lg:leading-9">
                         Немного о нас
                     </h1>
                 </div>
-                <div className="flex justify-between flex-col gap-[30px]">
-                    <div className="flex relative gap-1">
+                <div className="flex justify-between flex-col min-h-[460px] gap-[30px]">
+                    <div className="flex no-scrollbar relative gap-1 lg:min-h-[367px] lg:overflow-x-scroll lg:px-4">
                         {
                             LIST_OF_NEWS.map((cardNewsObj) => (
                                 <CardAboutUs key={cardNewsObj.title} {...cardNewsObj} />
@@ -43,7 +43,9 @@ export default function AboutUs() {
                         }
                     </div>
 
-                    <EmptyButton title={'больше о нас'} onClick={() => undefined}  />
+                    <div className="w-full lg:px-4">
+                        <EmptyButton title={'больше о нас'} onClick={() => undefined} />
+                    </div>
                 </div>
             </div>
         </div>
