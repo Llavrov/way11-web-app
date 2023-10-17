@@ -1,9 +1,5 @@
 'use client';
 
-import Link from "next/link";
-import CardCase from "@/components/common/cards/CardCase";
-import EmptyButton from "@/components/common/buttons/emptyButton";
-import TagGray from "@/components/common/tags/tagGray";
 import Tag from "@/components/common/tags/tag";
 import {useState} from "react";
 import Epr from "@/components/pages/cases/epr";

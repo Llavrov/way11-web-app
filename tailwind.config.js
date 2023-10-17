@@ -12,6 +12,7 @@ module.exports = {
       },
       colors: {
         'tag-gray': '#8C8C8C',
+        gray: '#676767',
       },
       backgroundPosition: {
         top_bg: 'top -60px',
@@ -54,6 +55,7 @@ module.exports = {
         'heading-xl': ['38px', { fontWeight: '600' }],
         'heading-xxl': ['52px', { fontWeight: '600' }],
         'text-s': ['12px', { lineHeight: '15px' }],
+        'em-m': ['1.5rem'],
         'text-s-bold': ['12px', { lineHeight: '15px', fontWeight: '700' }],
         'text-s-height': ['12px', { lineHeight: '20px' }],
         'text-sm': ['14px', { lineHeight: '18px' }],
@@ -94,6 +96,8 @@ module.exports = {
         'icon-2': '32px',
       },
       screens: {
+        flg: { min: '1440px' },
+        blg: { max: '1440px' },
         large: { min: '1279px', max: '1311px' },
         big: { min: '1023px', max: '1279px' },
         // => @media (max-width: 1279px) { ... }

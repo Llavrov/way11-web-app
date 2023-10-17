@@ -12,6 +12,12 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   font-family: WorkSans, 'sans-serif';
 }
 
+@layer base {
+  html {
+    scroll-behavior: smooth !important;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;

@@ -20,7 +20,7 @@ export default function CardCase({tags, photo, background, description}: TCardCa
             <div
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="relative cursor-pointer w-[790px] h-[600px] lg:h-[392px] max-w-[790px] lg:max-w-full p-6 lg:pr-0 overflow-hidden sm:py-4 rounded-10 lg:rounded-5"
+                className="relative cursor-pointer w-[790px] h-[600px] lg:h-[392px] max-w-[790px] flg:w-[60vw] flg:h-[60vh] flg:max-w-[calc(60vw-50px)] lg:max-w-full p-6 lg:pr-0 overflow-hidden sm:py-4 rounded-10 lg:rounded-5"
                 style={{ backgroundColor: background }}
             >
                 <div className="absolute flex gap-2 z-10">
@@ -35,13 +35,14 @@ export default function CardCase({tags, photo, background, description}: TCardCa
                     style={{ transition: '0.5s', opacity: hover ? 1 : 0 }}
                     className="flex justify-end items-end absolute lg:hidden top-0 left-0 rounded-10 w-full h-full border border-solid border-white bg-card-hover"
                 >
+                    <Image className="cursor-pointer absolute top-5 right-5" src={'/svg/arrow-right.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
                     <p className="text-white text-20 pb-7 pr-7 max-w-[372px]">
                         {description}
                     </p>
                 </div>
 
                 <div className="w-full h-full flex justify-center items-center box-border">
-                    <Image className="aspect-video box-border lg:h-[248px] lg:w-auto object-cover rounded-5" src={photo} width={658} height={375} alt={title} />
+                    <Image className="aspect-video box-border lg:h-[248px] flg:w-[90%] flg:h-[75%] lg:w-auto object-cover rounded-5" src={photo} width={658} height={375} alt={title} />
                 </div>
             </div>
 

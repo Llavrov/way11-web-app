@@ -21,7 +21,7 @@ export default function QUTextField({
     const [isMobile, setIsMobile] = useState(false);
 
     useEffect(() => {
-        setIsMobile((window && window?.innerWidth <= 768));
+        setIsMobile((window && window?.innerWidth) >= 768);
     }, [])
 
     return (
