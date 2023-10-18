@@ -55,9 +55,9 @@ export default function Footer() {
 
             <nav className="w-[70%] lg:max-w-[750px] bg-[#252525] flex px-[80px] py-10 rounded-[30px] lg:p-5 md:py-4 md:flex-col md:gap-10 lg:w-full">
                 <div className="w-[50%] md:w-full flex flex-col justify-between">
-                    <span >
+                    <span>
                         <h2 className="text-[#878787]">мы в соцсетях</h2>
-                        <ul className="flex gap-2 flex-wrap w-100 py-3 md:px-0">
+                        <ul className="flex gap-2 flex-wrap w-[80%] py-3 md:px-0">
                             {
                                 SOCIAL.map(({ link, title }) => (
                                     <li key={title}>
