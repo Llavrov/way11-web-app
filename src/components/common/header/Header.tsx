@@ -39,7 +39,7 @@ export default function Header() {
     const [isOpen, setOpen] = useState(false);
     const [scrollTop, setScrollTop] = useState({
         lastScroll: 0,
-        isScrollTop: false,
+        isScrollTop: true,
         lastUpdate: 0
     });
     const [opacity, setOpacity] = useState(false);
