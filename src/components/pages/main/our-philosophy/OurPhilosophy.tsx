@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function OurPhilosophy() {
     return (
-        <div className="w-[calc(100vw-100px)] lg:w-[calc(100vw-32px)] overflow-hidden flex h-[calc(100vh-190px)] lg:h-[507px] px-[50px] lg:px-4 relative flex-col box-border justify-between items-center bg-white rounded-[50px] lg:rounded-5">
+        <div className="w-[calc(100vw-100px)] flg:min-h-[900px] lg:w-[calc(100vw-32px)] overflow-hidden flex h-[calc(100vh-190px)] lg:h-[507px] px-[50px] pt-[50px] lg:px-4 relative flex-col box-border justify-between items-center bg-white rounded-[50px] lg:rounded-5">
             <div className="flex flex-col items-center justify-center gap-[30px] lg:gap-6 h-[380px]">
                 <div className="flex gap-6 flex-col items-center">
                     <div className="flex">
