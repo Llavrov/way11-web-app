@@ -33,9 +33,12 @@ export default function QUMultiLineTextField({
                         border: '0px solid #8E8E93',
                         borderColor: '#8E8E93',
                     },
+                    '& textarea::placeholder': {
+                        color: 'rgba(142, 142, 147, 0.24)'
+                    },
+                    color: 'white',
                     borderRadius: '20px',
                     background: 'rgba(142, 142, 147, 0.08)',
-                    color: 'rgba(142, 142, 147, 0.24)',
                     transition: '0.5s',
                     height: '230px',
                     fontSize: '24px',
