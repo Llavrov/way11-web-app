@@ -29,6 +29,7 @@ module.exports = {
       backgroundColor: {
         gray: '#8E8E93',
         'base-gray': '#2D2D2D',
+        header: '#101010',
         blue: '#007FE0',
         'border-gray': 'rgba(140, 140, 140, 0.4)',
         'tag-gray': '#8C8C8C',

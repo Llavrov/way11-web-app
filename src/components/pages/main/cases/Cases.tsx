@@ -1,7 +1,6 @@
 import Link from "next/link";
 import CardCase from "@/components/common/cards/CardCase";
 import EmptyButton from "@/components/common/buttons/emptyButton";
-import { useTransform, motion, useScroll } from "framer-motion";
 import TagSticky from "@/components/common/tags/tagSticky";
 import { useEffect, useRef, useState } from "react";
 

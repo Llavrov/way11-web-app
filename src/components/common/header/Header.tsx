@@ -3,9 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/common/buttons/button";
-import { useState } from "react";
+import {useEffect, useRef, useState} from "react";
 import HeaderMenu from "./headerMenu";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation, useScroll } from "framer-motion";
+import {TABLET} from "@/components/common/tags/tagSticky";
 
 const TABS = [
     {
@@ -34,9 +35,24 @@ const path03Variants = {
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
     const [isOpen, setOpen] = useState(false);
+    const [opacity, setOpacity] = useState(false);
     const path01Controls = useAnimation();
     const path02Controls = useAnimation();
     const path03Controls = useAnimation();
+
+    const { scrollY } = useScroll();
+
+    useEffect(() => {
+        const updateOpacity = () => {
+            if (window && scrollY.get() >= window?.innerHeight ) {
+                setOpacity(true);
+            } else {
+                setOpacity(false);
+            }
+        };
+
+        scrollY.on('change', updateOpacity);
+    }, [scrollY]);
 
     const changeMenuState = async (e: boolean) => {
         setOpen(!isOpen);
@@ -66,29 +82,33 @@ export default function Header() {
                             alt={'logotype way11'}
                         />
                     </Link>
-                    <nav className="flex items-center h-[110px] lg:hidden">
+                    <nav className="flex items-center h-[100px] lg:hidden">
                         <a href="mailto:mail@studioway11.com" className="text-20 text-white">
                             mail@studioway11.com
                         </a>
                     </nav>
                 </div>
 
-                <div className="flex items-center gap-6 relative h-[110px] pr-[50px] lg:hidden">
-                    {TABS.map(({ link, title }) => (
-                        <nav key={title}>
-                            <Link href={link} className="text-20 text-white">
-                                {title}
-                            </Link>
-                        </nav>
-                    ))}
-                    <Link href={'/#contact-us'}>
-                        <Button title="оставить заявку" onClick={(): void => {}} />
-                    </Link>
+                <div className="flex items-center justify-end gap-6 relative h-[100px] w-full pr-[50px] lg:hidden">
+                    <div className="flex items-center gap-6 absolute z-[998] ">
+                        {TABS.map(({ link, title }) => (
+                            <nav key={title}>
+                                <Link href={link} className="text-20 text-white">
+                                    {title}
+                                </Link>
+                            </nav>
+                        ))}
+                        <Link href={'/#contact-us'}>
+                            <Button title="оставить заявку" onClick={(): void => {}} />
+                        </Link>
+                    </div>
                 </div>
+
+                <div style={{ opacity: opacity ? 1 : 0 }} className="w-full h-[96px] absolute z-[997] bg-header transition" />
 
                 <button
                     onClick={() => changeMenuState(!openMenu)}
-                    className="hidden h-[90px] flex justify-center items-center pr-[30px] lg:flex">
+                    className="hidden h-[90px] justify-center items-center pr-[30px] lg:flex">
 
                     <svg width='39' height='39' viewBox='0 0 24 24'>
                         <motion.path

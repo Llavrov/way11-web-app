@@ -1,4 +1,4 @@
-import { motion, useScroll, Variants } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import TagGray from "./tagGray";
 
