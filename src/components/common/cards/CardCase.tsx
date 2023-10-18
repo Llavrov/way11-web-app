@@ -42,7 +42,7 @@ export default function CardCase({tags, photo, background, description}: TCardCa
                 </div>
 
                 <div className="w-full h-full flex justify-center items-center box-border">
-                    <Image className="aspect-video box-border lg:h-[248px] flg:w-[90%] flg:h-[75%] lg:w-auto object-cover rounded-5" src={photo} width={658} height={375} alt={title} />
+                    <Image className="aspect-video box-border lg:h-[248px] flg:w-[90%] flg:h-[75%] lg:w-auto object-cover rounded-5" src={photo} width={658} height={375} alt={'image'} />
                 </div>
             </div>
 

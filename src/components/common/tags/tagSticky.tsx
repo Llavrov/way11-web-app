@@ -44,7 +44,7 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
 
                 if (scrollProgress > -0.08 && scrollProgress < 1 && window.innerWidth >= +innerHeightOfContainer) {
                     setPosition('fixed');
-                    setTop('120px')
+                    setTop('0')
                 } else if (scrollProgress >= 1) {
                     setPosition('relative');
                     setTop(+innerHeightOfContainer + 620)
@@ -62,7 +62,7 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
         <motion.div
             ref={utpRef}
         >
-            <motion.div className='h-[200px] lg:h-auto pt-10 opacity-1'
+            <motion.div className='h-[200px] lg:h-auto pt-[50px] opacity-1'
                 variants={fadeIdVariants}
                 initial="hidden"
                 whileInView="animationOne"

@@ -1,8 +1,4 @@
-import Link from "next/link";
-import CardCase from "@/components/common/cards/CardCase";
-import EmptyButton from "@/components/common/buttons/emptyButton";
 import CardOfService from "@/components/common/cards/CardOfService";
-import TagGray from "@/components/common/tags/tagGray";
 import {useEffect, useRef, useState} from "react";
 import TagSticky from "@/components/common/tags/tagSticky";
 

@@ -6,7 +6,6 @@ import Button from "@/components/common/buttons/button";
 import {useEffect, useRef, useState} from "react";
 import HeaderMenu from "./headerMenu";
 import { motion, useAnimation, useScroll } from "framer-motion";
-import {TABLET} from "@/components/common/tags/tagSticky";
 
 const TABS = [
     {
@@ -32,9 +31,17 @@ const path03Variants = {
     closed: { d: 'M0 19.5L24 19.5', opacity: 1 },
 }
 
+export const HEADER_HEIGHT = 140;
+export const ONE_SECOND = 1000;
+
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);
     const [isOpen, setOpen] = useState(false);
+    const [scrollTop, setScrollTop] = useState({
+        lastScroll: 0,
+        isScrollTop: false,
+        lastUpdate: 0
+    });
     const [opacity, setOpacity] = useState(false);
     const path01Controls = useAnimation();
     const path02Controls = useAnimation();
@@ -44,15 +51,29 @@ export default function Header() {
 
     useEffect(() => {
         const updateOpacity = () => {
-            if (window && scrollY.get() >= window?.innerHeight ) {
+            if (window && scrollY.get() >= HEADER_HEIGHT ) {
                 setOpacity(true);
             } else {
                 setOpacity(false);
             }
+
+            if (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND) {
+                setScrollTop({
+                    lastScroll: scrollY.get(),
+                    isScrollTop: true,
+                    lastUpdate: Date.now() - scrollTop.lastUpdate,
+                })
+            } else {
+                setScrollTop({
+                    lastScroll: scrollY.get(),
+                    isScrollTop: false,
+                    lastUpdate: Date.now() - scrollTop.lastUpdate,
+                })
+            }
         };
 
         scrollY.on('change', updateOpacity);
-    }, [scrollY]);
+    }, [scrollY, scrollTop]);
 
     const changeMenuState = async (e: boolean) => {
         setOpen(!isOpen);
@@ -71,7 +92,13 @@ export default function Header() {
 
     return (
         <>
-            <header className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[90px]`}>
+            <header
+                style={{
+                    transition: '0.5s',
+                    top: (scrollTop.isScrollTop) ? '0' : '-140px',
+                    position: opacity ? 'fixed' : 'absolute'
+                }}
+                className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[90px]`}>
                 <div className="relative z-[999] flex gap-10"
                 >
                     <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">

@@ -49,7 +49,7 @@ export default function CardsSwiper({
                 {cards &&
                     cards.map(({ title, image }, index) => (
                         <SwiperSlide
-                            key={title}
+                            key={title + index}
                             className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px]`}
                         >
                             <CardOfNews title={title} image={image} link={'/'} />
