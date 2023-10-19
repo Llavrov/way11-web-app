@@ -51,7 +51,7 @@ export default function PreviewBlock() {
 
     return (
         <div id="#preview" className="w-full h-screen overflow-hidden flex bg-black relative flex-col items-center justify-end p-[50px] box-border lg:p-[10px] lg:pb-[60px]">
-            <div className="w-full flex justify-between h-[210px] absolute z-10 px-[50px] box-border lg:justify-end lg:flex-col lg:px-[20px] lg:h-[400px]">
+            <div className="w-full flex justify-between h-[210px] absolute z-10 px-[50px] box-border lg:justify-end lg:flex-col lg:px-[20px] lg:gap-6 lg:h-[400px]">
                 <div className="max-w-[560px] lg:w-full">
                     <h1 className="text-white text-heading-l-bold font-sans lg:text-3xl lg:leading-9">
                         Путь в тысячу миль начинается с одного шага

@@ -18,9 +18,9 @@ export default function AboutUsPage() {
                         height={750}
                     />
                 </div>
-                <div className="absolute bottom-[50px] w-full flex justify-between h-[145px] px-[50px]">
+                <div className="absolute bottom-[50px] w-full flex justify-between h-[145px] px-[50px] lg:justify-end lg:flex-col lg:px-[20px] lg:h-[400px]">
                     <div className="flex items-start gap-8 max-w-[280px]">
-                        <h1 className="text-heading-l text-white leading-[78px]">
+                        <h1 className="text-heading-l text-white leading-[78px] lg:text-3xl lg:leading-9">
                             о студии
                             <p className="text-gray m-0">с 2022</p>
                         </h1>
@@ -34,12 +34,12 @@ export default function AboutUsPage() {
                 </div>
             </div>
 
-            <div className="w-full flex justify-between flex-wrap sm:p-3 px-[50px]">
+            <div className="w-full flex justify-between flex-wrap sm:p-3 px-[50px] lg:px-5 lg:gap-8">
                 <div className="flex flex-col gap-2">
                     <div className="flex">
                         <TagGray title="наша миссия" />
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0">приоритеты</h2>
+                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">приоритеты</h2>
                 </div>
 
                 <div className="w-full max-w-[742px] flex flex-col gap-[70px]">
@@ -47,12 +47,12 @@ export default function AboutUsPage() {
                 </div>
             </div>
 
-            <div className="w-full flex justify-between flex-wrap sm:p-3 px-[50px]">
+            <div className="w-full flex justify-between flex-wrap sm:p-3 px-[50px] lg:px-5 lg:gap-8">
                 <div className="flex flex-col gap-2">
                     <div className="flex">
                         <TagGray title="всегда на связи" />
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0">наши эксперты</h2>
+                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">наши эксперты</h2>
                 </div>
 
                 <div className="w-full max-w-[742px] flex flex-col gap-[70px]">

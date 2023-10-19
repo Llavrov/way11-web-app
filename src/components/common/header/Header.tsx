@@ -98,10 +98,10 @@ export default function Header() {
                     top: (scrollTop.isScrollTop) ? '0' : '-140px',
                     position: opacity ? 'fixed' : 'absolute'
                 }}
-                className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[90px]`}>
+                className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[96px]`}>
                 <div className="relative z-[999] flex gap-10"
                 >
-                    <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[90px]">
+                    <Link href={'/'} className="w-[156px] h-full p-5 pl-[50px] pt-[35px] box-border bg-white rounded-br-[20px] lg:pl-[20px] lg:pt-[20px] lg:w-[96px]">
                         <Image
                             width={84}
                             height={86}
@@ -131,11 +131,11 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div style={{ opacity: opacity ? 1 : 0 }} className="w-full h-[96px] absolute z-[997] bg-header transition" />
+                <div style={{ opacity: opacity ? 1 : 0 }} className="w-full h-[96px] absolute z-[990] bg-header transition" />
 
                 <button
                     onClick={() => changeMenuState(!openMenu)}
-                    className="hidden h-[90px] justify-center items-center pr-[30px] lg:flex">
+                    className="hidden h-[96px] justify-center items-center pr-[30px] lg:flex absolute right-5 z-[998]">
 
                     <svg width='39' height='39' viewBox='0 0 24 24'>
                         <motion.path
