@@ -44,7 +44,7 @@ export default function AboutUs() {
                         }
                     </div>
 
-                    <Link href={'/about-us'} className="w-full lg:px-4">
+                    <Link href={'/about-us'} className="w-full lg:px-4 no-scrollbar">
                         <EmptyButton title={'больше о нас'} onClick={() => {}} />
                     </Link>
                 </div>
