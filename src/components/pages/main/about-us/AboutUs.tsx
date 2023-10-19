@@ -3,6 +3,7 @@
 import EmptyButton from "@/components/common/buttons/emptyButton";
 import TagGray from "@/components/common/tags/tagGray";
 import CardAboutUs from "@/components/common/cards/CardAboutUs";
+import Link from "next/link";
 
 const LIST_OF_NEWS = [
     {
@@ -43,9 +44,9 @@ export default function AboutUs() {
                         }
                     </div>
 
-                    <div className="w-full lg:px-4">
-                        <EmptyButton title={'больше о нас'} onClick={() => undefined} />
-                    </div>
+                    <Link href={'/about-us'} className="w-full lg:px-4">
+                        <EmptyButton title={'больше о нас'} onClick={() => {}} />
+                    </Link>
                 </div>
             </div>
         </div>

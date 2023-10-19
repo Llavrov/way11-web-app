@@ -6,6 +6,7 @@ import CardOfService from "@/components/common/cards/CardOfService";
 import Image from "next/image";
 import Scrollbar from "@/components/common/scrollbar";
 import EmptyButton from "@/components/common/buttons/emptyButton";
+import Link from "next/link";
 
 type TCasePage = {
     title: string;
@@ -84,9 +85,9 @@ export default function CasePage({ title, tag, description, image, imageBackgrou
                 <Scrollbar images={['/cases/imag6.png', '/cases/imag6.png', '/cases/imag6.png', '/cases/imag6.png']} />
 
                 <div className="w-full flex justify-end px-[50px] lg:px-5">
-                    <div className="w-full max-w-[790px] lg:max-w-full">
-                        <EmptyButton title="отправить" onClick={() => {}} />
-                    </div>
+                    <Link href={'/cases'} className="w-full max-w-[790px] lg:max-w-full">
+                        <EmptyButton title="Смотреть другие проекты" onClick={() => {}} />
+                    </Link>
                 </div>
             </div>
         </div>
