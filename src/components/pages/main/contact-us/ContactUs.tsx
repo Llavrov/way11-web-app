@@ -22,7 +22,7 @@ export default function ContactUs() {
                     </p>
                 </div>
 
-                <Link href={'#preview'}>
+                <Link href={'#preview'} className="lg:hidden">
                     <Image src={"/scroll-up.svg"} alt="image picker" width={104} height={104} />
                 </Link>
             </div>

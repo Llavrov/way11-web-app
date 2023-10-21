@@ -42,7 +42,7 @@ export default function OurServices() {
         <div ref={scrollRef} className="w-full flex justify-between flex-wrap px-[50px] sm:p-3 ">
             {scrollRef ? <TagSticky heightArea={margins[1]} container={scrollRef} title={'в чём мы сильны'} tagText={'наши услуги'} /> : (<></>)}
 
-            <div className="w-full max-w-[742px] flg:max-w-[54vw] flex flex-col gap-[70px] mt-[92px] lg:mt-[40px]">
+            <div className="w-full max-w-[742px] flg_min:max-w-[50vw] feg:max-w-[60vw] flex flex-col gap-[70px] mt-[92px] lg:mt-[40px]">
                 {
                     CARDS_OF_CASES.map(({tag, description}) => (
                         <CardOfService key={tag} tag={tag} description={description} />

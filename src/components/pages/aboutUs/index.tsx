@@ -3,8 +3,22 @@
 import TagGray from "@/components/common/tags/tagGray";
 import CardOfService from "@/components/common/cards/CardOfService";
 import Image from "next/image";
+import ExpertsComponent, {TExpert} from "@/components/pages/aboutUs/experts";
+import {useState} from "react";
 
 export default function AboutUsPage() {
+    const [selectTeammate, setSelectTeammate] = useState<TExpert>(
+        {
+            name: 'Вадим Колесников',
+            role: 'Должность',
+            image: '/vadim.png',
+            socialNetworks: {
+                tg: '',
+                inst: ''
+            }
+        },
+    );
+
     return (
         <div className="flex flex-col items-center w-full relative overflow-hidden justify-between pb-[120px] gap-[120px] box-border">
             <div className="h-screen w-full relative">
@@ -48,15 +62,19 @@ export default function AboutUsPage() {
             </div>
 
             <div className="w-full flex justify-between flex-wrap sm:p-3 px-[50px] lg:px-5 lg:gap-8">
-                <div className="flex flex-col gap-2">
-                    <div className="flex">
-                        <TagGray title="всегда на связи" />
+                <div className="flex flex-col gap-5">
+                    <div className="flex flex-col gap-2">
+                        <div className="flex">
+                            <TagGray title="всегда на связи" />
+                        </div>
+                        <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">наши эксперты</h2>
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">наши эксперты</h2>
+
+                    <Image className="w-[540px] h-[540px] object-cover rounded-5" src={selectTeammate.image} alt={'picture of teammate'} width={540} height={540} />
                 </div>
 
-                <div className="w-full max-w-[742px] flex flex-col gap-[70px]">
-                    <CardOfService tag="тезис" description="Пользователь создаёт мероприятие за 1 минуту и может отправлять ссылку для регистрации своим зрителям. В день вебинара по базе зарегистрированных пользователей пройдет рассылка с напоминанием. Чтобы создать вебинар понадобится потратить несколько минут: подключить эфир через zoom или YouTube, поставить модератора на эфир и настроить сценарий комментариев. По завершению эфира пользователю предоставляется возможность создать автовебинар с сохранением комментариев, сценария всплывающих окон. Стоимость проведения вебинара списывается с “баланса” пользователя автоматически." />
+                <div className="w-full max-w-[742px] flg_min:max-w-[50vw] feg:max-w-[60vw]  flex flex-col gap-[70px]">
+                    <ExpertsComponent onSelectTeammate={setSelectTeammate} />
                 </div>
             </div>
         </div>

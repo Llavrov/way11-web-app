@@ -13,6 +13,7 @@ module.exports = {
       colors: {
         'tag-gray': '#8C8C8C',
         gray: '#676767',
+        orange: '#EF8354',
       },
       backgroundPosition: {
         top_bg: 'top -60px',
@@ -27,6 +28,7 @@ module.exports = {
         5: '5deg',
       },
       backgroundColor: {
+        orange: '#EF8354',
         gray: '#8E8E93',
         'base-gray': '#2D2D2D',
         header: '#101010',
@@ -98,6 +100,8 @@ module.exports = {
       },
       screens: {
         flg: { min: '1440px' },
+        flg_min: { min: '1440px', max: '1640px' },
+        feg: { min: '1640px' },
         blg: { max: '1440px' },
         large: { min: '1279px', max: '1311px' },
         big: { min: '1023px', max: '1279px' },
