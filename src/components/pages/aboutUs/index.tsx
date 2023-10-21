@@ -4,9 +4,15 @@ import TagGray from "@/components/common/tags/tagGray";
 import CardOfService from "@/components/common/cards/CardOfService";
 import Image from "next/image";
 import ExpertsComponent, {TExpert} from "@/components/pages/aboutUs/experts";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 export default function AboutUsPage() {
+    const [isMobile, setIsMobile] = useState(false);
+
+    useEffect(() => {
+        setIsMobile((window && window?.innerWidth) <= 768);
+    }, [])
+
     const [selectTeammate, setSelectTeammate] = useState<TExpert>(
         {
             name: 'Вадим Колесников',
@@ -70,10 +76,14 @@ export default function AboutUsPage() {
                         <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">наши эксперты</h2>
                     </div>
 
-                    <Image className="w-[540px] h-[540px] object-cover rounded-5" src={selectTeammate.image} alt={'picture of teammate'} width={540} height={540} />
+                    {
+                        !isMobile
+                            ? <Image className="w-[540px] h-[540px] object-cover rounded-5" src={selectTeammate.image} alt={'picture of teammate'} width={540} height={540} />
+                            : null
+                    }
                 </div>
 
-                <div className="w-full max-w-[742px] flg_min:max-w-[50vw] feg:max-w-[60vw]  flex flex-col gap-[70px]">
+                <div className="w-full lg:max-w-full max-w-[742px] flg_min:max-w-[50vw] feg:max-w-[60vw] flex flex-col gap-[70px]">
                     <ExpertsComponent onSelectTeammate={setSelectTeammate} />
                 </div>
             </div>
