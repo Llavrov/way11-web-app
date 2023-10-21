@@ -7,6 +7,7 @@ import Lancelot from "@/components/pages/cases/lancelot";
 import BuyNow from "@/components/pages/cases/buyNow";
 import AboutEducation from "@/components/pages/cases/aboutEducation";
 import Sgmk from "@/components/pages/cases/sgmk";
+import Link from "next/link";
 
 const FILTERS = ['все проекты', 'e-commerce', 'образовательные платформы', 'промышленность'];
 
@@ -17,7 +18,7 @@ const CARDS_OF_CASES = {
         background: '#DD622D',
         description: 'Кейс с созданием более доступной среды для наименее защищенных социальных групп.  Фишка проекта в том, что представленные товары имеют более низкую стоимость, за счет подступающего истечения срока годности.'
     },
-    epr: {
+    erp: {
         tags: [ 'ERP', 'промышленность'],
         photo: '/cases/image5.png',
         background: '#7C7AFE',
@@ -66,14 +67,24 @@ export default function CasesPage() {
             </div>
 
             <div className="w-full flex flex-col sm:w-full gap-[120px]">
-                <Epr {...CARDS_OF_CASES["epr"]} />
+                <Link href={'/case/erp'}>
+                    <Epr {...CARDS_OF_CASES["erp"]} />
+                </Link>
                 <div className="w-full flex justify-end">
-                    <Lancelot {...CARDS_OF_CASES["lancelot"]} />
+                    <Link href={'/case/lancelot'}>
+                        <Lancelot {...CARDS_OF_CASES["lancelot"]} />
+                    </Link>
                 </div>
-                <BuyNow {...CARDS_OF_CASES["buyNow"]} />
-                <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
+                <Link href={'/case/buy-now'}>
+                    <BuyNow {...CARDS_OF_CASES["buyNow"]} />
+                </Link>
+                <Link href={'/case/about-education'}>
+                    <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
+                </Link>
                 <div className="w-full flex justify-end">
-                    <Sgmk {...CARDS_OF_CASES["sgmk"]} />
+                    <Link href={'/case/sgmk'}>
+                        <Sgmk {...CARDS_OF_CASES["sgmk"]} />
+                    </Link>
                 </div>
             </div>
         </div>
