@@ -10,7 +10,7 @@ type PageContent = {
     solution: { number: number; content: string; }[];
 };
 
-const PAGES_CONTENT: Record<string, PageContent>  = {
+const PAGES_CONTENT: Record<string, PageContent> = {
     lancelot: {
         title: 'Lancelot',
         tag: 'образовательные платформы',
@@ -25,15 +25,52 @@ const PAGES_CONTENT: Record<string, PageContent>  = {
             },
             {
                 number: 2,
-                content: 'Разрабатываем приложения для IOS и Android, учитывая архитектуру мобильного приложения и особенностей дизайна.'
+                content: 'Разрабатываем приложения для IOS и Android, учитывая архитектуру мобильного приложения и особенности дизайна.'
             },
             {
                 number: 3,
-                content: 'Создаем цифровые продукты: корпоративные и промо-сайты, платформы    и высоко нагруженные системы.'
+                content: 'Создаем цифровые продукты: корпоративные и промо-сайты, платформы и высоко нагруженные системы.'
             },
         ]
     },
+    'buy-now': {
+        title: 'BuyNow',
+        tag: '',
+        description: '',
+        image: '',
+        imageBackground: '',
+        taskAndSolution: '',
+        solution: [],
+    },
+    'erp': {
+        title: 'ERP',
+        tag: '',
+        description: '',
+        image: '',
+        imageBackground: '',
+        taskAndSolution: '',
+        solution: [],
+    },
+    'sgmk': {
+        title: 'SGMK',
+        tag: '',
+        description: '',
+        image: '',
+        imageBackground: '',
+        taskAndSolution: '',
+        solution: [],
+    },
+    'about-education': {
+        title: 'ПРоОбразование',
+        tag: '',
+        description: '',
+        image: '',
+        imageBackground: '',
+        taskAndSolution: '',
+        solution: [],
+    },
 };
+
 
 export default function Page({ params }: { params: { caseId: string }}) {
     return (
