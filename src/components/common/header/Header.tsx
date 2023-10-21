@@ -32,7 +32,7 @@ const path03Variants = {
 }
 
 export const HEADER_HEIGHT = 140;
-export const ONE_SECOND = 1000;
+export const ONE_SECOND = 300;
 
 export default function Header() {
     const [openMenu, setOpenMenu] = useState(false);

@@ -3,6 +3,8 @@ import CardCase from "@/components/common/cards/CardCase";
 import EmptyButton from "@/components/common/buttons/emptyButton";
 import TagSticky from "@/components/common/tags/tagSticky";
 import { useEffect, useRef, useState } from "react";
+import {useScroll} from "framer-motion";
+import {HEADER_HEIGHT, ONE_SECOND} from "@/components/common/header/Header";
 
 const CARDS_OF_CASES = [
     {

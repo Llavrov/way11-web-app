@@ -1,6 +1,7 @@
 import { motion, useScroll } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import TagGray from "./tagGray";
+import {ONE_SECOND} from "@/components/common/header/Header";
 
 export const TABLET = 1370;
 
@@ -31,6 +32,11 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
     const { scrollY } = useScroll();
     const [position, setPosition] = useState<any>('relative');
     const [top, setTop] = useState<any>('0px');
+    const [scrollTop, setScrollTop] = useState({
+        lastScroll: 0,
+        isScrollTop: true,
+        lastUpdate: 0
+    });
 
     useEffect(() => {
         const updateOpacity = () => {
@@ -53,10 +59,24 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
                     setTop('0px')
                 }
             }
+
+            if (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND) {
+                setScrollTop({
+                    lastScroll: scrollY.get(),
+                    isScrollTop: true,
+                    lastUpdate: Date.now() - scrollTop.lastUpdate,
+                })
+            } else {
+                setScrollTop({
+                    lastScroll: scrollY.get(),
+                    isScrollTop: false,
+                    lastUpdate: Date.now() - scrollTop.lastUpdate,
+                })
+            }
         };
 
         scrollY.on('change', updateOpacity);
-    }, [scrollY, utpRef, container]);
+    }, [scrollY, utpRef, container, scrollTop]);
 
     return (
         <motion.div
@@ -67,7 +87,13 @@ function TagSticky({ heightArea, container, title, tagText }: {heightArea: numbe
                 initial="hidden"
                 whileInView="animationOne"
                 exit='exit' 
-                style={{ position, top }}>
+                style={{
+                    position,
+                    top,
+                    paddingTop: (scrollTop.isScrollTop && position !== 'relative') ? '160px' : '50px',
+                    transition: '0.3 padding',
+                }}
+            >
                 <motion.div className="flex flex-col gap-1">
                     <div className="flex">
                         <TagGray title={tagText} />
