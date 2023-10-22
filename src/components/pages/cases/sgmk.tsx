@@ -40,7 +40,7 @@ export default function Sgmk({tags, photo, background, description}: TCardCase) 
             </div>
 
             <div className="w-full h-full flex justify-center items-center box-border">
-                <Image className="aspect-video absolute -bottom-5 rotate-12 box-border object-contain flg:w-[70%] flg:h-[70%]" src={photo} width={658} height={375} alt={title} />
+                <Image className="aspect-video absolute -bottom-5 rotate-12 box-border rounded-5 object-contain flg:w-[70%] flg:h-[70%] lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rotate-0 lg:rounded-r-0" src={photo} width={658} height={375} alt={title} />
             </div>
         </div>
     )

@@ -40,7 +40,7 @@ export default function Epr({tags, photo, background, description}: TCardCase) {
             </div>
 
             <div className="w-full h-full relative flex justify-center items-center box-border">
-                <Image className="absolute bottom-[-25px] aspect-video box-border object-cover flg:w-[80%] flg:h-[80%] rounded-t-5" src={photo} width={658} height={375} alt={title} />
+                <Image className="absolute bottom-[-25px] rounded-5 aspect-video box-border object-cover flg:w-[80%] flg:h-[80%] rounded-t-5 lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rounded-r-0" src={photo} width={658} height={375} alt={title} />
             </div>
         </div>
     )

@@ -19,7 +19,7 @@ export default function BuyNow({tags, photo, background, description}: TCardCase
         <div
             onMouseOver={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
-            className="relative w-full h-[500px] max-w-[550px] flg:w-[40vw] flg:h-[60vh] flg:max-w-[calc(40vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden"
+            className="relative w-full h-[500px] max-w-[550px] flg:w-[40vw] flg:h-[60vh] flg:max-w-[calc(40vw-50px)] lg:max-w-full p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden"
             style={{ backgroundColor: background }}
         >
             <div className="absolute flex gap-2 z-10">
@@ -40,7 +40,7 @@ export default function BuyNow({tags, photo, background, description}: TCardCase
             </div>
 
             <div className="w-full h-full relative flex justify-center items-center box-border">
-                <Image className="aspect-video absolute -right-6 box-border object-left object-cover flg:w-[90%] flg:h-[80%]" src={photo} width={658} height={375} alt={title} />
+                <Image className="aspect-video absolute rounded-5 -right-6 box-border object-left object-cover flg:w-[90%] flg:h-[80%] lg:rounded-r-0" src={photo} width={658} height={375} alt={title} />
             </div>
         </div>
     )

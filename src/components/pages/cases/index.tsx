@@ -14,31 +14,31 @@ const FILTERS = ['все проекты', 'e-commerce', 'образовател�
 const CARDS_OF_CASES = {
     buyNow: {
         tags: [ 'Buy Now', 'E-commercial'],
-            photo: '/cases/image4.png',
+            photo: '/cases/buy-now-01.png',
         background: '#DD622D',
         description: 'Кейс с созданием более доступной среды для наименее защищенных социальных групп.  Фишка проекта в том, что представленные товары имеют более низкую стоимость, за счет подступающего истечения срока годности.'
     },
     erp: {
         tags: [ 'ERP', 'промышленность'],
-        photo: '/cases/image5.png',
+        photo: '/cases/cities-05.png',
         background: '#7C7AFE',
         description: 'Тут должно быть краткое описание проекта, просто в общих словах, что, да как, но примерно в таком объеме текста и ещё чуть-чуть, вот теперь всё. Ну может ещё 1 строчка'
     },
     lancelot: {
         tags: [ 'Lancelot', 'образование'],
-        photo: '/cases/imag6.png',
+        photo: '/cases/lancelot-01.png',
         background: '#007FE0',
         description: 'Тут должно быть краткое описание проекта, просто в общих словах, что, да как, но примерно в таком объеме текста и ещё чуть-чуть, вот теперь всё. Ну может ещё 1 строчка'
     },
     aboutEducation: {
         tags: [ 'ПроОбразование', 'образовательные платформы'],
-        photo: '/cases/image5.png',
+        photo: '/cases/education-02.png',
         background: '#8885FF',
         description: 'Кейс с инновационной курсовой платформой с упором на удобство, стиль и полный функциональный цикл. С четким разделением функционала в зависимости от роли.'
     },
     sgmk: {
         tags: [ 'SGMK', 'промышленность'],
-        photo: '/cases/imag6.png',
+        photo: '/cases/sgmk.png',
         background: '#F09D20',
         description: 'Кейс, как наша команда приняла участие в конкурсе на разработку прототипа для предприятия-лидера в сфере горно-добывающей промышленности. В ходе которого: создали дизайн сайта и провели презентацию по проекту и обобщенной аналитике функционала.'
     }
@@ -48,17 +48,17 @@ export default function CasesPage() {
     const [activeTag, setActiveTag] = useState('все проекты');
 
     return (
-        <div className="flex flex-col items-center w-full overflow-hidden justify-between px-[50px] pt-[200px] pb-[120px] gap-[120px] box-border">
-            <div className="w-full flex justify-between">
+        <div className="flex flex-col items-center w-full overflow-hidden justify-between px-[50px] lg:px-5 pt-[200px] pb-[120px] gap-[120px] box-border">
+            <div className="w-full flex justify-between lg:flex-col">
                 <div>
-                    <h1 className="text-heading-l text-white">все наши кейсы</h1>
-                    <h2 className="text-heading-l text-tag-gray opacity-50">2022-2022</h2>
+                    <h1 className="text-heading-l text-white lg:text-3xl lg:leading-9">все наши кейсы</h1>
+                    <h2 className="text-heading-l text-tag-gray opacity-50 lg:text-3xl lg:leading-9">2022-2022</h2>
                 </div>
 
                 <div className="flex max-w-[395px] flex-wrap gap-[10px]">
                     {
                         FILTERS.map((filter) => (
-                            <div key={filter} onClick={() => setActiveTag(filter)}>
+                            <div className="lg:max-h-[34px]" key={filter} onClick={() => setActiveTag(filter)}>
                                 <Tag title={filter} active={filter === activeTag} />
                             </div>
                         ))
@@ -70,8 +70,8 @@ export default function CasesPage() {
                 <Link href={'/case/erp'}>
                     <Epr {...CARDS_OF_CASES["erp"]} />
                 </Link>
-                <div className="w-full flex justify-end">
-                    <Link href={'/case/lancelot'}>
+                <div className="w-full flex justify-end lg:justify-start">
+                    <Link className="w-full" href={'/case/lancelot'}>
                         <Lancelot {...CARDS_OF_CASES["lancelot"]} />
                     </Link>
                 </div>
@@ -81,8 +81,8 @@ export default function CasesPage() {
                 <Link href={'/case/about-education'}>
                     <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
                 </Link>
-                <div className="w-full flex justify-end">
-                    <Link href={'/case/sgmk'}>
+                <div className="w-full flex justify-end lg:justify-start">
+                    <Link className="w-full" href={'/case/sgmk'}>
                         <Sgmk {...CARDS_OF_CASES["sgmk"]} />
                     </Link>
                 </div>
