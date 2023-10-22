@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import Button from "@/components/common/buttons/button";
-import {useEffect, useRef, useState} from "react";
+import {useEffect, useState} from "react";
 import HeaderMenu from "./headerMenu";
 import { motion, useAnimation, useScroll } from "framer-motion";
 
@@ -43,6 +43,7 @@ export default function Header() {
         lastUpdate: 0
     });
     const [opacity, setOpacity] = useState(false);
+    const [position, setPosition] = useState(false);
     const path01Controls = useAnimation();
     const path02Controls = useAnimation();
     const path03Controls = useAnimation();
@@ -51,13 +52,15 @@ export default function Header() {
 
     useEffect(() => {
         const updateOpacity = () => {
-            if (window && scrollY.get() >= HEADER_HEIGHT ) {
+            if (window && scrollY.get() >= HEADER_HEIGHT) {
                 setOpacity(true);
+                setPosition(true);
             } else {
                 setOpacity(false);
+                setPosition(false);
             }
 
-            if (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND) {
+            if (isOpen || (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND)) {
                 setScrollTop({
                     lastScroll: scrollY.get(),
                     isScrollTop: true,
@@ -77,13 +80,15 @@ export default function Header() {
 
     const changeMenuState = async (e: boolean) => {
         setOpen(!isOpen);
-        setOpenMenu(e)
+        setOpenMenu(e);
 
         if (!isOpen) {
+            setOpacity(false);
             path01Controls.start(path01Variants.open);
             path02Controls.start(path02Variants.open);
             path03Controls.start(path03Variants.open);
         } else {
+            setOpacity(true);
             path01Controls.start(path01Variants.closed);
             path02Controls.start(path02Variants.closed);
             path03Controls.start(path03Variants.closed);
@@ -96,7 +101,7 @@ export default function Header() {
                 style={{
                     transition: '0.5s',
                     top: (scrollTop.isScrollTop) ? '0' : '-140px',
-                    position: opacity ? 'fixed' : 'absolute'
+                    position: position ? 'fixed' : 'absolute'
                 }}
                 className={`w-full h-[140px] flex flex-row justify-between fixed z-[999] ${openMenu ? 'z-[999]' : ''} lg:h-[96px]`}>
                 <div className="relative z-[999] flex gap-10"
@@ -131,7 +136,10 @@ export default function Header() {
                     </div>
                 </div>
 
-                <div style={{ opacity: opacity ? 1 : 0 }} className="w-full h-[96px] absolute z-[990] bg-header transition" />
+                <div
+                    style={{ opacity: opacity ? 1 : 0 }}
+                    className="w-full h-[96px] absolute z-[990] bg-header transition"
+                />
 
                 <button
                     onClick={() => changeMenuState(!openMenu)}

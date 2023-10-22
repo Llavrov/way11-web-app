@@ -91,7 +91,7 @@ export default function RCDropDown({points = []}: RCDropDownProps): ReactElement
                         </AccordionSummary>
                         <AccordionDetails>
                             <div className="flex flex-col gap-4">
-                                <Image className="w-full h-full min-h-[400px] object-cover rounded-5" src={image} alt={'picture of teammate'} width={540} height={540} />
+                                <Image className="w-full h-full min-h-[400px] max-h-[400px] object-cover rounded-5" src={image} alt={'picture of teammate'} width={540} height={540} />
 
                                 <div className="flex gap-2">
                                     {

@@ -5,7 +5,7 @@ import {useState} from "react";
 import TagColor from "@/components/common/tags/tagColor";
 import {TExpert} from "@/components/pages/aboutUs/experts/index";
 
-const EXPERTS = [
+export const EXPERTS = [
     {
         name: 'Вадим Колесников',
         role: 'Должность',
@@ -16,8 +16,8 @@ const EXPERTS = [
         }
     },
     {
-        name: 'Вадим Колесников',
-        role: 'Еще должность',
+        name: 'Жудиниллсон Армандо-Мучачо',
+        role: 'Global teamlead',
         image: '/about-us-01.png',
         socialNetworks: {
             tg: '',
@@ -25,8 +25,8 @@ const EXPERTS = [
         }
     },
     {
-        name: 'Вадим Колесников',
-        role: 'Должность',
+        name: 'Валентин Макаров',
+        role: 'Teamlead',
         image: '/about-us-02.png',
         socialNetworks: {
             tg: '',
@@ -34,8 +34,8 @@ const EXPERTS = [
         }
     },
     {
-        name: 'Вадим Колесников',
-        role: 'Должность',
+        name: 'Николай Коновалов',
+        role: 'Senior UI/UX-дизайнер',
         image: '/about-us-03.png',
         socialNetworks: {
             tg: '',
@@ -43,8 +43,8 @@ const EXPERTS = [
         }
     },
     {
-        name: 'Вадим Колесников',
-        role: 'Должность',
+        name: 'Никита Подгорный',
+        role: 'Коммерческий директор',
         image: '/vadim.png',
         socialNetworks: {
             tg: '',
@@ -52,8 +52,8 @@ const EXPERTS = [
         }
     },
     {
-        name: 'Вадим Колесников',
-        role: 'Должность',
+        name: 'Форрест Гудлак',
+        role: 'Руководитель отдела маркетинга',
         image: '/vadim.png',
         socialNetworks: {
             tg: '',
@@ -82,13 +82,15 @@ export default function ListOfExperts({ onSelectTeammate }: {onSelectTeammate: (
                         <div className="flex justify-between pt-[5px]">
                             <p style={{
                                 color: selectTeammate === index ? '#EF8354' : 'white',
-                            }} className="text-20 text-white max-w-[400px] flg:max-w-[60%] lg:text-[15px] lg:mt-3 lg:font-medium lg:max-w-full">
+                            }}
+                               className="text-20 basis-[30%] text-white max-w-[400px] flg:max-w-[60%] lg:text-[15px] lg:mt-3 lg:font-medium lg:max-w-full"
+                            >
                                 {name}
                             </p>
 
                             <p style={{
                                 color: selectTeammate === index ? '#EF8354' : '#8E8E93',
-                            }} className="text-20 text-white max-w-[400px] flg:max-w-[60%] lg:text-[15px] lg:mt-3 lg:font-medium lg:max-w-full">
+                            }} className="text-20 basis-[30%] text-white max-w-[400px] flg:max-w-[60%] lg:text-[15px] lg:mt-3 lg:font-medium lg:max-w-full">
                                 {role}
                             </p>
 

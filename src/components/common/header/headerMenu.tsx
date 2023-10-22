@@ -34,12 +34,12 @@ export default function HeaderMenu() {
         >
             <div className="flex flex-col gap-[30px] pt-[50px] justify-between">
                 <nav className="flex justify-start items-start leading-[60px] flex-col text-[64px] font-medium">
-                    <Link href={'/'}>кейсы</Link>
-                    <Link href={'/'}>о нас</Link>
+                    <Link href={'/cases'}>кейсы</Link>
+                    <Link href={'/about-us'}>о нас</Link>
                 </nav>
 
                 <div>
-                    <Link href={'/'}>mail@studioway11.com</Link>
+                    <Link href={'/mailto:mail@studioway11.com'}>mail@studioway11.com</Link>
                 </div>
 
                 <span >
@@ -72,9 +72,9 @@ export default function HeaderMenu() {
                 </span>
             </div>
 
-            <div className="h-[200px] flex justify-center items-center">
-                <EmptyButton title="оставить заявку" onClick={() => { }} />
-            </div>
+            <Link href={'/#contact-us'} className="h-[200px] flex justify-center items-center">
+                <EmptyButton title="оставить заявку" onClick={() => {}} />
+            </Link>
         </motion.div>
     )
 }
