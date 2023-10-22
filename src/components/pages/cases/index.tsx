@@ -66,7 +66,7 @@ export default function CasesPage() {
                 </div>
             </div>
 
-            <div className="w-full flex flex-col sm:w-full gap-[120px]">
+            <div className="w-full flex flex-col sm:w-full gap-[120px] lg:gap-[50px]">
                 <Link href={'/case/erp'}>
                     <Epr {...CARDS_OF_CASES["erp"]} />
                 </Link>
