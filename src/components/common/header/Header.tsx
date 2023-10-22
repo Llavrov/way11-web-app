@@ -60,7 +60,7 @@ export default function Header() {
                 setPosition(false);
             }
 
-            if (isOpen || (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND)) {
+            if (isOpen || window && scrollY.get() <= HEADER_HEIGHT || (scrollTop.lastScroll >= scrollY.get() && scrollTop.lastUpdate > ONE_SECOND)) {
                 setScrollTop({
                     lastScroll: scrollY.get(),
                     isScrollTop: true,
