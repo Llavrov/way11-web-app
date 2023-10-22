@@ -6,6 +6,7 @@ import Button from "@/components/common/buttons/button";
 import {useEffect, useState} from "react";
 import HeaderMenu from "./headerMenu";
 import { motion, useAnimation, useScroll } from "framer-motion";
+import {bold} from "next/dist/lib/picocolors";
 
 const TABS = [
     {

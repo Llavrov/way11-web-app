@@ -7,6 +7,7 @@ import { SOCIAL } from "../footer/Footer";
 import { STATS } from "../footer/Footer";
 import EmptyButton from "../buttons/emptyButton";
 import { motion } from "framer-motion";
+import {useEffect} from "react";
 
 const headerVariants = {
     hidden: {
@@ -26,7 +27,7 @@ export default function HeaderMenu() {
             style={{
                 overscrollBehavior: 'contain',
             }}
-            className="w-full h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
+            className="w-full h-full min-h-screen px-5 pt-[90px] flex flex-col justify-between fixed z-[998] bg-black"
             variants={headerVariants}
             initial='hidden'
             animate='visible'
