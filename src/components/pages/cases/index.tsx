@@ -8,41 +8,9 @@ import BuyNow from "@/components/pages/cases/buyNow";
 import AboutEducation from "@/components/pages/cases/aboutEducation";
 import Sgmk from "@/components/pages/cases/sgmk";
 import Link from "next/link";
+import {CARDS_OF_CASES} from "@/consts";
 
 const FILTERS = ['все проекты', 'e-commerce', 'образовательные платформы', 'промышленность'];
-
-const CARDS_OF_CASES = {
-    buyNow: {
-        tags: [ 'Buy Now', 'E-commercial'],
-            photo: '/cases/buy-now-01.png',
-        background: '#DD622D',
-        description: 'Кейс с созданием более доступной среды для наименее защищенных социальных групп.  Фишка проекта в том, что представленные товары имеют более низкую стоимость, за счет подступающего истечения срока годности.'
-    },
-    erp: {
-        tags: [ 'ERP', 'промышленность'],
-        photo: '/cases/cities-05.png',
-        background: '#7C7AFE',
-        description: 'Тут должно быть краткое описание проекта, просто в общих словах, что, да как, но примерно в таком объеме текста и ещё чуть-чуть, вот теперь всё. Ну может ещё 1 строчка'
-    },
-    lancelot: {
-        tags: [ 'Lancelot', 'образование'],
-        photo: '/cases/lancelot-01.png',
-        background: '#007FE0',
-        description: 'Тут должно быть краткое описание проекта, просто в общих словах, что, да как, но примерно в таком объеме текста и ещё чуть-чуть, вот теперь всё. Ну может ещё 1 строчка'
-    },
-    aboutEducation: {
-        tags: [ 'ПроОбразование', 'образовательные платформы'],
-        photo: '/cases/education-02.png',
-        background: '#8885FF',
-        description: 'Кейс с инновационной курсовой платформой с упором на удобство, стиль и полный функциональный цикл. С четким разделением функционала в зависимости от роли.'
-    },
-    sgmk: {
-        tags: [ 'SGMK', 'промышленность'],
-        photo: '/cases/sgmk.png',
-        background: '#F09D20',
-        description: 'Кейс, как наша команда приняла участие в конкурсе на разработку прототипа для предприятия-лидера в сфере горно-добывающей промышленности. В ходе которого: создали дизайн сайта и провели презентацию по проекту и обобщенной аналитике функционала.'
-    }
-};
 
 export default function CasesPage() {
     const [activeTag, setActiveTag] = useState('все проекты');

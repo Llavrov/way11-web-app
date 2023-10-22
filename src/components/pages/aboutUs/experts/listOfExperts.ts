@@ -4,63 +4,7 @@ import Link from "next/link";
 import {useState} from "react";
 import TagColor from "@/components/common/tags/tagColor";
 import {TExpert} from "@/components/pages/aboutUs/experts/index";
-
-export const EXPERTS = [
-    {
-        name: 'Вадим Колесников',
-        role: 'Должность',
-        image: '/vadim.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Жудиниллсон Армандо-Мучачо',
-        role: 'Global teamlead',
-        image: '/about-us-01.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Валентин Макаров',
-        role: 'Teamlead',
-        image: '/about-us-02.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Николай Коновалов',
-        role: 'Senior UI/UX-дизайнер',
-        image: '/about-us-03.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Никита Подгорный',
-        role: 'Коммерческий директор',
-        image: '/vadim.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Форрест Гудлак',
-        role: 'Руководитель отдела маркетинга',
-        image: '/vadim.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-]
+import {EXPERTS} from "@/consts";
 
 export default function ListOfExperts({ onSelectTeammate }: {onSelectTeammate: (teammate: TExpert) => void}) {
     const [selectTeammate, setSelectTeammate] = useState(0);

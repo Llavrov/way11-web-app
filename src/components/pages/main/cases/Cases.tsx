@@ -3,32 +3,12 @@ import CardCase from "@/components/common/cards/CardCase";
 import EmptyButton from "@/components/common/buttons/emptyButton";
 import TagSticky from "@/components/common/tags/tagSticky";
 import { useEffect, useRef, useState } from "react";
-import {useScroll} from "framer-motion";
-import {HEADER_HEIGHT, ONE_SECOND} from "@/components/common/header/Header";
+import {CARDS_OF_CASES} from "@/consts";
 
-const CARDS_OF_CASES = [
-    {
-        tags: ['Buy Now', 'E-commercial'],
-        photo: '/cases/image4.png',
-        background: '#DD622D',
-        description: 'Кейс с созданием более доступной среды для наименее защищенных социальных групп.  Фишка проекта в том, что представленные товары имеют более низкую стоимость, за счет подступающего истечения срока годности.',
-        link: '/case/buy-now',
-    },
-    {
-        tags: ['ERP', 'промышленность'],
-        photo: '/cases/image5.png',
-        background: '#7C7AFE',
-        description: 'Кейс с созданием более доступной среды для наименее защищенных социальных групп.  Фишка проекта в том, что представленные товары имеют более низкую стоимость, за счет подступающего истечения срока годности.',
-        link: '/case/erp',
-    },
-    {
-        tags: ['Lancelot', 'образование'],
-        photo: '/cases/imag6.png',
-        background: '#007FE0',
-        description: 'Кейс, как наша команда приняла участие в конкурсе на разработку прототипа для предприятия-лидера в сфере горно-добывающей промышленности. В ходе которого: создали дизайн сайта и провели презентацию по проекту и обобщенной аналитике функционала.',
-        link: '/case/lancelot',
-
-    }
+const CASE_CARDS = [
+    CARDS_OF_CASES['buyNow'],
+    CARDS_OF_CASES['erp'],
+    CARDS_OF_CASES['lancelot'],
 ];
 
 export default function Cases() {
@@ -46,7 +26,7 @@ export default function Cases() {
 
             <div className="flex flex-col sm:w-full gap-6 lg:gap-[50px]">
                 {
-                    CARDS_OF_CASES.map(({link, ...cardObj}) => (
+                    CASE_CARDS.map(({link, ...cardObj}) => (
                         <Link href={link} key={cardObj.background} >
                             <CardCase {...cardObj} />
                         </Link>

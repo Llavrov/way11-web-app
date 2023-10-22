@@ -1,8 +1,9 @@
 'use client';
 
 import {useEffect, useState} from "react";
-import ListOfExperts, {EXPERTS} from "@/components/pages/aboutUs/experts/listOfExperts";
+import ListOfExperts from "@/components/pages/aboutUs/experts/listOfExperts";
 import RCDropDown from "@/components/common/dropDown";
+import {EXPERTS} from "@/consts";
 
 export type TExpert = {
     name: string;
