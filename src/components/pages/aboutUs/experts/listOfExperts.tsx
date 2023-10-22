@@ -4,7 +4,7 @@ import Link from "next/link";
 import {useState} from "react";
 import TagColor from "@/components/common/tags/tagColor";
 import {TExpert} from "@/components/pages/aboutUs/experts/index";
-import {EXPERTS} from "@/consts";
+import { EXPERTS } from "@/consts";
 
 export default function ListOfExperts({ onSelectTeammate }: {onSelectTeammate: (teammate: TExpert) => void}) {
     const [selectTeammate, setSelectTeammate] = useState(0);
