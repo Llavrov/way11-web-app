@@ -16,7 +16,7 @@ export default function CasesPage() {
     const [activeTag, setActiveTag] = useState('все проекты');
 
     return (
-        <div className="flex flex-col items-center w-full overflow-hidden justify-between px-[50px] lg:px-5 pt-[200px] pb-[120px] gap-[120px] box-border">
+        <div className="flex flex-col relative items-center w-full overflow-hidden justify-between px-[50px] lg:px-5 pt-[200px] pb-[120px] gap-[120px] box-border">
             <div className="w-full flex justify-between lg:flex-col">
                 <div>
                     <h1 className="text-heading-l text-white lg:text-3xl lg:leading-9">все наши кейсы</h1>
@@ -34,7 +34,7 @@ export default function CasesPage() {
                 </div>
             </div>
 
-            <div className="w-full flex flex-col sm:w-full gap-[120px] lg:gap-[50px]">
+            <div className="w-full relative flex flex-col sm:w-full gap-[120px] lg:gap-[50px]">
                 <Link href={'/case/erp'}>
                     <Epr {...CARDS_OF_CASES["erp"]} />
                 </Link>
