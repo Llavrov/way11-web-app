@@ -27,7 +27,7 @@ export default function ContactUs() {
                 </Link>
             </div>
 
-            <div className="w-[790px] lg:w-full flex flex-col overflow-x-scroll gap-[10px] pt-[64px] lg:pt-[24px]">
+            <div className="w-[790px] lg:w-full flex flex-col gap-[10px] pt-[64px] lg:pt-[24px]">
                 <div className="flex gap-2 lg:flex-col">
                     <QUTextField type="text" placeholder="Имя*" />
                     <QUTextField type="text" placeholder="Компания" />
