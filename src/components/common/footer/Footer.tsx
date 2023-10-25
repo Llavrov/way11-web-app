@@ -84,13 +84,13 @@ export default function Footer() {
                 
                 <div className="w-[50%] md:w-full pl-5 lg:pl-0 gap-[40px] flex flex-col justify-between">
                     <span className="text-20 flex gap-4 flex-col">
-                        <Link href={'/'}>mail@studioway11.com</Link>
+                        <Link href={'mailto:mail@studioway11.com'}>mail@studioway11.com</Link>
                         <Link href="tel:+79371234333">+7 (937) 123-43-33</Link>
                         <Link href={'/'}>Астрахань ул. Урицкого 7, офис 217</Link>
                     </span>
 
                     <span className="text-20 flex flex-col gap-[10px]">
-                        <Link className='flex underline' href={'/'}>Политика конфиденциальности</Link>
+                        <Link className='flex underline' href={'/terms'}>Политика конфиденциальности</Link>
                         <h1 className="text-[#4D4D4D] text-18">© 2023 Digital-агентство Way11</h1>
                     </span>
                 </div>
