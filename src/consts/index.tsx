@@ -170,7 +170,7 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
 export const EXPERTS = [
     {
         name: 'Вадим Колесников',
-        role: 'SEO',
+        role: 'ceo',
         image: '/team/vadim.jpeg',
         socialNetworks: {
             tg: '',
