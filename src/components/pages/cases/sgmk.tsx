@@ -4,6 +4,7 @@ import Image from "next/image";
 import TagWhite from "@/components/common/tags/tagWhite";
 import { title } from "process";
 import {useState} from "react";
+import Tag from "@/components/common/tags/tag";
 
 type TCardCase = {
     tags: string[];
@@ -20,9 +21,13 @@ export default function Sgmk({tags, photo, background, description}: TCardCase) 
             <div
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="relative w-full h-[500px] max-w-[790px] flg:w-[60vw] flg:h-[60vh] flg:max-w-[calc(60vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:rounded-5"
+                className="relative w-full h-[500px] lg:max-h-[400px] max-w-[790px] flg:w-[60vw] flg:h-[60vh] flg:max-w-[calc(60vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:rounded-5"
                 style={{ backgroundColor: background }}
             >
+                <div className="absolute top-6 right-6 lg:top-0 lg:right-3">
+                    <Tag title={'2022'} />
+                </div>
+
                 <div className="absolute flex gap-2 z-10">
                     {
                         tags.map((title) => (

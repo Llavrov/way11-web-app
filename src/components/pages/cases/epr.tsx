@@ -4,6 +4,7 @@ import Image from "next/image";
 import TagWhite from "@/components/common/tags/tagWhite";
 import { title } from "process";
 import {useState} from "react";
+import Tag from "@/components/common/tags/tag";
 
 type TCardCase = {
     tags: string[];
@@ -20,9 +21,13 @@ export default function Epr({tags, photo, background, description}: TCardCase) {
             <div
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="relative w-full h-[500px] max-w-[940px] flg:w-[65vw] flg:h-[60vh] flg:max-w-[calc(65vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:rounded-5"
+                className="relative w-full h-[500px] lg:max-h-[400px] max-w-[940px] flg:w-[65vw] flg:h-[60vh] flg:max-w-[calc(65vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:rounded-5"
                 style={{ backgroundColor: background }}
             >
+                <div className="absolute top-6 right-6 lg:top-0 lg:right-3">
+                    <Tag title={'2023'} />
+                </div>
+
                 <div className="absolute flex gap-2 z-10">
                     {
                         tags.map((title) => (
@@ -40,8 +45,8 @@ export default function Epr({tags, photo, background, description}: TCardCase) {
                     </p>
                 </div>
 
-                <div className="w-full h-full relative flex justify-center items-center box-border rounded-5 overflow-hidden">
-                    <Image className="absolute bottom-[-25px] lg:min-h-[250px] rounded-5 aspect-video box-border object-cover flg:w-[80%] flg:h-[80%] rounded-t-5 lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rounded-r-0" src={photo} width={658} height={375} alt={title} />
+                <div className="w-full h-full relative flex justify-center items-center box-border rounded-t-5">
+                    <Image className="absolute bottom-[-25px] lg:min-h-[250px] aspect-video box-border object-cover flg:w-[80%] flg:h-[80%] rounded-t-5 lg:rounded-5 lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rounded-r-0" src={photo} width={658} height={375} alt={title} />
                 </div>
             </div>
 
