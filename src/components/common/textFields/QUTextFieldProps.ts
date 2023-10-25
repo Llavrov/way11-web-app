@@ -1,4 +1,4 @@
-import { type CSSProperties, type HTMLInputTypeAttribute, type ReactElement } from 'react';
+import {ChangeEvent, type CSSProperties, type HTMLInputTypeAttribute, type ReactElement} from 'react';
 
 export interface QUTextFieldProps {
     value?: string;
