@@ -17,10 +17,8 @@ export default function OurPhilosophy() {
                     </p>
                 </div>
 
-                <p className="text-20 lg:text-text-m font-medium text-black max-w-[360px] lg:max-w-[250px] text-center">
-                    Здесь нужно написать какой-то текст о компании,
-                    её ценностях, посыл-мы крутые чуваки
-                    и шарим за своё направление
+                <p className="text-20 lg:text-text-m font-medium text-black max-w-[460px] lg:max-w-[250px] text-center">
+                    Мы в WAY11 знаем, что объединив творчество, аналитику, креатив и технологии можно получить нечто грандиозное. Разработка - наша страсть, клиенты - наш приоритет. Мы хотим, чтобы свой путь в тысячу миль, начиная с первого шага - вы прошли с надежным подрядчиком и партнером.
                 </p>
             </div>
 
