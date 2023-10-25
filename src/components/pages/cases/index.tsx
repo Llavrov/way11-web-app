@@ -39,7 +39,7 @@ export default function CasesPage() {
                     <Epr {...CARDS_OF_CASES["erp"]} />
                 </Link>
                 <div className="w-full flex justify-end lg:justify-start">
-                    <Link className="w-full" href={'/case/lancelot'}>
+                    <Link className="lg:w-full" href={'/case/lancelot'}>
                         <Lancelot {...CARDS_OF_CASES["lancelot"]} />
                     </Link>
                 </div>
@@ -50,7 +50,7 @@ export default function CasesPage() {
                     <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
                 </Link>
                 <div className="w-full flex justify-end lg:justify-start">
-                    <Link className="w-full" href={'/case/sgmk'}>
+                    <Link className="lg:w-full" href={'/case/sgmk'}>
                         <Sgmk {...CARDS_OF_CASES["sgmk"]} />
                     </Link>
                 </div>
