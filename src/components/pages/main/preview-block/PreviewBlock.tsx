@@ -6,8 +6,9 @@ import Background02 from "@/components/pages/main/preview-block/background02";
 import Tag from "@/components/common/tags/tag";
 import Background03 from "./backgroundForPhone";
 import { useState, useEffect } from "react";
+import {SOCIAL} from "@/components/common/footer/Footer";
+import Link from "next/link";
 
-const LIST_OF_TAGS = ['inst', 'youtube', 'tenchat', 'tg'];
 const MOBILE_SCREEN_SIZE = 1024;
 
 const backgroundVariants = {
@@ -61,8 +62,10 @@ export default function PreviewBlock() {
                 <div className="flex justify-between flex-col lg:w-full">
                     <div className="flex relative gap-[10px]">
                         {
-                            LIST_OF_TAGS.map((title) => (
-                                <Tag title={title} key={title} />
+                            SOCIAL.map(({ link, title }) => (
+                                <Link key={title} href={link}>
+                                    <Tag title={title} />
+                                </Link>
                             ))
                         }
                     </div>

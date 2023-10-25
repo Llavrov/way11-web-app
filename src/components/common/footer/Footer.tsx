@@ -10,27 +10,23 @@ type TSocial = {
 
 export const SOCIAL: TSocial[] = [
     {
-        link: '/',
+        link: 'https://www.youtube.com/@wayeleven_studio',
         title: 'youtube',
     },
     {
-        link: '/',
+        link: 'https://t.me/studioway11',
         title: 'tg',
     },
     {
-        link: '/',
+        link: 'https://tenchat.ru/ForrestGaziev',
         title: 'tenchat',
     },
     {
-        link: '/',
-        title: 'dribbble',
-    },
-    {
-        link: '/',
+        link: 'https://instagram.com/way.eleven?igshid=MzRlODBiNWFlZA==',
         title: 'inst',
     },
     {
-        link: '/',
+        link: 'https://vk.com/public222368466',
         title: 'vk',
     },
 ]
@@ -38,11 +34,11 @@ export const SOCIAL: TSocial[] = [
 export const STATS: TSocial[] = [
     {
         title: 'dzen',
-        link: '/'
+        link: 'https://dzen.ru/forrest_way11'
     },
     {
-        title: 'vc/ru',
-        link: '/'
+        title: 'vc.ru',
+        link: 'https://vc.ru/u/2305773-forrest'
     }
 ]
 

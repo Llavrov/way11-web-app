@@ -14,7 +14,10 @@ export default function CasePage({ title, tag, description, image, imagesOfReady
         <div className="flex flex-col items-center w-full relative overflow-hidden justify-between pt-[200px] lg:pt-[140px] pb-[120px] lg:pb-[80px] gap-[120px] lg:gap-[80px] box-border">
             <div className="w-full flex justify-between h-[210px] px-[50px] lg:flex-col lg:px-[20px] lg:gap-6 ">
                 <div className="flex items-start gap-8 lg:gap-4">
-                    <Image className="pt-4 lg:pt-0 lg:w-[44px]" src={'/svg/arrow-left.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
+                    <Link href={'/cases/'}>
+                        <Image className="pt-4 lg:pt-0 lg:w-[44px]" src={'/svg/arrow-left.svg'} alt={'/src/arrow-left.svg'} width={63} height={49} />
+                    </Link>
+
                     <h1 className="text-heading-l text-white lg:text-3xl lg:leading-9">{title}</h1>
                 </div>
 

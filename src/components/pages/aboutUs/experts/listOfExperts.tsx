@@ -40,11 +40,11 @@ export default function ListOfExperts({ onSelectTeammate }: {onSelectTeammate: (
 
                             <div className="flex gap-2">
                                 {
-                                    Object.entries(socialNetworks).map(([socialNetwork, link]) => (
+                                    socialNetworks ? Object.entries(socialNetworks).map(([socialNetwork, link]) => (
                                         <Link key={socialNetwork} href={link}>
                                             <TagColor title={socialNetwork} color={selectTeammate === index ? '#EF8354' : 'white'} />
                                         </Link>
-                                    ))
+                                    )) : null
                                 }
                             </div>
                         </div>

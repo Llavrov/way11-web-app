@@ -170,26 +170,8 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
 export const EXPERTS = [
     {
         name: 'Вадим Колесников',
-        role: 'Должность',
-        image: '/vadim.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Жудиниллсон Армандо-Мучачо',
-        role: 'Global teamlead',
-        image: '/about-us-01.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Валентин Макаров',
-        role: 'Teamlead',
-        image: '/about-us-02.png',
+        role: 'SEO',
+        image: '/team/vadim.jpeg',
         socialNetworks: {
             tg: '',
             inst: ''
@@ -198,16 +180,7 @@ export const EXPERTS = [
     {
         name: 'Николай Коновалов',
         role: 'Senior UI/UX-дизайнер',
-        image: '/about-us-03.png',
-        socialNetworks: {
-            tg: '',
-            inst: ''
-        }
-    },
-    {
-        name: 'Никита Подгорный',
-        role: 'Коммерческий директор',
-        image: '/vadim.png',
+        image: '/team/nikolay.jpeg',
         socialNetworks: {
             tg: '',
             inst: ''
@@ -216,10 +189,25 @@ export const EXPERTS = [
     {
         name: 'Форрест Гудлак',
         role: 'Руководитель отдела маркетинга',
-        image: '/vadim.png',
+        image: '/team/forrest.jpeg',
         socialNetworks: {
             tg: '',
             inst: ''
         }
+    },
+    {
+        name: 'Жудиниллсон Армандо-Мучачо',
+        role: 'Global teamlead',
+        image: '/team/ju.jpeg',
+    },
+    {
+        name: 'Валентин Макаров',
+        role: 'Teamlead',
+        image: '/team/valentin.jpeg',
+    },
+    {
+        name: 'Никита Подгорный',
+        role: 'Коммерческий директор',
+        image: '/team/nikita.jpeg',
     },
 ]

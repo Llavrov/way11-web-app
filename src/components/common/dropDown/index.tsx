@@ -95,11 +95,11 @@ export default function RCDropDown({points = []}: RCDropDownProps): ReactElement
 
                                 <div className="flex gap-2">
                                     {
-                                        Object.entries(socialNetworks).map(([socialNetwork, link]) => (
+                                        socialNetworks ? Object.entries(socialNetworks).map(([socialNetwork, link]) => (
                                             <Link key={socialNetwork} href={link}>
                                                 <TagColor title={socialNetwork} color={'white'} />
                                             </Link>
-                                        ))
+                                        )) : null
                                     }
                                 </div>
                             </div>
