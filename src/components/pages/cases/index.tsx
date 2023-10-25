@@ -1,7 +1,7 @@
 'use client';
 
 import Tag from "@/components/common/tags/tag";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import Epr from "@/components/pages/cases/epr";
 import Lancelot from "@/components/pages/cases/lancelot";
 import BuyNow from "@/components/pages/cases/buyNow";
@@ -12,8 +12,74 @@ import {CARDS_OF_CASES} from "@/consts";
 
 const FILTERS = ['все проекты', 'e-commerce', 'образовательные платформы', 'промышленность'];
 
+const CASES_COMPONENTS = [
+    [
+        'промышленность',
+        (
+            <Link key={'erp'} href={'/case/erp'}>
+                <Epr {...CARDS_OF_CASES["erp"]} />
+            </Link>
+        )
+    ],
+    [
+        'образовательные платформы',
+        (
+            <div key={'lancelot'} className="w-full flex justify-end lg:justify-start">
+                <Link className="lg:w-full" href={'/case/lancelot'}>
+                    <Lancelot {...CARDS_OF_CASES["lancelot"]} />
+                </Link>
+            </div>
+        )
+    ],
+    [
+        'e-commerce',
+        (
+            <Link key={'buy-now'} href={'/case/buy-now'}>
+                <BuyNow {...CARDS_OF_CASES["buyNow"]} />
+            </Link>
+        )
+    ],
+    [
+        'образовательные платформы',
+        (
+            <Link key={'about-education'} href={'/case/about-education'}>
+                <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
+            </Link>
+        )
+    ],
+    [
+        'промышленность',
+        (
+            <div key={'sgmk'} className="w-full flex justify-end lg:justify-start">
+                <Link className="lg:w-full" href={'/case/sgmk'}>
+                    <Sgmk {...CARDS_OF_CASES["sgmk"]} />
+                </Link>
+            </div>
+        )
+    ],
+];
+
+const sortCasesByTag = (cases: typeof CASES_COMPONENTS, activeTag: string) => {
+    if (activeTag === 'все проекты') {
+        return CASES_COMPONENTS;
+    }
+
+    const filteredCases = cases.filter(([tag]) => tag === activeTag);
+    const otherCases = cases.filter(([tag]) => tag !== activeTag);
+
+    return [...filteredCases, ...otherCases];
+};
+
 export default function CasesPage() {
     const [activeTag, setActiveTag] = useState('все проекты');
+
+    const [arrayOfComponents, setArrayOfComponents] = useState(CASES_COMPONENTS);
+
+    useEffect(() => {
+        console.log(activeTag);
+        setArrayOfComponents(sortCasesByTag(arrayOfComponents, activeTag))
+    }, [activeTag]);
+
 
     return (
         <div className="flex flex-col relative items-center w-full overflow-hidden justify-between px-[50px] lg:px-5 pt-[200px] pb-[120px] gap-[120px] box-border">
@@ -35,25 +101,11 @@ export default function CasesPage() {
             </div>
 
             <div className="w-full relative flex flex-col sm:w-full gap-[120px] lg:gap-[50px]">
-                <Link href={'/case/erp'}>
-                    <Epr {...CARDS_OF_CASES["erp"]} />
-                </Link>
-                <div className="w-full flex justify-end lg:justify-start">
-                    <Link className="lg:w-full" href={'/case/lancelot'}>
-                        <Lancelot {...CARDS_OF_CASES["lancelot"]} />
-                    </Link>
-                </div>
-                <Link href={'/case/buy-now'}>
-                    <BuyNow {...CARDS_OF_CASES["buyNow"]} />
-                </Link>
-                <Link href={'/case/about-education'}>
-                    <AboutEducation {...CARDS_OF_CASES["aboutEducation"]} />
-                </Link>
-                <div className="w-full flex justify-end lg:justify-start">
-                    <Link className="lg:w-full" href={'/case/sgmk'}>
-                        <Sgmk {...CARDS_OF_CASES["sgmk"]} />
-                    </Link>
-                </div>
+                {
+                    arrayOfComponents.map(([_, component]) => (
+                        component
+                    ))
+                }
             </div>
         </div>
     )

@@ -178,8 +178,8 @@ export const EXPERTS = [
         }
     },
     {
-        name: 'Николай Коновалов',
-        role: 'Senior UI/UX-дизайнер',
+        name: 'Никита Подгорный',
+        role: 'Коммерческий директор',
         image: '/team/nikolay.jpeg',
         socialNetworks: {
             tg: '',
@@ -206,8 +206,8 @@ export const EXPERTS = [
         image: '/team/valentin.jpeg',
     },
     {
-        name: 'Никита Подгорный',
-        role: 'Коммерческий директор',
+        name: 'Николай Коновалов',
+        role: 'Senior UI/UX-дизайнер',
         image: '/team/nikita.jpeg',
     },
 ]
