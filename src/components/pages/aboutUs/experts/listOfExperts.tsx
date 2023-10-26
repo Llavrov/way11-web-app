@@ -38,7 +38,7 @@ export default function ListOfExperts({ onSelectTeammate }: {onSelectTeammate: (
                                 {role}
                             </p>
 
-                            <div className="flex gap-2">
+                            <div className="flex gap-2 w-[140px]">
                                 {
                                     socialNetworks ? Object.entries(socialNetworks).map(([socialNetwork, link]) => (
                                         <Link key={socialNetwork} href={link}>

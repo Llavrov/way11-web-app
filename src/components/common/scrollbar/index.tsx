@@ -10,7 +10,7 @@ export default function Scrollbar({ images }: { images: string[]}) {
                     <>
                         {
                             index === 0
-                                ? (<Image className="object-cover rounded-5 lg:h-[392px] lg:max-w-[calc(100%-40px)]" src={image} alt={image} width={546} height={461} />)
+                                ? (<Image className="object-cover object-left rounded-5 lg:h-[392px] lg:max-w-[calc(100%-40px)]" src={image} alt={image} width={546} height={461} />)
                                 : (<Image className="object-cover rounded-5 lg:h-[392px]" src={image} alt={image} width={784} height={461} />)
                         }
                     </>

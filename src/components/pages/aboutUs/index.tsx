@@ -79,7 +79,7 @@ export default function AboutUsPage() {
 
                     {
                         !isMobile
-                            ? <Image className="w-[540px] h-[540px] object-cover rounded-5" src={selectTeammate.image} alt={'picture of teammate'} width={540} height={540} />
+                            ? <Image className="w-[540px] h-[540px] object-top object-cover rounded-5" src={selectTeammate.image} alt={'picture of teammate'} width={540} height={540} />
                             : null
                     }
                 </div>

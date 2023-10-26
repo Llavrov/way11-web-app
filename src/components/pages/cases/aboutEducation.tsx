@@ -46,7 +46,7 @@ export default function AboutEducation({tags, photo, background, description}: T
                 </div>
 
                 <div className="w-full h-full flex justify-center items-center box-border rounded-5 overflow-hidden">
-                    <Image className="absolute bottom-[-25px] rounded-5 lg:-right-6 lg:min-h-[250px] lg:object-left lg:bottom-auto lg:w-[90%] aspect-video box-border object-cover flg:w-[80%] flg:h-[80%] rounded-t-5" src={photo} width={658} height={375} alt={title} />
+                    <Image className="absolute bottom-[-25px] rounded-5 lg:-right-6 lg:min-h-[250px] lg:object-left lg:bottom-auto lg:w-[90%] box-border object-contain lg:object-cover flg:w-[80%] rounded-t-5" src={photo} width={658} height={375} alt={title} />
                 </div>
             </div>
 

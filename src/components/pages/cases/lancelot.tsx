@@ -46,7 +46,7 @@ export default function Lancelot({tags, photo, background, description}: TCardCa
                 </div>
 
                 <div className="w-full h-full flex justify-center items-center box-border rounded-5 overflow-hidden">
-                    <Image className="aspect-video absolute -bottom-10 lg:min-h-[250px] rounded-5 -rotate-12 box-border object-cover flg:w-[80%] flg:h-[80%] lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rotate-0" src={photo} width={658} height={375} alt={title} />
+                    <Image className="absolute -bottom-10 lg:min-h-[250px] rounded-5 -rotate-12 box-border object-contain lg:object-cover flg:w-[80%] lg:-right-6 lg:object-left lg:bottom-auto lg:w-[90%] lg:rotate-0" src={photo} width={658} height={375} alt={title} />
                 </div>
             </div>
 
