@@ -19,7 +19,7 @@ const LIST_OF_NEWS = [
     {
         image: '/about-us-03.png',
         link: '/',
-        title: '№2 Ad‑Unions за 2022 год',
+        title: '№2 на Лидирующая позиция за 2022 год',
     }
 ];
 

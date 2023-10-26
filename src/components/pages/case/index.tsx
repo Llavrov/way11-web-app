@@ -47,7 +47,7 @@ export default function CasePage({ title, tag, description, image, imagesOfReady
                 </div>
 
                 <div className="w-full max-w-[742px] lg:max-w-full flex flex-col gap-[70px]">
-                    <CardOfService tag="тезис" description={taskAndSolution} />
+                    <CardOfService tag="" description={taskAndSolution} />
                 </div>
             </div>
 

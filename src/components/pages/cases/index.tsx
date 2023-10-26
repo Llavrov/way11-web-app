@@ -86,7 +86,7 @@ export default function CasesPage() {
             <div className="w-full flex justify-between lg:flex-col">
                 <div>
                     <h1 className="text-heading-l text-white lg:text-3xl lg:leading-9">все наши кейсы</h1>
-                    <h2 className="text-heading-l text-tag-gray opacity-50 lg:text-3xl lg:leading-9">2022-2022</h2>
+                    <h2 className="text-heading-l text-tag-gray opacity-50 lg:text-3xl lg:leading-9">2022-2023</h2>
                 </div>
 
                 <div className="flex max-w-[395px] flex-wrap gap-[10px]">

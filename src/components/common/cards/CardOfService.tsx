@@ -10,9 +10,13 @@ type TCardOfService = {
 export default function CardOfService({tag, description}: TCardOfService) {
     return (
         <div className="w-full flex flex-col gap-[10px] lg:gap-0 max-w-[742px] lg:max-w-full flg:max-w-[60vw]">
-            <div className="flex">
-                <TagBlue title={tag} />
-            </div>
+            {
+                tag ? (
+                    <div className="flex">
+                        <TagBlue title={tag} />
+                    </div>
+                ) : null
+            }
 
             <div className="w-full bg-border-gray h-[1px] lg:mt-2" />
 
