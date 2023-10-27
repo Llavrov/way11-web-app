@@ -17,7 +17,7 @@ export default function AboutUsPage() {
         {
             name: 'Вадим Колесников',
             role: 'Должность',
-            image: '/team/vadim.png',
+            image: '/team/vadim.jpeg',
             socialNetworks: {
                 tg: '',
                 inst: ''
@@ -62,7 +62,7 @@ export default function AboutUsPage() {
                     <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">приоритеты</h2>
                 </div>
 
-                <div className="w-full max-w-[742px] flex flex-col gap-[70px]">
+                <div className="w-full max-w-[742px] flg:max-w-[60%] flex flex-col gap-[70px]">
                     <CardOfService tag="" description="WAY11 - это коллектив талантливых людей, любящих свое дело. Специализируемся на полном цикле разработки: от аналитики до поддержки проекта и внедрения нового функционала. Уверены, что способны значительно улучшить функционирование вашего бизнеса за счет передовых решений и грамотно выстроенного процесса разработки.
 А наш штат опытных специалистов позволяет нам выполнит всё в кратчайшие сроки." />
                 </div>

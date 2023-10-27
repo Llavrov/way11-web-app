@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from 'swiper/modules';
+import { Navigation, Scrollbar } from 'swiper/modules';
 import { useRef } from "react";
 import CardOfNews from "@/components/common/cards/CardOfNews";
 
@@ -25,11 +25,10 @@ export default function CardsSwiper({
         1024: { slidesPerView: 3, spaceBetween: 10 },
     };
 
-
     return (
         <div className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px] lg:pl-4 lg:ml-0">
             <Swiper
-                modules={[Navigation]}
+                modules={[Navigation, Scrollbar]}
                 navigation={{
                     prevEl: prevBtn.current ?? '',
                     nextEl: nextBtn.current ?? '',

@@ -8,7 +8,7 @@ import Link from "next/link";
 const LIST_OF_NEWS = [
     {
         image: '/about-us-01.png',
-        link: '/',
+        link: '/cases',
         title: '8 стартапов с нуля',
     },
     {
