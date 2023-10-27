@@ -21,7 +21,7 @@ const headerVariants = {
     },
 }
 
-export default function HeaderMenu() {
+export default function HeaderMenu({ closeMenu }: { closeMenu: () => void }) {
     return (
         <motion.div
             style={{
@@ -35,8 +35,8 @@ export default function HeaderMenu() {
         >
             <div className="flex flex-col gap-[30px] pt-[50px] justify-between">
                 <nav className="flex justify-start items-start leading-[60px] flex-col text-[64px] font-medium">
-                    <Link href={'/cases'}>кейсы</Link>
-                    <Link href={'/about-us'}>о нас</Link>
+                    <Link onClick={closeMenu} href={'/cases'}>кейсы</Link>
+                    <Link onClick={closeMenu} href={'/about-us'}>о нас</Link>
                 </nav>
 
                 <div>
@@ -63,7 +63,7 @@ export default function HeaderMenu() {
                         {
                             STATS.map(({ link, title }) => (
                                 <li key={title}>
-                                    <Link className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
+                                    <Link onClick={closeMenu} className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
                                         {title}
                                     </Link>
                                 </li>
@@ -74,7 +74,7 @@ export default function HeaderMenu() {
             </div>
 
             <Link href={'/#contact-us'} className="h-[200px] flex justify-center items-center">
-                <EmptyButton title="оставить заявку" onClick={() => {}} />
+                <EmptyButton onClick={closeMenu} title="оставить заявку" />
             </Link>
         </motion.div>
     )

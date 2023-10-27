@@ -71,7 +71,7 @@ module.exports = {
         'accent-l': ['18px', { fontWeight: '500' }],
 
         '18': ['18px', { lineHeight: '20px', fontWeight: '500' }],
-        '20': ['1.4em', { lineHeight: '1.4em', fontWeight: '500' }],
+        '20': ['20px', { lineHeight: '22px', fontWeight: '500' }],
       },
       filter: {
         'white-icon': 'brightness(0) invert(1)',
