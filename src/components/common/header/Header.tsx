@@ -176,7 +176,10 @@ export default function Header() {
             <>
                 {
                     openMenu
-                        ? <HeaderMenu closeMenu={() => setOpenMenu(false)} />
+                        ? <HeaderMenu closeMenu={() => {
+                            setOpenMenu(false);
+                            changeMenuState(!openMenu)
+                        }} />
                         : null
                 }
             </>
