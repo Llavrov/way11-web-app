@@ -21,7 +21,7 @@ export const CARDS_OF_CASES = {
         tags: [ 'ERP', 'промышленность'],
         photo: '/cases/cities-05.png',
         background: '#7C7AFE',
-        description: 'Тут должно быть краткое описание проекта, просто в общих словах, что, да как, но примерно в таком объеме текста и ещё чуть-чуть, вот теперь всё. Ну может ещё 1 строчка',
+        description: 'К нам обратилась производственная компания «NDA» с запросом провести аналитику их производства и найти слабые места во всех процессах происходящих в компании и предложить улучшения на основе проведенной аналитики.',
         link: '/case/erp',
     },
     lancelot: {
@@ -79,7 +79,7 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
         image: '/cases/buy-now-01.png',
         imagesOfReadyPages: ['/cases/buy-now-01.png', '/cases/buy-now-02.png', '/cases/buy-now-03.png', '/cases/buy-now-04.png', '/cases/buy-now-05.png'],
         imageBackground: '#DD622D',
-        taskAndSolution: '',
+        taskAndSolution: 'Разработка маркетплейса с предпросроченной продукцией с большими скидками, как способ win to win, где продавцом выступают крупные сети магазинов, что могут уменьшить часть убытков за счет повышения продаж продукции, чей срок годности подходит к концу, а покупатель получает возможность приобрести товар дешевле, за счет серьезных скидок.',
         solution: [
             {
                 number: 1,
@@ -102,7 +102,8 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
         image: '/cases/cities-01.png',
         imagesOfReadyPages: ['/cases/cities-01.png', '/cases/cities-02.png', '/cases/cities-03.png', '/cases/cities-04.png', '/cases/cities-05.png'],
         imageBackground: '#7C7AFE',
-        taskAndSolution: '',
+        taskAndSolution: 'Масштаб аналитической работы и сжатые сроки, в которые необходимо было успеть провести анализ огромного предприятия с филиалами и контрагентами по всей РФ.\n' +
+            'Сложный и запутанный производственный процесс.',
         solution: [
             {
                 number: 1,
@@ -125,7 +126,7 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
         image: '/cases/sgmk.png',
         imagesOfReadyPages: ['/cases/sgmk.png'],
         imageBackground: '#F09D20',
-        taskAndSolution: '',
+        taskAndSolution: 'Для этого компания решила провести конкурс, в котором WAY11 реализовала своё виденье проекта.',
         solution: [
             {
                 number: 1,
@@ -144,7 +145,7 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
         image: '/cases/education-01.png',
         imagesOfReadyPages: ['/cases/education-01.png', '/cases/education-02.png', '/cases/education-03.png', '/cases/education-04.png', '/cases/education-05.png'],
         imageBackground: '#8885FF',
-        taskAndSolution: '',
+        taskAndSolution: 'Мы решили делать платформу, с упором на удобство и упрощения взаимодействия, за счет использования разделения пользователей на роли с отличающимся функционалом,  отвечающую всем требованиям Минобразования.',
         solution: [
             {
                 number: 1,
