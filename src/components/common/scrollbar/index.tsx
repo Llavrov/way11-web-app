@@ -57,7 +57,7 @@ export default function Scrollbar({ images }: { images: string[]}) {
                                                 setActiveImage(image);
                                                 setIsOpen(true)
                                             }}
-                                            className="object-cover rounded-5 lg:h-[392px]"
+                                            className="object-cover rounded-5 lg:h-[392px] lg:max-w-[90%]"
                                             src={image}
                                             alt={image}
                                             width={2352}
