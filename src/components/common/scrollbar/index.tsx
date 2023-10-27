@@ -43,7 +43,7 @@ export default function Scrollbar({ images }: { images: string[]}) {
                                                 setActiveImage(image);
                                                 setIsOpen(true)
                                             }}
-                                            className="w-full min-w-[500px] object-cover object-left rounded-5 lg:h-[392px] lg:max-w-[calc(100%-40px)]"
+                                            className="w-full min-w-[500px] lg:min-w-80% object-cover object-left rounded-5 lg:h-[392px] lg:max-w-[calc(100%-40px)]"
                                             src={image}
                                             alt={image}
                                             width={1638}
