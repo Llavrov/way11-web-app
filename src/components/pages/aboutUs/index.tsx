@@ -17,7 +17,7 @@ export default function AboutUsPage() {
         {
             name: 'Вадим Колесников',
             role: 'Должность',
-            image: '/vadim.png',
+            image: '/team/vadim.png',
             socialNetworks: {
                 tg: '',
                 inst: ''

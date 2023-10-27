@@ -43,7 +43,10 @@ export default function CasePage({ title, tag, description, image, imagesOfReady
                     <div className="flex">
                         <TagGray title="что предстояло решить" />
                     </div>
-                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">проблематика и задача</h2>
+                    <h2 className="text-6xl font-bold text-white my-0 lg:text-3xl lg:leading-9">
+                        проблематика <br/>
+                        и задача
+                    </h2>
                 </div>
 
                 <div className="w-full max-w-[742px] lg:max-w-full flex flex-col gap-[70px]">
