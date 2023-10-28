@@ -8,8 +8,9 @@ import OurNews from "@/components/pages/main/our-news/OurNews";
 import ContactUs from "@/components/pages/main/contact-us/ContactUs";
 import Cases from "@/components/pages/main/cases/Cases";
 import OurServices from "@/components/pages/main/our-services/OurServices";
-import Footer from "@/components/common/footer/Footer";
-import CardsSwiper from "@/components/common/cardsSwiper";
+import { Navigation } from 'swiper/modules';
+import { Swiper, SwiperSlide } from "swiper/react";
+import CardOfNews from "@/components/common/cards/CardOfNews";
 
 export default function MainPage() {
     return (

@@ -44,8 +44,7 @@ export default function OurNews() {
                 {
                     refs.nextBtnRef.current &&
                     refs.nextBtnRef.current &&
-                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={OUR_NEWS}
-                    />
+                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={OUR_NEWS} />
                 }
             </div>
         </div>

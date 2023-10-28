@@ -1,5 +1,5 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Scrollbar } from 'swiper/modules';
+import { Navigation } from 'swiper/modules';
 import { useRef } from "react";
 import CardOfNews from "@/components/common/cards/CardOfNews";
 
@@ -19,6 +19,8 @@ export default function CardsSwiper({
     nextBtn: React.RefObject<HTMLDivElement>;
 }) {
     const swiperRef = useRef();
+    const listOfCards = cards;
+    listOfCards.length = (window && window?.innerWidth <= 768) ? cards.length / 2 : cards.length
 
     const sliderSettings = {
         440: { slidesPerView: 1, spaceBetween: 10 },
@@ -30,8 +32,8 @@ export default function CardsSwiper({
         <div
              className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px] lg:pl-4 lg:ml-0"
              style={{
-                 paddingLeft: cards.length <= 3 ? '0' : '800px',
-                 marginLeft: cards.length <= 3 ? '0' : '-390px'
+                 paddingLeft: cards.length >= 3 ? '0' : '800px',
+                 marginLeft: cards.length >= 3 ? '0' : '-390px'
              }}>
             <Swiper
                 modules={[Navigation]}
@@ -39,23 +41,19 @@ export default function CardsSwiper({
                     prevEl: prevBtn.current ?? '',
                     nextEl: nextBtn.current ?? '',
                 }}
-                loop={cards.length > 3}
+                loop={cards.length >= 3}
                 slidesPerGroup={1}
                 initialSlide={(window && window?.innerWidth >= 768) ? 1 : 0}
                 slidesPerView={3}
-                breakpoints={sliderSettings}
                 onBeforeInit={(swiper) => {
                     // @ts-ignore
                     swiperRef.current = swiper;
                 }}
                 effect="fade"
                 className="w-[1186px] lg:w-full lg:h-[367px] h-[462px] pr-[400px] lg:pr-0"
-                style={{
-                    paddingRight: cards.length <= 3 ? '0' : '400px'
-                }}
             >
-                {cards &&
-                    cards.map(({ title, image, link }, index) => (
+                {listOfCards &&
+                    listOfCards.map(({ title, image, link }, index) => (
                         <SwiperSlide
                             key={title + index}
                             className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px] lg:px-5 box-border`}

@@ -228,4 +228,19 @@ export const OUR_NEWS = [
             image: '/news/news-03.png',
             link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },
+        {
+            title: 'Принципы хорошего: смакуем дизайнерские решения',
+            image: '/news/news-02.jpeg',
+            link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
+        },
+        {
+            title: 'Книги для весенней хандры',
+            image: '/news/news-01.webp',
+            link: 'https://vc.ru/books/894638-knigi-dlya-vesenney-handry'
+        },
+        {
+            title: 'тусовка в офисе 2023',
+            image: '/news/news-03.png',
+            link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
+        },
 ]
