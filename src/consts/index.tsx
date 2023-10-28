@@ -215,32 +215,32 @@ export const EXPERTS = [
 export const OUR_NEWS = [
         {
             title: 'Книги для весенней хандры',
-            image: '/news/news-01.webp',
+            image: '/news/new-01.png',
             link: 'https://vc.ru/books/894638-knigi-dlya-vesenney-handry'
         },
         {
             title: 'Принципы хорошего: смакуем дизайнерские решения',
-            image: '/news/news-02.jpeg',
+            image: '/news/new-02.png',
             link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
         },
         {
             title: 'Подкаст с Алексеем Титовым',
-            image: '/news/news-03.png',
+            image: '/news/new-03.png',
             link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },
         {
             title: 'Принципы хорошего: смакуем дизайнерские решения',
-            image: '/news/news-02.jpeg',
+            image: '/news/new-02.png',
             link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
         },
         {
             title: 'Книги для весенней хандры',
-            image: '/news/news-01.webp',
+            image: '/news/new-01.png',
             link: 'https://vc.ru/books/894638-knigi-dlya-vesenney-handry'
         },
         {
             title: 'Подкаст с Алексеем Титовым',
-            image: '/news/news-03.png',
+            image: '/news/new-03.png',
             link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },
 ]
