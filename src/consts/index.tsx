@@ -224,7 +224,7 @@ export const OUR_NEWS = [
             link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
         },
         {
-            title: 'тусовка в офисе 2023',
+            title: 'Подкаст с Алексеем Титовым',
             image: '/news/news-03.png',
             link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },
@@ -239,7 +239,7 @@ export const OUR_NEWS = [
             link: 'https://vc.ru/books/894638-knigi-dlya-vesenney-handry'
         },
         {
-            title: 'тусовка в офисе 2023',
+            title: 'Подкаст с Алексеем Титовым',
             image: '/news/news-03.png',
             link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },

@@ -20,13 +20,7 @@ export default function CardsSwiper({
 }) {
     const swiperRef = useRef();
     const listOfCards = cards;
-    listOfCards.length = (window && window?.innerWidth <= 768) ? cards.length / 2 : cards.length
-
-    const sliderSettings = {
-        440: { slidesPerView: 1, spaceBetween: 10 },
-        680: { slidesPerView: 2, spaceBetween: 10 },
-        1024: { slidesPerView: 3, spaceBetween: 10 },
-    };
+    listOfCards.length = (window && window?.innerWidth <= 768) ? 3 : cards.length
 
     return (
         <div

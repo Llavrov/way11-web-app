@@ -86,7 +86,7 @@ export default function Footer() {
                     <span className="text-20 flex gap-4 flex-col">
                         <Link href={'mailto:mail@studioway11.com'}>mail@studioway11.com</Link>
                         <Link href="tel:+79371234333">+7 (937) 123-43-33</Link>
-                        <Link href={'/'}>Астрахань ул. Урицкого 7, офис 217</Link>
+                        <Link href={'/'}>Астрахань ул. Урицкого 7, офис 207</Link>
                     </span>
 
                     <span className="text-20 flex flex-col gap-[10px]">
