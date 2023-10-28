@@ -220,7 +220,7 @@ export const OUR_NEWS = [
         },
         {
             title: 'Принципы хорошего: смакуем дизайнерские решения',
-            image: '/news/news-02.webp',
+            image: '/news/news-02.jpeg',
             link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
         },
         {
