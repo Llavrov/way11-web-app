@@ -56,7 +56,7 @@ export default function CardsSwiper({
                                 opacity: cards.length <= 3 ? '1' : 'inherit'
                             }}
                         >
-                            <CardOfNews title={title} image={image} link={link} position={index % 2 === 0 ? 'object-left' : 'object-right' } />
+                            <CardOfNews title={title} image={image} link={link} position={title === 'Книги для весенней хандры' ? 'object-left' : 'object-right' } />
                         </SwiperSlide>
                     ))}
             </Swiper>
