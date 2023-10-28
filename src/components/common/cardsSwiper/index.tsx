@@ -41,6 +41,7 @@ export default function CardsSwiper({
                     prevEl: prevBtn.current ?? '',
                     nextEl: nextBtn.current ?? '',
                 }}
+                spaceBetween={10}
                 loop={cards.length >= 3}
                 slidesPerGroup={1}
                 initialSlide={(window && window?.innerWidth >= 768) ? 1 : 0}
