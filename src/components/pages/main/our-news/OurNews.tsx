@@ -4,6 +4,7 @@ import TagGray from "@/components/common/tags/tagGray";
 import Image from "next/image";
 import CardsSwiper from "@/components/common/cardsSwiper";
 import {useEffect, useRef, useState} from "react";
+import {OUR_NEWS} from "@/consts";
 
 export default function OurNews() {
     const prevRef = useRef(null);
@@ -43,14 +44,7 @@ export default function OurNews() {
                 {
                     refs.nextBtnRef.current &&
                     refs.nextBtnRef.current &&
-                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={[
-                        {title: 'тусовка в офисе 2023', image: '/news-01.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-02.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-03.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-01.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-02.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-03.png'},
-                        {title: 'тусовка в офисе 2023', image: '/news-01.png'}]}
+                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={OUR_NEWS}
                     />
                 }
             </div>

@@ -6,6 +6,7 @@ import CardOfNews from "@/components/common/cards/CardOfNews";
 type TCardSwiper = {
     title: string;
     image: string;
+    link: string;
 };
 
 export default function CardsSwiper({
@@ -26,14 +27,19 @@ export default function CardsSwiper({
     };
 
     return (
-        <div className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px] lg:pl-4 lg:ml-0">
+        <div
+             className="swiper-component w-[1586px] max-w-[1586px] pl-[800px] ml-[-390px] lg:pl-4 lg:ml-0"
+             style={{
+                 paddingLeft: cards.length <= 3 ? '0' : '800px',
+                 marginLeft: cards.length <= 3 ? '0' : '-390px'
+             }}>
             <Swiper
-                modules={[Navigation, Scrollbar]}
+                modules={[Navigation]}
                 navigation={{
                     prevEl: prevBtn.current ?? '',
                     nextEl: nextBtn.current ?? '',
                 }}
-                loop={true}
+                loop={cards.length > 3}
                 slidesPerGroup={1}
                 initialSlide={(window && window?.innerWidth >= 768) ? 1 : 0}
                 slidesPerView={3}
@@ -44,14 +50,20 @@ export default function CardsSwiper({
                 }}
                 effect="fade"
                 className="w-[1186px] lg:w-full lg:h-[367px] h-[462px] pr-[400px] lg:pr-0"
+                style={{
+                    paddingRight: cards.length <= 3 ? '0' : '400px'
+                }}
             >
                 {cards &&
-                    cards.map(({ title, image }, index) => (
+                    cards.map(({ title, image, link }, index) => (
                         <SwiperSlide
                             key={title + index}
-                            className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px]`}
+                            className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px] lg:px-5 box-border`}
+                            style={{
+                                opacity: cards.length <= 3 ? '1' : 'inherit'
+                            }}
                         >
-                            <CardOfNews title={title} image={image} link={'/'} />
+                            <CardOfNews title={title} image={image} link={link} />
                         </SwiperSlide>
                     ))}
             </Swiper>

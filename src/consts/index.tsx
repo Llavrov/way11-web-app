@@ -211,3 +211,21 @@ export const EXPERTS = [
         image: '/team/nikita.jpeg',
     },
 ]
+
+export const OUR_NEWS = [
+        {
+            title: 'Книги для весенней хандры',
+            image: '/news/news-01.webp',
+            link: 'https://vc.ru/books/894638-knigi-dlya-vesenney-handry'
+        },
+        {
+            title: 'Принципы хорошего: смакуем дизайнерские решения',
+            image: '/news/news-02.webp',
+            link: 'https://vc.ru/design/836531-principy-horoshego-smakuem-dizaynerskie-resheniya'
+        },
+        {
+            title: 'тусовка в офисе 2023',
+            image: '/news-03.png',
+            link: ''
+        },
+]
