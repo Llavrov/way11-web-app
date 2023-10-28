@@ -225,7 +225,7 @@ export const OUR_NEWS = [
         },
         {
             title: 'тусовка в офисе 2023',
-            image: '/news-03.png',
-            link: ''
+            image: '/news/news-03.png',
+            link: 'https://youtu.be/q1Kyi00YpOw?si=ho7BruqOQzNnFSZa'
         },
 ]
