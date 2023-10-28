@@ -44,7 +44,7 @@ export default function CardsSwiper({
                 spaceBetween={10}
                 loop={cards.length >= 3}
                 slidesPerGroup={1}
-                initialSlide={(window && window?.innerWidth >= 768) ? 1 : 0}
+                initialSlide={0}
                 slidesPerView={3}
                 onBeforeInit={(swiper) => {
                     // @ts-ignore
