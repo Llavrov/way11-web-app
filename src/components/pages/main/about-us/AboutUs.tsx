@@ -14,13 +14,13 @@ const LIST_OF_NEWS = [
     },
     {
         image: '/about-us-02.png',
-        link: '/',
+        link: '/about-us',
         title: 'Российский и зарубежный рынок',
     },
     {
         image: '/about-us-03.png',
-        link: '/',
-        title: '№2 на Лидирующая позиция за 2022 год',
+        link: 'https://youtube.com/@wayeleven_studio?si=G3MBFUgVx2HnkMCD',
+        title: 'Снимаем подкасты про технологии в недвижимости, образование и других сферах',
     }
 ];
 
@@ -49,7 +49,7 @@ export default function AboutUs() {
                                     height={828}
                                 />
                                 <Image
-                                    className="flg:min-w-[390px] rotate-[-20deg] object-contain rounded-5 overflow-hidden mt-[-20px] ml-[-40px]"
+                                    className="flg:min-w-[360px] rotate-[-20deg] object-contain rounded-5 overflow-hidden mt-[-20px] ml-[-40px]"
                                     src={LIST_OF_NEWS[0].image}
                                     alt={LIST_OF_NEWS[0].title}
                                     width={786}
