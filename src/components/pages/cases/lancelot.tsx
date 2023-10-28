@@ -21,7 +21,7 @@ export default function Lancelot({tags, photo, background, description}: TCardCa
             <div
                 onMouseOver={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
-                className="relative w-full h-[500px] lg:max-h-[400px] max-w-[790px] flg:w-[60vw] flg:h-[60vh] flg:max-w-[calc(60vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:min-w-full lg:rounded-5"
+                className="relative w-screen h-[500px] lg:max-h-[400px] max-w-[790px] flg:w-[60vw] flg:h-[60vh] flg:max-w-[calc(60vw-50px)] p-6 sm:p-2 sm:pt-4 rounded-10 overflow-hidden lg:min-w-full lg:rounded-5"
                 style={{ backgroundColor: background }}
             >
                 <div className="absolute top-6 right-6 lg:top-0 lg:right-3">
