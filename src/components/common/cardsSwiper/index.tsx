@@ -51,12 +51,17 @@ export default function CardsSwiper({
                     listOfCards.map(({ title, image, link }, index) => (
                         <SwiperSlide
                             key={title + index}
-                            className={`swiper-slide w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px] lg:px-5 box-border`}
+                            className={`swiper-slide no-scrollbar w-[390px] min-w-[390px] lg:min-w-[272px] lg:max-w-[272px] lg:w-[272px] lg:px-5 box-border`}
                             style={{
                                 opacity: cards.length <= 3 ? '1' : 'inherit'
                             }}
                         >
-                            <CardOfNews title={title} image={image} link={link} position={title === 'Книги для весенней хандры' ? 'object-left' : 'object-right' } />
+                            <CardOfNews
+                                title={title}
+                                image={image}
+                                link={link}
+                                position={title === 'Книги для весенней хандры' ? 'object-left' : 'object-right' }
+                            />
                         </SwiperSlide>
                     ))}
             </Swiper>
