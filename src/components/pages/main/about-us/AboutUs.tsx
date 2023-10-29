@@ -32,9 +32,9 @@ export default function AboutUs() {
                     <div className="flex">
                         <TagGray title="наши успехи" />
                     </div>
-                    <h1 className="text-white text-heading-l lg:w-full lg:text-3xl lg:leading-9">
+                    <h2 className="text-white text-heading-l lg:w-full lg:text-3xl lg:leading-9">
                         немного о нас
-                    </h1>
+                    </h2>
                 </div>
                 <div className="flex justify-between flex-col min-h-[460px] gap-[30px]">
                     <div className="flex no-scrollbar relative gap-1 lg:min-h-[367px] lg:overflow-x-scroll lg:px-4">
