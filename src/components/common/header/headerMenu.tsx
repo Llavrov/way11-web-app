@@ -1,13 +1,10 @@
 'use client'
 
 import Link from "next/link";
-import Image from "next/image";
-import Button from "@/components/common/buttons/button";
 import { SOCIAL } from "../footer/Footer";
 import { STATS } from "../footer/Footer";
 import EmptyButton from "../buttons/emptyButton";
 import { motion } from "framer-motion";
-import {useEffect} from "react";
 
 const headerVariants = {
     hidden: {

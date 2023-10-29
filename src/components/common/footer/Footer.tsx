@@ -25,10 +25,6 @@ export const SOCIAL: TSocial[] = [
         link: 'https://instagram.com/way.eleven?igshid=MzRlODBiNWFlZA==',
         title: 'inst',
     },
-    {
-        link: 'https://vk.com/public222368466',
-        title: 'vk',
-    },
 ]
 
 export const STATS: TSocial[] = [

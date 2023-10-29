@@ -207,7 +207,7 @@ export const EXPERTS = [
     },
     {
         name: 'Николай Коновалов',
-        role: 'Senior UI/UX-дизайнер',
+        role: 'Design teamlead',
         image: '/team/nikita.jpeg',
     },
 ]
