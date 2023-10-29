@@ -38,6 +38,15 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   }
 }
 
+.swiper-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+.swiper-wrapper {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
 /*.swiper-slide {*/
 /*  transition: 0.5s;*/
 /*}*/
