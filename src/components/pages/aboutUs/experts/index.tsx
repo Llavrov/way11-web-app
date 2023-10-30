@@ -9,7 +9,7 @@ export type TExpert = {
     name: string;
     role: string;
     image: string;
-    socialNetworks?: {tg: string, inst: string};
+    socialNetworks?: {tg: string, inst?: string};
 }
 
 export default function ExpertsComponent({ onSelectTeammate }: {onSelectTeammate: (teammate: TExpert) => void}) {

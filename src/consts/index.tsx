@@ -173,8 +173,7 @@ export const EXPERTS = [
         role: 'ceo',
         image: '/team/vadim.jpeg',
         socialNetworks: {
-            tg: '',
-            inst: ''
+            tg: 'https://t.me/kolesnikov15',
         }
     },
     {
@@ -182,7 +181,7 @@ export const EXPERTS = [
         role: 'Коммерческий директор',
         image: '/team/nikolay.jpeg',
         socialNetworks: {
-            tg: '',
+            tg: 'https://t.me/pdgrn',
             inst: ''
         }
     },
@@ -191,8 +190,7 @@ export const EXPERTS = [
         role: 'Руководитель отдела маркетинга',
         image: '/team/forrest.jpeg',
         socialNetworks: {
-            tg: '',
-            inst: ''
+            tg: 'https://t.me/Forrest3301',
         }
     },
     {
