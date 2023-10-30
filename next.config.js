@@ -3,8 +3,8 @@ const withImages = require('next-images'); // Для обработки изоб
 
 module.exports = withImages({
     env: {
-        TEST_USER_LOGIN: process.env.TEST_USER_LOGIN,
-        TEST_USER_PASSWORD: process.env.TEST_USER_PASSWORD,
+        TG_BOT_API_KEY: process.env.TG_BOT_API_KEY,
+        TG_BOT_USER: process.env.TG_BOT_USER,
     },
     images: {
         domains: ['www.w3.org'],

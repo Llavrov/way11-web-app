@@ -142,7 +142,7 @@ export const PAGES_CONTENT: Record<string, PageContent> = {
         title: 'Про образование',
         tag: 'образовательные платформы',
         description: 'Была необходимость в создании инновационной курсовой платформы, с упором на удобство и упрощения взаимодействия, за счет использования разделения пользователей на роли с отличающимся функционалом.',
-        image: '/cases/education-01.png',
+        image: '/cases/education-03.png',
         imagesOfReadyPages: ['/cases/education-01.png', '/cases/education-02.png', '/cases/education-03.png', '/cases/education-04.png', '/cases/education-05.png'],
         imageBackground: '#8885FF',
         taskAndSolution: 'Мы решили делать платформу, с упором на удобство и упрощения взаимодействия, за счет использования разделения пользователей на роли с отличающимся функционалом,  отвечающую всем требованиям Минобразования.',
