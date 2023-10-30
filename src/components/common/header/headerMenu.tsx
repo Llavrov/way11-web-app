@@ -60,7 +60,7 @@ export default function HeaderMenu({ closeMenu }: { closeMenu: () => void }) {
                         {
                             STATS.map(({ link, title }) => (
                                 <li key={title}>
-                                    <Link onClick={closeMenu} className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
+                                    <Link target="_blank" onClick={closeMenu} className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
                                         {title}
                                     </Link>
                                 </li>

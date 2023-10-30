@@ -182,7 +182,7 @@ export const EXPERTS = [
         image: '/team/nikolay.jpeg',
         socialNetworks: {
             tg: 'https://t.me/pdgrn',
-            inst: ''
+            inst: 'https://instagram.com/podgornyy.no?igshid=YTQwZjQ0NmI0OA%3D%3D&utm_source=qr'
         }
     },
     {

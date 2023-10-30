@@ -68,7 +68,7 @@ export default function Footer() {
                             {
                                 STATS.map(({ link, title }) => (
                                     <li key={title}>
-                                        <Link className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
+                                        <Link  target="_blank" className="flex rounded-[100px] py-[10px] px-[20px] box-border text-18 text-white border-solid border-white border" href={link}>
                                             {title}
                                         </Link>
                                     </li>
