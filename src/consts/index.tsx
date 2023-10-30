@@ -33,7 +33,7 @@ export const CARDS_OF_CASES = {
     },
     aboutEducation: {
         tags: [ 'ПроОбразование', 'образовательные платформы'],
-        photo: '/cases/education-02.png',
+        photo: '/cases/education-03.png',
         background: '#8885FF',
         description: 'Кейс с инновационной курсовой платформой с упором на удобство, стиль и полный функциональный цикл. С четким разделением функционала в зависимости от роли.',
         link: '/case/abouе-education',

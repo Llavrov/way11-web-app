@@ -90,7 +90,6 @@ ${
                 </Link>
             </div>
 
-            {/* Правая колонка с формой */}
             <div className="w-[790px] lg:w-full flex flex-col gap-[10px] pt-[64px] lg:pt-[24px]">
                 <div className="flex gap-2 lg:flex-col">
                     <QUTextField
