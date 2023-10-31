@@ -44,7 +44,7 @@ export default function OurClients() {
                 </p>
             </div>
 
-            <Marquee>
+            <Marquee autoFill>
                 {
                     CLIENTS.map(({src, width, height}) => (
                         <div key={src} className="mx-[45px]">
