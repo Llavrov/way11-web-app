@@ -48,7 +48,7 @@ export default function OurClients() {
                 {
                     CLIENTS.map(({src, width, height}) => (
                         <div key={src} className="mx-[45px]">
-                            <Image className="lg:w-[110px] object-contain" src={src} alt={src} width={width} height={height} />
+                            <Image placeholder="blur" blurDataURL="blur" loading="eager" className="lg:w-[110px] object-contain" src={src} alt={src} width={width} height={height} />
                         </div>
                     ))
                 }

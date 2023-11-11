@@ -14,7 +14,13 @@ export const metadata = {
     keywords: ['Аналитика', 'мобильная разработка', 'разработка', 'IT-безопасность', 'UI/UX дизайн', 'поддержка проектов'],
     icon: '/favicon.ico',
     image: '/favicon.ico',
-
+    preload: [
+        '/our-clients/client-01.svg',
+        '/our-clients/client-02.svg',
+        '/our-clients/client-03.svg',
+        '/our-clients/client-04.svg',
+        '/our-clients/client-05.svg'
+    ]
 }
 
 export default function RootLayout({
