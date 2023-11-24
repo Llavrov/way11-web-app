@@ -8,9 +8,7 @@ import OurNews from "@/components/pages/main/our-news/OurNews";
 import ContactUs from "@/components/pages/main/contact-us/ContactUs";
 import Cases from "@/components/pages/main/cases/Cases";
 import OurServices from "@/components/pages/main/our-services/OurServices";
-import { Navigation } from 'swiper/modules';
-import { Swiper, SwiperSlide } from "swiper/react";
-import CardOfNews from "@/components/common/cards/CardOfNews";
+import WorkWithUs from "@/components/pages/main/work-with-us/WorkWithUs";
 
 export default function MainPage() {
     return (
@@ -18,6 +16,7 @@ export default function MainPage() {
             <PreviewBlock />
 
             <section className="flex flex-col items-center w-full gap-[240px] lg:gap-[120px] py-[120px] lg:py-15">
+                <WorkWithUs />
                 <AboutUs />
                 <Cases />
 
