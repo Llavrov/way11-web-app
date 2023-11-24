@@ -51,7 +51,7 @@ export default function WorkWithUs() {
                     </p>
 
                     <Link href={'https://t.me/Forrest3301'} className="w-full no-scrollbar">
-                        <EmptyButton color={"black"} title={'@Forrest3301'} onClick={() => {}} />
+                        <EmptyButton color={"black"} title={'Написать в тг'} onClick={() => {}} />
                     </Link>
                 </div>
             </div>
