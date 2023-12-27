@@ -4,11 +4,12 @@ import TagGray from "@/components/common/tags/tagGray";
 import Image from "next/image";
 import CardsSwiper from "@/components/common/cardsSwiper";
 import {useEffect, useRef, useState} from "react";
-import {OUR_NEWS} from "@/consts";
+import {getPosts} from "@/utils/getPosts";
 
 export default function OurNews() {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
+    const [posts, setPosts] = useState([]);
 
     const [refs, setRefs] = useState({
         prevBtnRef: prevRef,
@@ -20,6 +21,17 @@ export default function OurNews() {
             prevBtnRef: prevRef,
             nextBtnRef: nextRef
         });
+
+        getPosts()
+            .then(resolve => {
+                const result = resolve.data.map(item => ({
+                    link: item.link,
+                    image: item.image,
+                    title: item.name
+                }));
+
+                setPosts(result);
+            });
     }, []);
 
     return (
@@ -44,7 +56,8 @@ export default function OurNews() {
                 {
                     refs.nextBtnRef.current &&
                     refs.nextBtnRef.current &&
-                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={OUR_NEWS} />
+                    !!posts.length &&
+                    <CardsSwiper prevBtn={refs.prevBtnRef} nextBtn={refs.nextBtnRef} cards={posts} />
                 }
             </div>
         </div>

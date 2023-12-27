@@ -93,7 +93,6 @@ html, p, span, div, h1, h2, h3, h4, a, button {
   .swiper-wrapper.disabled {
     transform: translate3d(0px, 0, 0) !important;
   }
-  
 
   .swiper-pagination.disabled {
     display: none;
