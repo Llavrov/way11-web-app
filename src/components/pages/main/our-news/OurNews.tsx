@@ -6,10 +6,14 @@ import CardsSwiper from "@/components/common/cardsSwiper";
 import {useEffect, useRef, useState} from "react";
 import {getPosts} from "@/utils/getPosts";
 
+type TPostsResponse = { link: string; image: string; name: string; };
+
+type TPosts = { link: string; image: string; title: string; };
+
 export default function OurNews() {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
-    const [posts, setPosts] = useState([]);
+    const [posts, setPosts] = useState<TPosts[]>([]);
 
     const [refs, setRefs] = useState({
         prevBtnRef: prevRef,
@@ -23,12 +27,12 @@ export default function OurNews() {
         });
 
         getPosts()
-            .then(resolve => {
+            .then((resolve: { data: TPostsResponse[]}) => {
                 const result = resolve.data.map(item => ({
                     link: item.link,
                     image: item.image,
                     title: item.name
-                }));
+                })) ?? [];
 
                 setPosts(result);
             });

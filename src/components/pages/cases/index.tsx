@@ -12,7 +12,7 @@ import { CARDS_OF_CASES } from "@/consts";
 import FirstCase from "@/components/pages/cases/firstCase";
 import SecondCase from "@/components/pages/cases/secondCase";
 import ThirdCase from "@/components/pages/cases/thirdCase";
-import {getProjects} from "@/utils/getCases";
+import {getProjects, TCases, TCasesResolve} from "@/utils/getCases";
 
 const FILTERS = ['все проекты', 'e-commerce', 'образовательные платформы', 'промышленность'];
 
@@ -63,17 +63,6 @@ const CASES_COMPONENTS = [
     ],
 ];
 
-type TCases = {
-    name: string;
-    backgroundColor: string;
-    createdAt: string;
-    problem: string;
-    publishedAt: string;
-    shortDescription: string;
-    year: string | number;
-    mainImage?: string;
-}
-
 function ListOfCases({ cases }: { cases: TCases[] }) {
     return (
         <>
@@ -85,8 +74,8 @@ function ListOfCases({ cases }: { cases: TCases[] }) {
                                 <FirstCase
                                     tags={['tag']}
                                     photo={'/cases/buy-now-01.png'}
-                                    background={caseData.backgroundColor}
-                                    description={caseData.shortDescription}
+                                    background={caseData.background}
+                                    description={caseData.description}
                                     year={String(caseData.year)}
                                 />
                             </Link>
@@ -98,8 +87,8 @@ function ListOfCases({ cases }: { cases: TCases[] }) {
                                     <SecondCase
                                         tags={['tag']}
                                         photo={'/cases/buy-now-01.png'}
-                                        background={caseData.backgroundColor}
-                                        description={caseData.shortDescription}
+                                        background={caseData.background}
+                                        description={caseData.description}
                                         year={String(caseData.year)}
                                     />
                                 </Link>
@@ -111,8 +100,8 @@ function ListOfCases({ cases }: { cases: TCases[] }) {
                                 <ThirdCase
                                     tags={['tag']}
                                     photo={'/cases/buy-now-01.png'}
-                                    background={caseData.backgroundColor}
-                                    description={caseData.shortDescription}
+                                    background={caseData.background}
+                                    description={caseData.description}
                                     year={String(caseData.year)}
                                 />
                             </Link>
@@ -136,7 +125,7 @@ const sortCasesByTag = (cases: typeof CASES_COMPONENTS, activeTag: string) => {
 };
 
 export default function CasesPage() {
-    const [cases, setCases] = useState([]);
+    const [cases, setCases] = useState<TCases[]>([]);
 
     const [activeTag, setActiveTag] = useState('все проекты');
 
@@ -144,9 +133,9 @@ export default function CasesPage() {
 
     useEffect(() => {
         getProjects()
-            .then(resolve => {
+            .then((resolve: { data: { attributes: TCasesResolve }[]}) => {
                 const resultData = resolve.data.map(({ attributes }) => ({
-                    name: attributes.name,
+                    title: attributes.name,
                     background: attributes.backgroundColor,
                     createdAt: attributes.createdAt,
                     problem: attributes.problem,
@@ -155,7 +144,7 @@ export default function CasesPage() {
                     year: attributes.year,
                     photo: '',
                     tags: ['tag']
-                }));
+                })) ?? [];
 
                 setCases(resultData);
             });
